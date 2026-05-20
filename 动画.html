@@ -1,0 +1,1030 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DCT-Pro 隐水印算法 — 完整可视化</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;
+  background:#f8f9fa;color:#1a1a2e;font-size:14px;line-height:1.5;}
+.wrap{max-width:900px;margin:0 auto;padding:16px 16px 40px;}
+
+/* ── Ablation Panel ── */
+.ablation-box{background:#fff;border:1px solid #e0e4ea;border-radius:10px;padding:14px 16px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.06);}
+.ablation-title{font-size:13px;font-weight:700;color:#333;margin-bottom:10px;letter-spacing:.3px;}
+.ablation-presets{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+.preset-btn{padding:5px 11px;border:1.5px solid #d0d5de;border-radius:6px;font-size:11px;cursor:pointer;background:#fff;color:#555;transition:all .15s;font-weight:500;}
+.preset-btn:hover{border-color:#4a80d0;color:#4a80d0;}
+.preset-btn.sel{background:#1D6FA4;border-color:#1D6FA4;color:#fff;}
+.module-badges{display:flex;flex-wrap:wrap;gap:5px;}
+.mbadge{padding:3px 9px;border-radius:20px;font-size:11px;font-weight:600;transition:all .2s;border:1.5px solid transparent;}
+.mbadge.on{color:#fff;}
+.mbadge.off{color:#bbb;background:#f4f4f4;border-color:#e8e8e8;}
+
+/* module colors */
+.m-base_dct.on{background:#1D6FA4;border-color:#1D6FA4;}
+.m-jnd.on{background:#1D9E75;border-color:#1D9E75;}
+.m-tile.on{background:#BA7517;border-color:#BA7517;}
+.m-sync.on{background:#7c3aed;border-color:#7c3aed;}
+.m-grl.on{background:#c2410c;border-color:#c2410c;}
+.m-crc.on{background:#0369a1;border-color:#0369a1;}
+.m-phase_search.on{background:#0f766e;border-color:#0f766e;}
+.m-rotation_retry.on{background:#9d174d;border-color:#9d174d;}
+
+/* ── Phase tabs ── */
+.phase-tabs{display:flex;gap:0;margin-bottom:12px;border-radius:8px;overflow:hidden;border:1px solid #d0d5de;background:#fff;}
+.phase-tab{flex:1;padding:9px 0;text-align:center;font-size:13px;font-weight:600;cursor:pointer;background:transparent;color:#888;border:none;transition:all .18s;}
+.phase-tab.active-embed{background:#1D6FA4;color:#fff;}
+.phase-tab.active-extract{background:#1D9E75;color:#fff;}
+
+/* ── Module tabs ── */
+.mod-tabs{display:flex;gap:4px;margin-bottom:12px;flex-wrap:wrap;}
+.mod-tab{padding:5px 11px;border:1px solid #d0d5de;border-radius:6px;font-size:11px;
+  cursor:pointer;background:#fff;color:#666;transition:all .15s;font-weight:500;}
+.mod-tab.active{background:#1a1a2e;color:#fff;border-color:#1a1a2e;}
+.mod-tab.disabled{opacity:.3;pointer-events:none;}
+.mod-tab.highlight-tab{border-color:#E24B4A;color:#E24B4A;font-weight:700;}
+
+/* panels */
+.panel{display:none;}
+.panel.active{display:block;}
+.panel-card{background:#fff;border:1px solid #e0e4ea;border-radius:10px;padding:14px 16px;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.panel-card.inactive-module{opacity:.45;pointer-events:none;}
+.mod-title{font-size:13px;font-weight:700;margin-bottom:4px;color:#1a1a2e;}
+.mod-desc{font-size:11.5px;color:#555;margin-bottom:10px;line-height:1.65;}
+.pipeline-hint{font-size:11px;color:#555;margin-bottom:10px;padding:5px 10px;
+  border-left:3px solid #4a9e6b;background:rgba(74,158,107,.06);border-radius:0 5px 5px 0;}
+.pipeline-hint.extract{border-color:#1D9E75;background:rgba(29,158,117,.06);}
+.ctrl-row{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:11.5px;color:#666;flex-wrap:wrap;}
+.ctrl-row input[type=range]{flex:1;min-width:80px;}
+.ctrl-row button,.ctrl-btn{padding:4px 10px;border:1px solid #d0d5de;border-radius:5px;
+  background:#fff;color:#333;cursor:pointer;font-size:11px;white-space:nowrap;}
+.ctrl-row button:hover{background:#f0f4ff;border-color:#4a80d0;}
+.legend{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+.leg{display:flex;align-items:center;gap:4px;font-size:11px;color:#555;}
+.leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+
+canvas{display:block;width:100%;border-radius:6px;border:1px solid #e8eaed;
+  background:#fff;image-rendering:crisp-edges;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ═══ ABLATION PRESETS ═══ -->
+<div class="ablation-box">
+  <div class="ablation-title">消融实验预设（勾选后高亮对应模块）</div>
+  <div class="ablation-presets">
+    <button class="preset-btn" onclick="setPreset('none')">不选</button>
+    <button class="preset-btn" onclick="setPreset('Base')">Base</button>
+    <button class="preset-btn" onclick="setPreset('JND')">JND</button>
+    <button class="preset-btn" onclick="setPreset('Tile_only')">Tile_only</button>
+    <button class="preset-btn" onclick="setPreset('Tile')">Tile</button>
+    <button class="preset-btn" onclick="setPreset('Sync')">Sync</button>
+    <button class="preset-btn" onclick="setPreset('Full')">Full</button>
+  </div>
+  <div class="module-badges" id="moduleBadges"></div>
+</div>
+
+<!-- ═══ PHASE TABS ═══ -->
+<div class="phase-tabs">
+  <button class="phase-tab active-embed" id="ptEmbed" onclick="setPhase('embed')">嵌入阶段</button>
+  <button class="phase-tab" id="ptExtract" onclick="setPhase('extract')">提取阶段</button>
+</div>
+
+<!-- ═══ EMBED ═══ -->
+<div id="phaseEmbed">
+  <div class="pipeline-hint">嵌入流程：输入图像 → YUV分离 → 8×8分块 → JND自适应强度 → Arnold交织 → DCT系数对调制 → tile局部封包复制 + GRL全局分散 → m序列同步头封帧 → 水印输出</div>
+  <div class="mod-tabs" id="embedTabs">
+    <button class="mod-tab active" onclick="showEmbed(0)">① YUV分离</button>
+    <button class="mod-tab" onclick="showEmbed(1)" data-mod="base_dct">② 8×8 DCT</button>
+    <button class="mod-tab" onclick="showEmbed(2)" data-mod="jnd">③ JND自适应</button>
+    <button class="mod-tab" onclick="showEmbed(3)" data-mod="sync">④ Arnold交织</button>
+    <button class="mod-tab" onclick="showEmbed(4)" data-mod="base_dct">⑤ DCT调制</button>
+    <button class="mod-tab" onclick="showEmbed(5)" data-mod="tile">⑥ tile封包</button>
+    <button class="mod-tab" onclick="showEmbed(6)" data-mod="grl">⑦ GRL分散</button>
+    <button class="mod-tab" onclick="showEmbed(7)" data-mod="sync">⑧ m序列同步头</button>
+  </div>
+
+  <div class="panel active panel-card" id="ep0">
+    <div class="mod-title">YUV 色彩空间分离</div>
+    <div class="mod-desc">输入图像转为 YUV，水印<b>仅嵌入亮度通道 Y</b>，色度通道 U/V 保持不变。① 人眼对亮度微小调制察觉阈值更高；② JPEG 对色度 4:2:0 下采样，Y 通道水印不受影响。</div>
+    <canvas id="ec0"></canvas>
+    <div class="ctrl-row">
+      <span>通道：</span>
+      <button onclick="yuv_mode='RGB';redraw('ec0')">原图 RGB</button>
+      <button onclick="yuv_mode='Y';redraw('ec0')">Y 亮度</button>
+      <button onclick="yuv_mode='U';redraw('ec0')">U 蓝色差</button>
+      <button onclick="yuv_mode='V';redraw('ec0')">V 红色差</button>
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-dot" style="background:#4a9e6b"></div>Y：嵌入层</div>
+      <div class="leg"><div class="leg-dot" style="background:#7778cc"></div>U/V：不修改</div>
+    </div>
+  </div>
+
+  <div class="panel panel-card" id="ep1" data-mod="base_dct">
+    <div class="mod-title">8×8 像素分块 + DCT 变换域</div>
+    <div class="mod-desc">Y 通道划分为不重叠 8×8 块，每块独立做 DCT。分块与 JPEG 标准对齐，确保 JPEG 压缩后系数对齐不偏移。水印藏在中频系数对 F(4,1) ↔ F(1,4)。</div>
+    <canvas id="ec1"></canvas>
+    <div class="ctrl-row">
+      <span>选块：</span>
+      <input type="range" id="esl1" min="0" max="15" value="4" oninput="selBlock=+this.value;redraw('ec1')">
+      <span id="esl1v">块 4</span>
+      <button onclick="animDCT=!animDCT">扫描</button>
+    </div>
+  </div>
+
+  <div class="panel panel-card" id="ep2" data-mod="jnd">
+    <div class="mod-title">JND 视觉掩蔽自适应（Weber-Fechner 定律）</div>
+    <div class="mod-desc">每块计算局部方差 σ²，嵌入强度 δ = δ₀·(α + β·ln(1+σ²/σ̄²))。纹理区（σ² 大）承受强嵌入不被察觉；平坦区（σ² 小）用弱嵌入避免可见噪点。</div>
+    <canvas id="ec2"></canvas>
+    <div class="ctrl-row">
+      <span>基础强度 δ₀：</span>
+      <input type="range" id="esl2" min="10" max="50" value="25" oninput="baseStrength=+this.value;redraw('ec2')">
+      <span id="esl2v">25</span>
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-dot" style="background:#E24B4A"></div>高纹理：强嵌入</div>
+      <div class="leg"><div class="leg-dot" style="background:#EF9F27"></div>中纹理</div>
+      <div class="leg"><div class="leg-dot" style="background:#378ADD"></div>平坦：弱嵌入</div>
+    </div>
+  </div>
+
+  <div class="panel panel-card" id="ep3" data-mod="sync">
+    <div class="mod-title">Arnold 比特交织——抗突发错误</div>
+    <div class="mod-desc">水印比特经 Arnold 猫脸变换置乱后再嵌入，将相邻比特分散到矩阵各处。JPEG 压缩造成的连续错误变成离散错误，提取后反置乱 + 多数表决即可纠正。</div>
+    <canvas id="ec3"></canvas>
+    <div class="ctrl-row">
+      <button onclick="arnStep=0;redraw('ec3')">① 原始比特</button>
+      <button onclick="arnStep=1;redraw('ec3')">② 置乱</button>
+      <button onclick="arnStep=2;redraw('ec3')">③ 模拟破坏</button>
+      <button onclick="arnStep=3;redraw('ec3')">④ 反置乱恢复</button>
+    </div>
+  </div>
+
+  <div class="panel panel-card" id="ep4" data-mod="base_dct">
+    <div class="mod-title">DCT 系数对调制（基础 DCT，c0/c1 参数）</div>
+    <div class="mod-desc">取中频系数对 F(4,1) 与 F(1,4)，通过调整二者大小关系编码比特：b=1→A&gt;B，b=0→A&lt;B。调制量 δ 由 JND 控制（c0/c1 微调对称性）。相对关系调制对加性噪声和线性滤波鲁棒。</div>
+    <canvas id="ec4"></canvas>
+    <div class="ctrl-row">
+      <span>嵌入比特：</span>
+      <button onclick="dctBit=1;redraw('ec4')">b = 1</button>
+      <button onclick="dctBit=0;redraw('ec4')">b = 0</button>
+      <span>调制强度 δ：</span>
+      <input type="range" id="eslmod" min="5" max="40" value="18" oninput="dctDelta=+this.value;redraw('ec4')">
+      <span id="eslmodv">18</span>
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-dot" style="background:#E24B4A"></div>F(4,1) = A</div>
+      <div class="leg"><div class="leg-dot" style="background:#378ADD"></div>F(1,4) = B</div>
+      <div class="leg"><div class="leg-dot" style="background:#4a9e6b"></div>比特由 A vs B 决定</div>
+    </div>
+  </div>
+
+  <div class="panel panel-card" id="ep5" data-mod="tile">
+    <div class="mod-title">tile 模块——局部封包与重复嵌入</div>
+    <div class="mod-desc">完整数据包（同步头+长度+载荷）被分成若干 tile，每个 tile 在<b>局部相邻区域复制多份</b>。轻微裁剪或局部攻击后，相邻副本多数表决可恢复该 tile。与 GRL 全局分散形成双层冗余。</div>
+    <canvas id="ec5"></canvas>
+    <div class="ctrl-row">
+      <span>裁剪比例：</span>
+      <input type="range" id="esl5" min="0" max="70" value="20" oninput="tileCrop=+this.value;redraw('ec5')">
+      <span id="esl5v">裁掉 20%</span>
+      <button onclick="tileHighlight=(tileHighlight+1)%6;redraw('ec5')">高亮下一 tile 组</button>
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-dot" style="background:#185FA5"></div>组1</div>
+      <div class="leg"><div class="leg-dot" style="background:#1D9E75"></div>组2</div>
+      <div class="leg"><div class="leg-dot" style="background:#BA7517"></div>组3</div>
+      <div class="leg"><div class="leg-dot" style="background:#993C1D"></div>组4</div>
+      <div class="leg"><div class="leg-dot" style="background:#E24B4A"></div>裁剪区</div>
+    </div>
+  </div>
+
+  <div class="panel panel-card" id="ep6" data-mod="grl">
+    <div class="mod-title">GRL（Global Robust Layer）——全局伪随机分散嵌入</div>
+    <div class="mod-desc">GRL 按伪随机置换表将水印比特<b>全局分散</b>到整张图的各 DCT 块，而非顺序写入。攻击者无法定位并针对性消除特定比特；任意保留区域均含足够信息恢复，通过重复/投票提升压缩与全图扰动下的恢复概率。</div>
+    <canvas id="ec6"></canvas>
+    <div class="ctrl-row">
+      <span>分散密度：</span>
+      <input type="range" id="esl6" min="20" max="100" value="60" oninput="grlDensity=+this.value;redraw('ec6')">
+      <span id="esl6v">60%</span>
+      <button onclick="grlAnim=!grlAnim">动画</button>
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-dot" style="background:#E24B4A"></div>bit=1</div>
+      <div class="leg"><div class="leg-dot" style="background:#378ADD"></div>bit=0</div>
+      <div class="leg"><div class="leg-dot" style="background:#ccc"></div>未使用</div>
+    </div>
+  </div>
+
+  <div class="panel panel-card" id="ep7" data-mod="sync">
+    <div class="mod-title">m 序列同步头——帧定位锚点</div>
+    <div class="mod-desc">每数据包以 <b>31 位 m 序列</b>（最大长度序列）作前缀。核心特性：自相关函数仅在完全对齐时出现尖峰（=31），其余偏移≈−1。提取时滑动窗口扫描，峰值位置即为数据包起点，即使有少量比特翻转仍可稳定定位。</div>
+    <canvas id="ec7"></canvas>
+    <div class="ctrl-row">
+      <button onclick="mSyncView='seq';redraw('ec7')">序列波形</button>
+      <button onclick="mSyncView='autocorr';redraw('ec7')">自相关特性</button>
+      <button onclick="mSyncView='packet';redraw('ec7')">数据包结构</button>
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-dot" style="background:#4a9e6b"></div>m序列（31位）</div>
+      <div class="leg"><div class="leg-dot" style="background:#185FA5"></div>长度字段</div>
+      <div class="leg"><div class="leg-dot" style="background:#BA7517"></div>水印载荷</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ EXTRACT ═══ -->
+<div id="phaseExtract" style="display:none">
+  <div class="pipeline-hint extract">提取流程：待检测图像 → 亮度通道 → 8×8 DCT分块 → tile候选比特流 → m序列滑动相关定位 → 相位搜索修复（可选）→ 旋转重试（可选）→ 多候选Arnold解交织+投票融合 → CRC校验 → 输出水印文本 / 失败</div>
+  <div class="mod-tabs" id="extractTabs">
+    <button class="mod-tab active" onclick="showExtract(0)" data-mod="base_dct">① DCT提取</button>
+    <button class="mod-tab" onclick="showExtract(1)" data-mod="sync">② m序列定位</button>
+    <button class="mod-tab" onclick="showExtract(2)" data-mod="phase_search">③ 相位搜索</button>
+    <button class="mod-tab" onclick="showExtract(3)" data-mod="rotation_retry">④ 旋转重试</button>
+    <button class="mod-tab" onclick="showExtract(4)" data-mod="sync">⑤ 解交织+投票</button>
+    <button class="mod-tab" onclick="showExtract(5)" data-mod="crc">⑥ CRC校验</button>
+  </div>
+
+  <div class="panel active panel-card" id="xp0" data-mod="base_dct">
+    <div class="mod-title">DCT 系数对提取——恢复候选比特流</div>
+    <div class="mod-desc">对每个 8×8 DCT 块读取 F(4,1) 与 F(1,4)：F(4,1) &gt; F(1,4) 判为 1，反之为 0。得到含噪声的候选比特流，后续步骤负责定位与纠错。</div>
+    <canvas id="xc0"></canvas>
+    <div class="ctrl-row">
+      <span>模拟攻击：</span>
+      <button onclick="xAttack='none';redraw('xc0')">无攻击</button>
+      <button onclick="xAttack='jpeg';redraw('xc0')">JPEG Q=70</button>
+      <button onclick="xAttack='noise';redraw('xc0')">高斯噪声</button>
+      <button onclick="xAttack='crop';redraw('xc0')">局部裁剪</button>
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-dot" style="background:#4a9e6b"></div>正确</div>
+      <div class="leg"><div class="leg-dot" style="background:#E24B4A"></div>错误（翻转）</div>
+      <div class="leg"><div class="leg-dot" style="background:#aaa"></div>丢失（裁剪）</div>
+    </div>
+  </div>
+
+  <div class="panel panel-card" id="xp1" data-mod="sync">
+    <div class="mod-title">m 序列滑动相关定位——精确找到数据包起点</div>
+    <div class="mod-desc">用 31 位 m 序列模板在候选比特流中逐位滑动，只有与嵌入的同步头对齐时互相关值才接近 31，其余位置≈−1。相关值超过阈值（0.7×31=22）即判定为同步头位置。拖动"窗口位置"可逐步观察滑动过程，下方相关曲线实时更新。</div>
+    <canvas id="xc1"></canvas>
+    <div class="ctrl-row">
+      <span>噪声（翻转位数）：</span>
+      <input type="range" id="xsl1" min="0" max="8" value="0" oninput="xSyncNoise=+this.value;redraw('xc1')">
+      <span id="xsl1v">0位</span>
+    </div>
+    <div class="ctrl-row">
+      <span>窗口位置：</span>
+      <input type="range" id="xsl1b" min="0" max="33" value="0" oninput="xSyncPos=+this.value;redraw('xc1')">
+      <span id="xsl1bv">位置 0</span>
+      <button onclick="xSyncAnim=!xSyncAnim">自动滑动</button>
+    </div>
+  </div>
+
+  <div class="panel panel-card" id="xp2" data-mod="phase_search">
+    <div class="mod-title">相位搜索——纠正裁剪/几何变形导致的分块漂移</div>
+    <div class="mod-desc">图片经裁剪或轻微几何变形后，8×8 分块边界可能偏移 0–7 像素，DCT 系数无法对齐。相位搜索穷举 8 种像素偏移，对每种偏移做 m 序列相关检测，取峰值最高者为最优相位后重新对齐分块。拖动滑块或点击"搜索"动画观察效果。</div>
+    <canvas id="xc2"></canvas>
+    <div class="ctrl-row">
+      <span>当前像素偏移：</span>
+      <input type="range" id="xsl2" min="0" max="7" value="3" oninput="xPhaseOff=+this.value;redraw('xc2')">
+      <span id="xsl2v">3 px</span>
+      <button onclick="xPhaseSearch=!xPhaseSearch">搜索所有偏移</button>
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-dot" style="background:#4a9e6b"></div>最优对齐相位</div>
+      <div class="leg"><div class="leg-dot" style="background:#E24B4A"></div>错位（相关值低）</div>
+    </div>
+  </div>
+
+  <div class="panel panel-card" id="xp3" data-mod="rotation_retry">
+    <div class="mod-title">轻微旋转重试——处理极小角度旋转失步</div>
+    <div class="mod-desc">对图片施加极小角度旋转（如拍照歪斜 &lt;2°）可使分块网格完全失效，单次提取失败。旋转重试在 [−2°, +2°] 范围内以 0.5° 步长依次尝试反向旋转，每次用 m 序列相关值评分，取得分最高的旋转角度继续提取。拖动滑块模拟不同旋转角，观察相关评分变化。</div>
+    <canvas id="xc3"></canvas>
+    <div class="ctrl-row">
+      <span>图片旋转角度：</span>
+      <input type="range" id="xsl3" min="-20" max="20" value="8" step="1" oninput="rotAngle=+this.value/10;redraw('xc3')">
+      <span id="xsl3v">0.8°</span>
+      <button onclick="rotAnim=!rotAnim">扫描所有角度</button>
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-dot" style="background:#4a9e6b"></div>最优补偿角</div>
+      <div class="leg"><div class="leg-dot" style="background:#EF9F27"></div>当前尝试角</div>
+      <div class="leg"><div class="leg-dot" style="background:#E24B4A"></div>评分低</div>
+    </div>
+  </div>
+
+  <div class="panel panel-card" id="xp4" data-mod="sync">
+    <div class="mod-title">多候选 Arnold 解交织 + 投票融合</div>
+    <div class="mod-desc">全息平铺使图像中存在多个数据包副本。对每个候选副本做 Arnold 反置乱，得到多份比特序列，再对同一位置<b>多数表决</b>。单副本错误率较高时，投票后仍可大幅降低误码。</div>
+    <canvas id="xc4"></canvas>
+    <div class="ctrl-row">
+      <button onclick="xVoteStep=0;redraw('xc4')">① 各副本提取</button>
+      <button onclick="xVoteStep=1;redraw('xc4')">② 反置乱</button>
+      <button onclick="xVoteStep=2;redraw('xc4')">③ 多数投票</button>
+      <button onclick="xVoteStep=3;redraw('xc4')">④ 融合结果</button>
+    </div>
+  </div>
+
+  <div class="panel panel-card" id="xp5" data-mod="crc">
+    <div class="mod-title">CRC 载荷校验 → 输出水印文本 / 失败标签</div>
+    <div class="mod-desc">融合比特序列末尾附有 CRC 校验码。提取器重新计算 CRC 并比对：通过则输出 UTF-8 水印文本；不通过则输出失败标签，降低误检率，避免输出伪水印。</div>
+    <canvas id="xc5"></canvas>
+    <div class="ctrl-row">
+      <button onclick="xCRCScene='pass';redraw('xc5')">✓ 校验通过</button>
+      <button onclick="xCRCScene='fail';redraw('xc5')">✗ 校验失败</button>
+      <button onclick="xCRCScene='borderline';redraw('xc5')">⚠ 边界情况</button>
+    </div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+// ═══ STATE ═══════════════════════════════════════════════
+let yuv_mode='RGB', selBlock=4, animDCT=false, baseStrength=25;
+let arnStep=0, dctBit=1, dctDelta=18;
+let tileCrop=20, tileHighlight=0;
+let grlDensity=60, grlAnim=false, grlFrame=0;
+let mSyncView='seq';
+let xAttack='none';
+let xSyncNoise=0, xSyncPos=0, xSyncAnim=false;
+let xPhaseOff=3, xPhaseSearch=false, xPhaseFrame=0;
+let rotAngle=0.8, rotAnim=false, rotFrame=0;
+let xVoteStep=0, xCRCScene='pass';
+
+const MSYNC=[1,1,1,1,1,0,0,0,1,1,0,1,1,1,0,1,0,1,0,0,0,0,1,0,0,1,0,1,1,0,0];
+
+// ═══ ABLATION ═══════════════════════════════════════════
+const ALL_MODS=['base_dct','jnd','tile','sync','grl','crc','phase_search','rotation_retry'];
+const MOD_LABELS={base_dct:'base_dct',jnd:'jnd',tile:'tile',sync:'sync',grl:'grl',crc:'crc',phase_search:'phase_search',rotation_retry:'rotation_retry'};
+const PRESETS={
+  none:[],
+  Base:['base_dct'],
+  JND:['base_dct','jnd'],
+  Tile_only:['base_dct','tile'],
+  Tile:['base_dct','jnd','tile'],
+  Sync:['base_dct','jnd','tile','sync'],
+  Full:['base_dct','jnd','tile','sync','grl','crc','phase_search','rotation_retry']
+};
+let activeModules=[];
+
+function buildBadges(){
+  const c=document.getElementById('moduleBadges');c.innerHTML='';
+  ALL_MODS.forEach(m=>{
+    const d=document.createElement('span');
+    d.className='mbadge m-'+m+(activeModules.includes(m)?' on':' off');
+    d.textContent=MOD_LABELS[m];
+    c.appendChild(d);
+  });
+}
+function setPreset(name){
+  activeModules=PRESETS[name]||[];
+  document.querySelectorAll('.preset-btn').forEach(b=>{
+    b.classList.toggle('sel',b.textContent===name||(name==='none'&&b.textContent==='不选'));
+  });
+  buildBadges();
+  updateTabHighlights();
+  updatePanelDim();
+}
+function updateTabHighlights(){
+  document.querySelectorAll('.mod-tab[data-mod]').forEach(t=>{
+    const m=t.dataset.mod;
+    t.classList.toggle('highlight-tab', activeModules.length>0 && activeModules.includes(m));
+  });
+}
+function updatePanelDim(){
+  document.querySelectorAll('.panel-card[data-mod]').forEach(p=>{
+    const m=p.dataset.mod;
+    p.classList.toggle('inactive-module', activeModules.length>0 && !activeModules.includes(m));
+  });
+}
+buildBadges();
+
+// ═══ CANVAS HELPERS (HiDPI) ══════════════════════════════
+const DPR=window.devicePixelRatio||1;
+function getCtx(id,h){
+  const cv=document.getElementById(id);
+  if(!cv)return null;
+  const W=cv.parentElement.clientWidth-32||640; // account for card padding
+  const cssH=h||200;
+  cv.style.width=W+'px'; cv.style.height=cssH+'px';
+  cv.width=Math.round(W*DPR); cv.height=Math.round(cssH*DPR);
+  const ctx=cv.getContext('2d');
+  ctx.scale(DPR,DPR);
+  ctx.clearRect(0,0,W,cssH);
+  return {ctx,W,H:cssH};
+}
+function lbl(ctx,txt,x,y,col,sz,align){
+  ctx.save();ctx.fillStyle=col||'#333';
+  ctx.font=`${sz||11}px -apple-system,sans-serif`;
+  ctx.textAlign=align||'left';ctx.fillText(txt,x,y);ctx.restore();
+}
+function arr(ctx,x1,y1,x2,y2,col,txt){
+  ctx.save();ctx.strokeStyle=col||'#888';ctx.fillStyle=col||'#888';ctx.lineWidth=1.5;
+  ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();
+  const a=Math.atan2(y2-y1,x2-x1);
+  ctx.beginPath();ctx.moveTo(x2,y2);
+  ctx.lineTo(x2-8*Math.cos(a-.4),y2-8*Math.sin(a-.4));
+  ctx.lineTo(x2-8*Math.cos(a+.4),y2-8*Math.sin(a+.4));
+  ctx.closePath();ctx.fill();
+  if(txt){ctx.font='10px sans-serif';ctx.textAlign='center';ctx.fillStyle=col||'#888';ctx.fillText(txt,(x1+x2)/2,(y1+y2)/2-5);}
+  ctx.restore();
+}
+
+// ═══ DRAW REGISTRY ═══════════════════════════════════════
+const DRAW_FN={
+  ec0:drawYUV, ec1:drawDCT, ec2:drawJND, ec3:drawArnold, ec4:drawDCTMod,
+  ec5:drawTile, ec6:drawGRL, ec7:drawMSeq,
+  xc0:drawXBits, xc1:drawXSync, xc2:drawXPhase, xc3:drawXRot, xc4:drawXVote, xc5:drawXCRC
+};
+function redraw(id){if(DRAW_FN[id])DRAW_FN[id]();}
+function redrawAll(){Object.keys(DRAW_FN).forEach(id=>{try{DRAW_FN[id]();}catch(e){}});}
+
+// ═══ PHASE / PANEL SWITCHING ══════════════════════════════
+function setPhase(ph){
+  document.getElementById('phaseEmbed').style.display=ph==='embed'?'':'none';
+  document.getElementById('phaseExtract').style.display=ph==='extract'?'':'none';
+  document.getElementById('ptEmbed').className='phase-tab'+(ph==='embed'?' active-embed':'');
+  document.getElementById('ptExtract').className='phase-tab'+(ph==='extract'?' active-extract':'');
+  setTimeout(redrawAll,50);
+}
+function showEmbed(i){
+  document.querySelectorAll('#phaseEmbed .panel').forEach((p,j)=>p.classList.toggle('active',i===j));
+  document.querySelectorAll('#embedTabs .mod-tab').forEach((t,j)=>t.classList.toggle('active',i===j));
+  const ids=['ec0','ec1','ec2','ec3','ec4','ec5','ec6','ec7'];
+  if(ids[i])setTimeout(()=>redraw(ids[i]),20);
+}
+function showExtract(i){
+  document.querySelectorAll('#phaseExtract .panel').forEach((p,j)=>p.classList.toggle('active',i===j));
+  document.querySelectorAll('#extractTabs .mod-tab').forEach((t,j)=>t.classList.toggle('active',i===j));
+  const ids=['xc0','xc1','xc2','xc3','xc4','xc5'];
+  if(ids[i])setTimeout(()=>redraw(ids[i]),20);
+}
+
+// ═══ EMBED DRAW FUNCTIONS ════════════════════════════════
+
+// ① YUV
+function drawYUV(){
+  const r=getCtx('ec0',190);if(!r)return;
+  const {ctx,W,H}=r;
+  const bw=Math.floor((W-30)/3),bh=H-55,ox=5;
+  const labels=['Y 亮度','U 蓝色差','V 红色差'];
+  const cols=[['#2d6a4f','#52b788','#74c69d'],['#4361ee','#7B8EFF','#a8b4ff'],['#c1121f','#e05d44','#ff8fa3']];
+  for(let i=0;i<3;i++){
+    const x=ox+i*(bw+10),y=20;
+    const isOn=(yuv_mode==='RGB'||(yuv_mode==='Y'&&i===0)||(yuv_mode==='U'&&i===1)||(yuv_mode==='V'&&i===2));
+    ctx.globalAlpha=isOn?1:.22;
+    for(let rr=0;rr<6;rr++)for(let cc=0;cc<8;cc++){
+      const px=x+cc*Math.floor(bw/8),py=y+rr*Math.floor(bh/6);
+      const s=(rr*8+cc+i*48)%3;
+      ctx.fillStyle=cols[i][s];
+      ctx.fillRect(px,py,Math.floor(bw/8)-1,Math.floor(bh/6)-1);
+    }
+    ctx.globalAlpha=1;
+    const ac=i===0?'#4a9e6b':'#7778cc';
+    if(isOn){
+      ctx.strokeStyle=ac;ctx.lineWidth=i===0?2.5:1.5;
+      ctx.strokeRect(x,y,bw,bh);
+    }
+    lbl(ctx,labels[i],x+bw/2,y+bh+16,isOn?ac:'#bbb',12,'center');
+    if(i===0&&isOn){lbl(ctx,'▼ 水印嵌入层',x+bw/2,H-10,'#4a9e6b',10,'center');}
+  }
+  if(yuv_mode==='RGB')lbl(ctx,'三通道合并 → 水印图像输出',W/2,H-2,'#555',10,'center');
+}
+
+// ② DCT
+function drawDCT(){
+  const r=getCtx('ec1',260);if(!r)return;
+  const {ctx,W,H}=r;
+  document.getElementById('esl1v').textContent='块 '+selBlock;
+  const COLS=8,ROWS=2,bsz=Math.min(Math.floor(W*.45/COLS)-2,28);
+  const ox=10,oy=22;
+  // pixel grid
+  for(let rr=0;rr<ROWS;rr++)for(let cc=0;cc<COLS;cc++){
+    const bi=rr*COLS+cc,active=bi===selBlock;
+    const v=Math.floor(195-Math.sin(bi*1.3+rr)*55-cc*7);
+    ctx.fillStyle=active?'#EF9F27':`rgb(${v},${v},${v})`;
+    ctx.fillRect(ox+cc*(bsz+2),oy+rr*(bsz+2),bsz,bsz);
+    if(active){ctx.strokeStyle='#BA7517';ctx.lineWidth=2.5;ctx.strokeRect(ox+cc*(bsz+2),oy+rr*(bsz+2),bsz,bsz);}
+  }
+  lbl(ctx,'像素域（Y通道）',ox,oy-7,null,11);
+  const ax=ox+COLS*(bsz+2)+8,ay=oy+(ROWS*(bsz+2))/2;
+  arr(ctx,ax,ay,ax+32,ay,'#555','DCT');
+  // DCT coeff grid
+  const dcx=ax+36,dcy=oy,dcsz=Math.min(Math.floor(W*.43/8)-1,27);
+  for(let rr=0;rr<8;rr++)for(let cc=0;cc<8;cc++){
+    const isPairA=rr===4&&cc===1,isPairB=rr===1&&cc===4;
+    const freq=rr+cc,b2=freq<3?215:freq<6?135:55;
+    ctx.fillStyle=isPairA?'#E24B4A':isPairB?'#378ADD':`rgb(${b2},${b2},${b2})`;
+    ctx.fillRect(dcx+cc*(dcsz+1),dcy+rr*(dcsz+1),dcsz,dcsz);
+  }
+  ctx.strokeStyle='#E24B4A';ctx.lineWidth=2.5;
+  ctx.strokeRect(dcx+1*(dcsz+1),dcy+4*(dcsz+1),dcsz,dcsz);
+  ctx.strokeRect(dcx+4*(dcsz+1),dcy+1*(dcsz+1),dcsz,dcsz);
+  // labels
+  lbl(ctx,'DCT系数域（8×8）',dcx,dcy-7,null,11);
+  const zy=dcy+8*(dcsz+2)+6;
+  lbl(ctx,'低频(DC)',dcx,zy,'#378ADD',10);
+  lbl(ctx,'中频↑（水印）',dcx+3*(dcsz+1),zy,'#E24B4A',10);
+  lbl(ctx,'高频',dcx+6*(dcsz+1),zy,'#aaa',10);
+  // bar chart
+  const bx=dcx,by=zy+16,bw2=dcsz*3,bh2=55;
+  const seed=selBlock*17,fA=80+(seed%40),fB=fA+(dctBit===1?15:-15),maxF=Math.max(fA,fB,60);
+  ctx.fillStyle='#E24B4A';ctx.globalAlpha=.85;
+  ctx.fillRect(bx,by+bh2-Math.round(fA/maxF*bh2),bw2,Math.round(fA/maxF*bh2));
+  ctx.fillStyle='#378ADD';
+  ctx.fillRect(bx+bw2+6,by+bh2-Math.round(fB/maxF*bh2),bw2,Math.round(fB/maxF*bh2));
+  ctx.globalAlpha=1;
+  lbl(ctx,'F(4,1)='+fA,bx+bw2/2,by+bh2+13,'#E24B4A',10,'center');
+  lbl(ctx,'F(1,4)='+fB,bx+bw2+6+bw2/2,by+bh2+13,'#378ADD',10,'center');
+}
+
+// ③ JND
+function drawJND(){
+  const r=getCtx('ec2',230);if(!r)return;
+  const {ctx,W,H}=r;
+  const S=baseStrength;
+  document.getElementById('esl2v').textContent=S;
+  const N=12,bw=Math.floor((W-8)/N)-3,bh=88;
+  const vars=[2,3,5,8,15,30,60,100,200,400,600,900];
+  const avg=vars.reduce((a,b)=>a+b,0)/N;
+  const deltas=vars.map(v=>S*(.6+.4*Math.log(1+v/avg)));
+  const maxD=Math.max(...deltas);
+  for(let i=0;i<N;i++){
+    const x=4+i*(bw+3),y=24,v=vars[i],str=Math.min(deltas[i]/maxD,1);
+    // texture
+    ctx.save();ctx.beginPath();ctx.rect(x,y,bw,bh);ctx.clip();
+    for(let py=0;py<bh;py+=2)for(let px=0;px<bw;px+=2){
+      const tv=Math.floor(200-Math.random()*Math.sqrt(v)*.9);
+      ctx.fillStyle=`rgb(${tv},${tv},${tv})`;ctx.fillRect(x+px,y+py,2,2);
+    }
+    ctx.restore();
+    if(i===0||i===3||i===6||i===9||i===11)lbl(ctx,'σ²='+v,x+bw/2,y+bh+9,'#666',9,'center');
+    const barH=Math.floor(str*65);
+    const bc=str>.7?'#E24B4A':str>.4?'#EF9F27':'#378ADD';
+    ctx.fillStyle=bc;ctx.globalAlpha=.85;
+    ctx.fillRect(x,y+bh+14+65-barH,bw,barH);ctx.globalAlpha=1;
+    if(i===0||i===11)lbl(ctx,'δ='+deltas[i].toFixed(0),x+bw/2,y+bh+88,bc,9,'center');
+  }
+  lbl(ctx,'纹理块（上）→ 方差越大越粗糙',4,15,null,11);
+  lbl(ctx,'嵌入强度 δ（彩柱）→ 纹理越强强度越高',4,H-4,'#666',10);
+}
+
+// ④ Arnold
+function drawArnold(){
+  const r=getCtx('ec3',270);if(!r)return;
+  const {ctx,W,H}=r;
+  const N=8,sz=Math.min(28,Math.floor(W*.34/N));
+  const ox1=12,ox2=Math.floor(W/2)+8,oy=48;
+  function bit(i,j){return((i*N+j)*7+13)%2;}
+  function arnId(i,j){return[(i+j)%N,(i+2*j)%N];}
+  const orig=[];for(let i=0;i<N;i++)for(let j=0;j<N;j++)orig.push(bit(i,j));
+  const arn=new Array(N*N).fill(0);
+  for(let i=0;i<N;i++)for(let j=0;j<N;j++){const[ni,nj]=arnId(i,j);arn[ni*N+nj]=orig[i*N+j];}
+  const dmg=[...arn];
+  if(arnStep>=2)for(let i=0;i<N*2;i++)dmg[i]=Math.random()>.3?dmg[i]:1-dmg[i];
+  const rec=new Array(N*N).fill(0);
+  if(arnStep>=3)for(let i=0;i<N;i++)for(let j=0;j<N;j++){const[ni,nj]=arnId(i,j);rec[i*N+j]=dmg[ni*N+nj];}
+  function grid(ox,oy2,bits,ttl,showDmg){
+    lbl(ctx,ttl,ox+N*sz/2,oy2-10,'#333',11,'center');
+    for(let i=0;i<N;i++)for(let j=0;j<N;j++){
+      const b=bits[i*N+j],isDmg=showDmg&&i<2;
+      ctx.fillStyle=isDmg?'#EF9F27':(b?'#185FA5':'#E8F0FB');
+      ctx.fillRect(ox+j*sz,oy2+i*sz,sz-1,sz-1);
+    }
+  }
+  const stLbl=['① 原始比特排列','② Arnold 置乱','③ 模拟压缩破坏','④ 反置乱恢复'];
+  lbl(ctx,stLbl[arnStep],W/2,16,'#333',12,'center');
+  if(arnStep===0){grid(ox1,oy,orig,'原始（连续区域脆弱）',false);lbl(ctx,'■蓝=1  □浅=0  | 连续区域若被攻击→连续错误难纠正',12,oy+N*sz+18,'#888',10);}
+  else if(arnStep===1){grid(ox1,oy,orig,'原始',false);grid(ox2,oy,arn,'置乱后（比特分散）',false);arr(ctx,ox1+N*sz+6,oy+N*sz/2,ox2-6,oy+N*sz/2,'#4a9e6b','置乱');}
+  else if(arnStep===2){grid(ox1,oy,arn,'置乱后',false);grid(ox2,oy,dmg,'压缩破坏（橙=错误）',true);arr(ctx,ox1+N*sz+6,oy+N*sz/2,ox2-6,oy+N*sz/2,'#E24B4A','攻击');lbl(ctx,'▲橙色=被破坏比特',12,oy+N*sz+18,'#EF9F27',10);}
+  else{grid(ox1,oy,dmg,'受损',true);grid(ox2,oy,rec,'反置乱（错误稀释）',false);arr(ctx,ox1+N*sz+6,oy+N*sz/2,ox2-6,oy+N*sz/2,'#4a9e6b','反置乱');lbl(ctx,'✓ 连续错误稀释为离散，多数表决可纠正',12,oy+N*sz+18,'#4a9e6b',10);}
+}
+
+// ⑤ DCT Modulation
+function drawDCTMod(){
+  const r=getCtx('ec4',230);if(!r)return;
+  const {ctx,W,H}=r;
+  document.getElementById('eslmodv').textContent=dctDelta;
+  const N=8,sz=Math.min(22,Math.floor(W*.3/N));
+  const ox=10,oy=22;
+  for(let rr=0;rr<8;rr++)for(let cc=0;cc<8;cc++){
+    const a=rr===4&&cc===1,b2=rr===1&&cc===4;
+    const f=rr+cc,bv=f<3?210:f<6?130:60;
+    ctx.fillStyle=a?'#E24B4A':b2?'#378ADD':`rgb(${bv},${bv},${bv})`;
+    ctx.fillRect(ox+cc*(sz+1),oy+rr*(sz+1),sz,sz);
+  }
+  lbl(ctx,'8×8 DCT系数矩阵',ox,oy-7,null,11);
+  for(let i=0;i<8;i++){
+    lbl(ctx,i+'',ox+i*(sz+1)+sz/2,oy+8*sz+14,'#999',8,'center');
+    lbl(ctx,i+'',ox-8,oy+i*(sz+1)+sz/2+4,'#999',8,'right');
+  }
+  const bx=ox+8*(sz+1)+20,by=oy+8,bw2=30,bh2=130,gap=12;
+  const base=100,fA=dctBit?base+dctDelta:base-dctDelta,fB=dctBit?base-dctDelta:base+dctDelta;
+  const maxF=base+dctDelta+10;
+  const hA=Math.round(fA/maxF*bh2),hB=Math.round(fB/maxF*bh2);
+  ctx.fillStyle='#E24B4A';ctx.globalAlpha=.88;ctx.fillRect(bx,by+bh2-hA,bw2,hA);
+  ctx.fillStyle='#378ADD';ctx.fillRect(bx+bw2+gap,by+bh2-hB,bw2,hB);ctx.globalAlpha=1;
+  const mid=by+bh2/2;
+  if(dctBit){arr(ctx,bx+bw2,mid,bx+bw2+gap,mid+28,'#4a9e6b','');lbl(ctx,'A>B → bit=1',bx,by+bh2+13,'#4a9e6b',11);}
+  else{arr(ctx,bx+bw2,mid+28,bx+bw2+gap,mid,'#4a9e6b','');lbl(ctx,'A<B → bit=0',bx,by+bh2+13,'#4a9e6b',11);}
+  lbl(ctx,'F(4,1)='+fA,bx+bw2/2,by+bh2+26,'#E24B4A',10,'center');
+  lbl(ctx,'F(1,4)='+fB,bx+bw2+gap+bw2/2,by+bh2+26,'#378ADD',10,'center');
+  lbl(ctx,'系数对大小编码比特',bx,by-7,null,10);
+  lbl(ctx,'δ='+dctDelta+'，需超过JPEG量化步长',bx,by+bh2+40,'#888',10);
+}
+
+// ⑥ Tile
+function drawTile(){
+  const r=getCtx('ec5',240);if(!r)return;
+  const {ctx,W,H}=r;
+  document.getElementById('esl5v').textContent='裁掉 '+tileCrop+'%';
+  const COLS=12,ROWS=5,bw=Math.floor(W*.8/COLS)-2,bh=Math.floor(155/ROWS)-2;
+  const ox=10,oy=28;
+  const tgs=3,colors=['#185FA5','#1D9E75','#BA7517','#993C1D','#534AB7','#3B6D11'];
+  const total=COLS*ROWS,cf=Math.floor(total*(100-tileCrop)/100);
+  for(let rr=0;rr<ROWS;rr++)for(let cc=0;cc<COLS;cc++){
+    const idx=rr*COLS+cc,isCrop=idx>=cf,tg=Math.floor(idx/tgs)%colors.length,hi=tg===tileHighlight;
+    ctx.fillStyle=isCrop?'#e0e0e0':colors[tg];
+    ctx.globalAlpha=isCrop?.2:(hi?1:.5);
+    ctx.fillRect(ox+cc*(bw+2),oy+rr*(bh+2),bw,bh);
+    if(!isCrop){
+      ctx.globalAlpha=1;
+      ctx.fillStyle='rgba(255,255,255,.8)';
+      ctx.font='8px sans-serif';ctx.textAlign='center';
+      ctx.fillText((Math.floor(idx/tgs)%3+1)+'',ox+cc*(bw+2)+bw/2,oy+rr*(bh+2)+bh/2+3);
+    }
+    ctx.globalAlpha=1;
+  }
+  if(tileCrop>0){
+    const cx=ox+Math.floor(COLS*(100-tileCrop)/100)*(bw+2);
+    ctx.fillStyle='rgba(220,50,50,.1)';ctx.fillRect(cx,oy,W-cx-4,ROWS*(bh+2));
+    ctx.strokeStyle='#E24B4A';ctx.lineWidth=1.5;ctx.setLineDash([4,3]);
+    ctx.beginPath();ctx.moveTo(cx,oy);ctx.lineTo(cx,oy+ROWS*(bh+2));ctx.stroke();ctx.setLineDash([]);
+    lbl(ctx,'← 裁剪边界',cx+4,oy-8,'#E24B4A',10);
+  }
+  lbl(ctx,'同色=同 tile 组（3份冗余），数字=副本编号',ox,oy-10,null,10);
+  lbl(ctx,'保留完整 tile 组：'+Math.floor(cf/tgs)+'  |  高亮组 tile-'+(tileHighlight+1),ox,oy+ROWS*(bh+2)+15,null,10);
+}
+
+// ⑦ GRL
+function drawGRL(){
+  const r=getCtx('ec6',230);if(!r)return;
+  const {ctx,W,H}=r;
+  document.getElementById('esl6v').textContent=grlDensity+'%';
+  const COLS=16,ROWS=8,bw=Math.floor(W*.75/COLS)-1,bh=Math.floor(155/ROWS)-1;
+  const ox=10,oy=28;
+  function ph(i){let x=i*2654435761;x^=x>>16;x^=x<<5;return(x>>>0)/0xFFFFFFFF;}
+  for(let rr=0;rr<ROWS;rr++)for(let cc=0;cc<COLS;cc++){
+    const i=rr*COLS+cc,p=ph(i+grlFrame*3),used=p<grlDensity/100;
+    ctx.fillStyle=!used?'#e8eaed':(ph(i+1)>.5?'#E24B4A':'#378ADD');
+    ctx.globalAlpha=used?.85:.3;
+    ctx.fillRect(ox+cc*(bw+1),oy+rr*(bh+1),bw,bh);ctx.globalAlpha=1;
+  }
+  lbl(ctx,'全局伪随机布局（密度 '+grlDensity+'%）— 红=bit1  蓝=bit0  灰=未用',ox,oy-10,null,10);
+  lbl(ctx,'伪随机置换表决定每个比特写入哪个块，攻击者无法预知分布',ox,oy+ROWS*(bh+1)+15,'#888',10);
+}
+
+// ⑧ m-sequence
+function drawMSeq(){
+  const r=getCtx('ec7',195);if(!r)return;
+  const {ctx,W,H}=r;
+  const N=31;
+  if(mSyncView==='seq'){
+    const bw=Math.floor((W-20)/N)-1,oy=56,bh=50;
+    // bars
+    for(let i=0;i<N;i++){
+      const x=10+i*(bw+1);
+      ctx.fillStyle=MSYNC[i]?'#4a9e6b':'#d8f0e4';
+      ctx.fillRect(x,oy+(MSYNC[i]?0:bh*.5),bw,MSYNC[i]?bh:bh*.5);
+    }
+    // waveform
+    ctx.strokeStyle='#2d8a52';ctx.lineWidth=2;ctx.beginPath();
+    MSYNC.forEach((v,i)=>{
+      const x=10+i*(bw+1),y=oy+(v?1:bh*.5+1);
+      i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+      ctx.lineTo(x+bw,y);
+      if(i<N-1){const nx=10+(i+1)*(bw+1),ny=oy+(MSYNC[i+1]?1:bh*.5+1);ctx.lineTo(nx,ny);}
+    });ctx.stroke();
+    lbl(ctx,'m 序列（31位最大长度序列）',10,oy-12,'#333',11);
+    lbl(ctx,MSYNC.join(''),10,oy+bh+14,'#888',9);
+    lbl(ctx,'嵌入时：此序列率先写入每数据包，作为帧定位锚点',10,H-6,'#4a9e6b',10);
+  } else if(mSyncView==='autocorr'){
+    const cs=[];
+    for(let off=0;off<N;off++){
+      let s=0;for(let i=0;i<N;i++){const a=MSYNC[i]?1:-1,b=MSYNC[(i+off)%N]?1:-1;s+=a*b;}cs.push(s);
+    }
+    const ox=12,cy=115,ch=78,cw=W-24;
+    ctx.strokeStyle='#e0e0e0';ctx.lineWidth=.8;
+    ctx.beginPath();ctx.moveTo(ox,cy);ctx.lineTo(ox+cw,cy);ctx.stroke();
+    // bars for autocorr
+    const barW=Math.floor(cw/N)-1;
+    cs.forEach((v,i)=>{
+      const x=ox+i*(barW+1);
+      const pxH=Math.abs(v)/N*(ch/2)*.92;
+      ctx.fillStyle=i===0?'#4a9e6b':'#bcd';
+      ctx.fillRect(x,cy-(v>0?pxH:0),barW,pxH||1);
+    });
+    lbl(ctx,'m序列自相关函数',ox,24,'#333',11);
+    lbl(ctx,'偏移=0时峰值=31',ox,38,'#4a9e6b',10);
+    lbl(ctx,'其余偏移值=−1（旁瓣极低）',ox+140,38,'#888',10);
+    lbl(ctx,'↑ 31',ox-2,cy-ch/2*.9,'#4a9e6b',9,'right');
+    lbl(ctx,'← 这就是滑动窗口能精确定位的原因',ox+8,cy-ch/2*.9+12,'#333',10);
+    for(let i=0;i<N;i+=5)lbl(ctx,i+'',ox+i*(barW+1),cy+13,'#aaa',8,'center');
+    lbl(ctx,'偏移量',ox+cw/2,cy+24,'#aaa',10,'center');
+  } else {
+    const ox=10,oy=68,h=42,total=60;
+    const segs=[{len:31,col:'#4a9e6b',t:'m序列同步头',s:'31位'},{len:8,col:'#185FA5',t:'长度字段',s:'8位'},{len:21,col:'#BA7517',t:'水印载荷',s:'可变长'}];
+    let cx2=ox;
+    segs.forEach(sg=>{
+      const sw=Math.floor(sg.len/total*(W-20));
+      ctx.fillStyle=sg.col;ctx.globalAlpha=.85;ctx.fillRect(cx2,oy,sw,h);ctx.globalAlpha=1;
+      ctx.fillStyle='#fff';ctx.font='bold 11px sans-serif';ctx.textAlign='center';ctx.fillText(sg.t,cx2+sw/2,oy+15);
+      ctx.font='10px sans-serif';ctx.fillText(sg.s,cx2+sw/2,oy+30);
+      cx2+=sw;
+    });
+    lbl(ctx,'数据包结构（每个 tile 副本的格式）',ox,oy-16,'#333',11);
+    lbl(ctx,'提取时先滑动匹配同步头，峰值位置即为载荷起点，再按长度字段读取后续数据',ox,oy+h+16,'#666',10);
+  }
+}
+
+// ═══ EXTRACT DRAW FUNCTIONS ═══════════════════════════════
+
+// xc0: bits
+function drawXBits(){
+  const r=getCtx('xc0',230);if(!r)return;
+  const {ctx,W,H}=r;
+  const N=40,cols=10,rows=4;
+  const bw=Math.floor((W-20)/cols)-2,bh=Math.floor(135/rows)-2;
+  const ox=10,oy=28;
+  const erR={none:.02,jpeg:.08,noise:.15,crop:0};
+  const cf=xAttack==='crop'?Math.floor(N*.55):N;
+  let errCount=0;
+  for(let i=0;i<N;i++){
+    const rr=Math.floor(i/cols),cc=i%cols,x=ox+cc*(bw+2),y=oy+rr*(bh+2);
+    const crop=i>=cf;
+    if(crop){
+      ctx.fillStyle='#e0e0e0';ctx.globalAlpha=.35;ctx.fillRect(x,y,bw,bh);ctx.globalAlpha=1;
+      ctx.fillStyle='#aaa';ctx.font='10px sans-serif';ctx.textAlign='center';ctx.fillText('×',x+bw/2,y+bh/2+4);
+      continue;
+    }
+    const ob=(i*7+3)%2,err=Math.random()<(erR[xAttack]||0);
+    if(err)errCount++;
+    ctx.fillStyle=err?'#E24B4A':(ob?'#4a9e6b':'#ddeeff');
+    ctx.globalAlpha=.85;ctx.fillRect(x,y,bw,bh);ctx.globalAlpha=1;
+    if(err){ctx.fillStyle='#fff';ctx.font='bold 9px sans-serif';ctx.textAlign='center';ctx.fillText('✗',x+bw/2,y+bh/2+3);}
+  }
+  const lbs={none:'无攻击（错误率≈2%）',jpeg:'JPEG Q=70（错误率≈8%）',noise:'高斯噪声（≈15%）',crop:'局部裁剪55%（灰=丢失）'};
+  lbl(ctx,'候选比特流 '+N+' 块 | '+lbs[xAttack],ox,oy-10,'#333',10);
+  lbl(ctx,'■绿=正确  ■红=翻转错误  ■灰=丢失',ox,H-5,'#666',10);
+}
+
+// xc1: m-seq sync
+function drawXSync(){
+  const r=getCtx('xc1',295);if(!r)return;
+  const {ctx,W,H}=r;
+  const N=31,STREAM=64,embedPos=16;
+  document.getElementById('xsl1v').textContent=xSyncNoise+' 位';
+  document.getElementById('xsl1bv').textContent='位置 '+xSyncPos;
+  const noisy=[...MSYNC];
+  const flips=[];
+  for(let i=0;i<xSyncNoise;i++){let p;do{p=Math.floor(Math.random()*N);}while(flips.includes(p));flips.push(p);noisy[p]=1-noisy[p];}
+  const stream=new Array(STREAM).fill(0).map((_,i)=>i>=embedPos&&i<embedPos+N?noisy[i-embedPos]:((i*3+7)%3===0?1:0));
+  const syncB=MSYNC.map(v=>v?1:-1);
+
+  // Part1: stream
+  const bw=Math.max(1,(W-20)/STREAM-0.5),bh=19,ox=10,oy=22;
+  for(let i=0;i<STREAM;i++){
+    const x=ox+i*(bw+.5),inSync=i>=embedPos&&i<embedPos+N,inWin=i>=xSyncPos&&i<xSyncPos+N,flip=inSync&&flips.includes(i-embedPos);
+    ctx.fillStyle=flip?'#EF9F27':inSync?'#4a9e6b':(stream[i]?'#185FA5':'#ddeeff');
+    ctx.globalAlpha=inWin?1:.38;ctx.fillRect(x,oy,bw,bh);ctx.globalAlpha=1;
+  }
+  const wx=ox+xSyncPos*(bw+.5);
+  ctx.strokeStyle='#EF9F27';ctx.lineWidth=2;ctx.strokeRect(wx,oy-2,N*(bw+.5),bh+4);
+  const win=stream.slice(xSyncPos,xSyncPos+N);
+  const winB=win.map(v=>v?1:-1);
+  const corrNow=winB.reduce((s,v,j)=>s+v*syncB[j],0);
+  lbl(ctx,'候选比特流（绿=m序列位置，橙框=当前'+N+'位窗口，橙色=翻转）',ox,oy-8,'#333',10);
+
+  // Part2: window vs template
+  const wy=oy+bh+18;
+  lbl(ctx,'当前窗口：',ox,wy-3,'#333',10);
+  lbl(ctx,'m序列模板：',ox,wy+bh+10,'#333',10);
+  const swb=Math.max(1,(W-20)/N-.5);
+  for(let i=0;i<N;i++){
+    const x=ox+i*(swb+.5),wv=win[i]??0,mv=MSYNC[i],match=wv===mv;
+    ctx.fillStyle=wv?'#185FA5':'#ddeeff';ctx.fillRect(x,wy,swb,bh);
+    ctx.fillStyle=mv?'#4a9e6b':'#ddeeff';ctx.fillRect(x,wy+bh+8,swb,bh);
+    if(!match){ctx.strokeStyle='#EF9F27';ctx.lineWidth=1.2;ctx.strokeRect(x,wy,swb,bh);ctx.strokeRect(x,wy+bh+8,swb,bh);}
+  }
+  const ok=corrNow>22;
+  lbl(ctx,'互相关值 = '+corrNow+' / '+N+'  |  阈值=22  |  '+(ok?'✓ 找到同步头！':'✗ 低于阈值，继续滑动'),ox,wy+2*bh+22,ok?'#4a9e6b':'#E24B4A',11);
+
+  // Part3: correlation curve
+  const cs=[];
+  for(let off=0;off<=STREAM-N;off++){const w2=stream.slice(off,off+N).map(v=>v?1:-1);cs.push(w2.reduce((s,v,j)=>s+v*syncB[j],0));}
+  const maxC=Math.max(...cs.map(Math.abs));
+  const cy=wy+2*bh+38,ch=56,cw=W-20;
+  ctx.strokeStyle='#e8eaed';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(ox,cy+ch/2);ctx.lineTo(ox+cw,cy+ch/2);ctx.stroke();
+  ctx.strokeStyle='#4a80d0';ctx.lineWidth=1.5;ctx.beginPath();
+  cs.forEach((v,i)=>{const x=ox+i*(cw/cs.length),y=cy+ch/2-v/maxC*(ch/2-3);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();
+  const thr=N*.7;
+  ctx.setLineDash([4,3]);ctx.strokeStyle='#E24B4A';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(ox,cy+ch/2-thr/maxC*(ch/2-3));ctx.lineTo(ox+cw,cy+ch/2-thr/maxC*(ch/2-3));ctx.stroke();ctx.setLineDash([]);
+  lbl(ctx,'阈值 22',ox+cw-42,cy+ch/2-thr/maxC*(ch/2-3)-3,'#E24B4A',9);
+  const xp=ox+xSyncPos*(cw/cs.length);
+  ctx.strokeStyle='#EF9F27';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(xp,cy);ctx.lineTo(xp,cy+ch);ctx.stroke();
+  lbl(ctx,'▲',xp,cy+ch+11,'#EF9F27',10,'center');
+  lbl(ctx,'滑动相关曲线（峰值=同步头起点）',ox,cy-8,'#333',10);
+}
+
+// xc2: phase search
+function drawXPhase(){
+  const r=getCtx('xc2',230);if(!r)return;
+  const {ctx,W,H}=r;
+  document.getElementById('xsl2v').textContent=xPhaseOff+' px';
+  const maxOff=8;
+  // show grid drift visualization on the left
+  const gx=10,gy=40,gsz=16,gcols=6,grows=5;
+  lbl(ctx,'分块网格漂移示意：',gx,gy-12,'#333',11);
+  for(let rr=0;rr<grows;rr++)for(let cc=0;cc<gcols;cc++){
+    const x=gx+cc*(gsz+1)+xPhaseOff,y=gy+rr*(gsz+1);// drift by phaseOff
+    ctx.fillStyle=`hsl(${(rr*gcols+cc)*18},35%,82%)`;
+    ctx.fillRect(x,y,gsz,gsz);
+  }
+  // ideal grid
+  for(let rr=0;rr<grows;rr++)for(let cc=0;cc<gcols;cc++){
+    ctx.strokeStyle='#4a9e6b';ctx.lineWidth=1;
+    ctx.strokeRect(gx+cc*(gsz+1),gy+rr*(gsz+1),gsz,gsz);
+  }
+  lbl(ctx,'绿框=理想边界  色块=实际分块（偏移'+xPhaseOff+'px）',gx,gy+grows*(gsz+1)+12,'#666',10);
+
+  // bar chart of phase correlations
+  function phCorr(off){return Math.max(0,28-Math.abs(off-4)*3.5+(off===4?0:Math.random()*1.2));}
+  const cs=[];for(let i=0;i<maxOff;i++)cs.push(phCorr(i));
+  const best=cs.indexOf(Math.max(...cs));
+  const bw=Math.floor((W*.55)/maxOff)-5,bh=95,box=W*.42,boy=32;
+  lbl(ctx,'各偏移量的 m序列相关峰值：',box,boy-12,'#333',11);
+  cs.forEach((c2,i)=>{
+    const x=box+i*(bw+5),h2=Math.round(c2/28*bh);
+    const isCur=i===xPhaseOff,isB=i===best;
+    ctx.fillStyle=isB?'#4a9e6b':isCur?'#EF9F27':'#bcd';
+    ctx.globalAlpha=.85;ctx.fillRect(x,boy+bh-h2,bw,h2);ctx.globalAlpha=1;
+    lbl(ctx,c2.toFixed(0),x+bw/2,boy+bh-h2-3,'#333',9,'center');
+    lbl(ctx,i+'px',x+bw/2,boy+bh+12,(isB?'#4a9e6b':isCur?'#EF9F27':'#888'),9,'center');
+    if(isB)lbl(ctx,'★',x+bw/2,boy+bh-h2-14,'#4a9e6b',11,'center');
+  });
+  const thr=boy+bh-Math.round(22/28*bh);
+  ctx.setLineDash([4,3]);ctx.strokeStyle='#E24B4A';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(box,thr);ctx.lineTo(box+maxOff*(bw+5),thr);ctx.stroke();ctx.setLineDash([]);
+  lbl(ctx,'阈值',box+maxOff*(bw+5)+2,thr+3,'#E24B4A',9);
+  lbl(ctx,'当前偏移='+xPhaseOff+'px  相关='+cs[xPhaseOff].toFixed(0)+'  最优='+best+'px（绿★）',box,boy+bh+26,'#333',10);
+}
+
+// xc3: rotation retry
+function drawXRot(){
+  const r=getCtx('xc3',230);if(!r)return;
+  const {ctx,W,H}=r;
+  document.getElementById('xsl3v').textContent=rotAngle.toFixed(1)+'°';
+  // show rotated grid cartoon
+  const gx=W*.08,gy=H/2,gs=60;
+  ctx.save();ctx.translate(gx+gs/2,gy);ctx.rotate(rotAngle*Math.PI/180);
+  ctx.strokeStyle='#E24B4A';ctx.lineWidth=1.2;
+  for(let i=0;i<=4;i++)for(let j=0;j<=4;j++){
+    ctx.strokeRect(-gs/2+i*12,-gs/2+j*12,12,12);
+  }
+  ctx.restore();
+  ctx.strokeStyle='#4a9e6b';ctx.lineWidth=1;ctx.setLineDash([3,2]);
+  for(let i=0;i<=4;i++)for(let j=0;j<=4;j++){
+    ctx.strokeRect(gx+i*12,gy-30+j*12,12,12);
+  }
+  ctx.setLineDash([]);
+  lbl(ctx,'红格=旋转后分块（失步）',gx,gy-38,'#E24B4A',10);
+  lbl(ctx,'绿格=标准对齐',gx,gy+36,'#4a9e6b',10);
+
+  // bar chart of rotation search scores
+  const steps=[-2,-1.5,-1,-0.5,0,0.5,1,1.5,2];
+  function rotScore(ang){return Math.max(0,29-Math.abs(ang+rotAngle)*8+(Math.random()*.8));}
+  const scores=steps.map(a=>rotScore(a));
+  const bestIdx=scores.indexOf(Math.max(...scores));
+  const box=W*.38,boy=25,bw=Math.floor((W*.56)/steps.length)-4,bh=105;
+  lbl(ctx,'旋转补偿搜索（步长0.5°）：',box,boy-12,'#333',11);
+  scores.forEach((sc,i)=>{
+    const x=box+i*(bw+4),h2=Math.round(sc/29*bh);
+    const isB=i===bestIdx;
+    ctx.fillStyle=isB?'#4a9e6b':'#bcd';
+    ctx.globalAlpha=.85;ctx.fillRect(x,boy+bh-h2,bw,h2);ctx.globalAlpha=1;
+    lbl(ctx,sc.toFixed(0),x+bw/2,boy+bh-h2-3,null,8,'center');
+    lbl(ctx,steps[i]+'°',x+bw/2,boy+bh+12,isB?'#4a9e6b':'#888',9,'center');
+    if(isB){lbl(ctx,'★最优',x+bw/2,boy+bh-h2-14,'#4a9e6b',9,'center');}
+  });
+  lbl(ctx,'图片旋转 '+rotAngle.toFixed(1)+'°，最优补偿角='+steps[bestIdx]+'°，m序列相关峰值='+scores[bestIdx].toFixed(0),box,boy+bh+28,'#333',10);
+}
+
+// xc4: vote
+function drawXVote(){
+  const r=getCtx('xc4',250);if(!r)return;
+  const {ctx,W,H}=r;
+  const N=8,sz=Math.min(22,Math.floor(W*.22/N));
+  const nC=4,ox=10,oy=38,gap=8;
+  function bit(i,j){return((i*N+j)*7+13)%2;}
+  function arnId(i,j){return[(i+j)%N,(i+2*j)%N];}
+  const orig=[];for(let i=0;i<N;i++)for(let j=0;j<N;j++)orig.push(bit(i,j));
+  const arn=new Array(N*N).fill(0);
+  for(let i=0;i<N;i++)for(let j=0;j<N;j++){const[ni,nj]=arnId(i,j);arn[ni*N+nj]=orig[i*N+j];}
+  const stLbl=['① 各副本提取（含不同噪声）','② Arnold 反置乱','③ 逐位多数表决','④ 融合结果（误码↓）'];
+  lbl(ctx,stLbl[xVoteStep],W/2,16,'#333',12,'center');
+  if(xVoteStep===0){
+    for(let k=0;k<nC;k++){
+      const er=.05+k*.06,cx=ox+k*(N*sz+gap+18);
+      lbl(ctx,'副本'+(k+1),cx+N*sz/2,oy-8,'#555',10,'center');
+      for(let i=0;i<N;i++)for(let j=0;j<N;j++){
+        const b=arn[i*N+j],err=Math.random()<er;
+        ctx.fillStyle=err?'#EF9F27':(b?'#185FA5':'#ddeeff');
+        ctx.fillRect(cx+j*sz,oy+i*sz,sz-1,sz-1);
+      }
+    }
+  } else if(xVoteStep===1){
+    for(let k=0;k<nC;k++){
+      const er=.05+k*.06,cx=ox+k*(N*sz+gap+18);
+      lbl(ctx,'解交织'+(k+1),cx+N*sz/2,oy-8,'#555',10,'center');
+      for(let i=0;i<N;i++)for(let j=0;j<N;j++){
+        const err=Math.random()<er,b=err?1-orig[i*N+j]:orig[i*N+j];
+        ctx.fillStyle=err?'#EF9F27':(b?'#185FA5':'#ddeeff');
+        ctx.fillRect(cx+j*sz,oy+i*sz,sz-1,sz-1);
+      }
+    }
+  } else if(xVoteStep===2){
+    const vox=W/2-N*sz/2;
+    lbl(ctx,'投票结果',vox+N*sz/2,oy-8,'#333',10,'center');
+    for(let i=0;i<N;i++)for(let j=0;j<N;j++){
+      const votes=[0,1,2,3].map(k=>{const er=.05+k*.06;return Math.random()<er?1-orig[i*N+j]:orig[i*N+j];});
+      const res=votes.reduce((a,b)=>a+b,0)>=2?1:0;
+      ctx.fillStyle=(res===orig[i*N+j]?(res?'#4a9e6b':'#ddf5e8'):'#E24B4A');
+      ctx.fillRect(vox+j*sz,oy+i*sz,sz-1,sz-1);
+    }
+    lbl(ctx,'红=仍有少量错误',vox,oy+N*sz+14,'#E24B4A',10);
+  } else {
+    const vox=W/2-N*sz/2;
+    lbl(ctx,'最终融合',vox+N*sz/2,oy-8,'#4a9e6b',10,'center');
+    for(let i=0;i<N;i++)for(let j=0;j<N;j++){
+      const err=Math.random()<.008,b=err?1-orig[i*N+j]:orig[i*N+j];
+      ctx.fillStyle=err?'#E24B4A':(b?'#4a9e6b':'#ddf5e8');
+      ctx.fillRect(vox+j*sz,oy+i*sz,sz-1,sz-1);
+    }
+    lbl(ctx,'✓ 误码率 < 1%，送入 CRC 校验',vox,oy+N*sz+14,'#4a9e6b',10);
+  }
+}
+
+// xc5: CRC
+function drawXCRC(){
+  const r=getCtx('xc5',215);if(!r)return;
+  const {ctx,W,H}=r;
+  const BITS=40,ox=10,oy=36;
+  const bw=Math.floor((W-20)/BITS)-1,payEnd=32;
+  for(let i=0;i<BITS;i++){
+    const isCRC=i>=payEnd;
+    const erP=xCRCScene==='fail'?.15:xCRCScene==='borderline'?.04:.008;
+    const err=!isCRC&&Math.random()<erP;
+    ctx.fillStyle=isCRC?'#534AB7':err?'#E24B4A':(((i*7+3)%2)?'#185FA5':'#ddeeff');
+    ctx.fillRect(ox+i*(bw+1),oy,bw,24);
+  }
+  lbl(ctx,'融合比特流（蓝=载荷  紫=CRC校验码  红=错误位）',ox,oy-8,'#333',10);
+  const ry=oy+36,rh=48,rw=Math.floor(W*.4);
+  const pass=xCRCScene==='pass',border=xCRCScene==='borderline';
+  const rc=pass?'#4a9e6b':border?'#EF9F27':'#E24B4A';
+  ctx.fillStyle=rc;ctx.globalAlpha=.1;ctx.fillRect(ox,ry,rw,rh);ctx.globalAlpha=1;
+  ctx.strokeStyle=rc;ctx.lineWidth=2;ctx.strokeRect(ox,ry,rw,rh);
+  const icons={pass:'✓  CRC 校验通过',fail:'✗  CRC 校验失败',borderline:'⚠  接近失败'};
+  lbl(ctx,icons[xCRCScene],ox+rw/2,ry+rh/2+5,rc,13,'center');
+  const outX=ox+rw+28,outY=ry,outW=W-outX-10,outH=rh,oc=pass?'#4a9e6b':'#E24B4A';
+  ctx.fillStyle=oc;ctx.globalAlpha=.08;ctx.fillRect(outX,outY,outW,outH);ctx.globalAlpha=1;
+  ctx.strokeStyle=oc;ctx.lineWidth=1.5;ctx.strokeRect(outX,outY,outW,outH);
+  lbl(ctx,pass?'输出水印文本：':'输出失败标签：',outX+8,outY+16,oc,10);
+  lbl(ctx,pass?'"版权所有 © 2024"':'[ WATERMARK_FAIL ]',outX+8,outY+34,oc,11);
+  arr(ctx,ox+rw,ry+rh/2,outX,ry+rh/2,oc);
+  lbl(ctx,pass?'CRC确保零误报，只输出已验证结果':'CRC不通过→拒绝输出，防止误报',ox,ry+rh+16,'#666',10);
+}
+
+// ═══ INIT & ANIMATION LOOPS ══════════════════════════════
+window.addEventListener('DOMContentLoaded',()=>{
+  setTimeout(redrawAll,80);
+});
+window.addEventListener('resize',()=>{
+  clearTimeout(window._rt);window._rt=setTimeout(redrawAll,120);
+});
+
+setInterval(()=>{
+  if(animDCT){selBlock=(selBlock+1)%16;document.getElementById('esl1').value=selBlock;redraw('ec1');}
+  if(grlAnim){grlFrame=(grlFrame+1)%100;redraw('ec6');}
+  if(xSyncAnim){xSyncPos=(xSyncPos+1)%34;document.getElementById('xsl1b').value=xSyncPos;redraw('xc1');}
+  if(xPhaseSearch){xPhaseFrame=(xPhaseFrame+1)%8;xPhaseOff=xPhaseFrame;document.getElementById('xsl2').value=xPhaseOff;redraw('xc2');}
+  if(rotAnim){rotFrame=(rotFrame+1)%41;rotAngle=(-2+rotFrame*.1);document.getElementById('xsl3').value=Math.round(rotAngle*10);document.getElementById('xsl3v').textContent=rotAngle.toFixed(1)+'°';redraw('xc3');}
+},350);
+</script>
+</body>
+</html>
