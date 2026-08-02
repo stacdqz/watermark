@@ -143,4 +143,5 @@ This repository provides public documentation, an interactive visualization, and
 
 ## Documentation
 
+- [操作手册（完整图文版）](docs/OPERATION_MANUAL.md)
 - [Release 说明](docs/RELEASE_NOTES_v13.md)
