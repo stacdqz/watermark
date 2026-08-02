@@ -1,0 +1,49 @@
+﻿attack,attack_label,attack_group,method,n,strict_dr,soft_dr,ber_mean,ber_std,runtime_ms_mean
+top30_occlusion,上裁30%(遮挡),occlusion,LSB,20,0.0,0.0,1.0,0.0,1.347
+top30_occlusion,上裁30%(遮挡),occlusion,DCT,20,0.0,0.0,0.2349,0.2136,9.866
+top30_occlusion,上裁30%(遮挡),occlusion,DCT-Pro,20,1.0,1.0,0.0,0.0,69.478
+top30_real,上裁30%(真实),real_crop,LSB,20,0.0,0.0,1.0,0.0,0.568
+top30_real,上裁30%(真实),real_crop,DCT,20,0.0,0.0,1.0,0.0,2.114
+top30_real,上裁30%(真实),real_crop,DCT-Pro,20,0.3,0.3,0.6745,0.455,128.424
+top50_occlusion,上裁50%(遮挡),occlusion,LSB,20,0.0,0.0,1.0,0.0,0.671
+top50_occlusion,上裁50%(遮挡),occlusion,DCT,20,0.0,0.0,0.3567,0.2265,10.742
+top50_occlusion,上裁50%(遮挡),occlusion,DCT-Pro,20,0.9,0.9,0.0721,0.2335,79.308
+top50_real,上裁50%(真实),real_crop,LSB,20,0.0,0.0,1.0,0.0,0.44
+top50_real,上裁50%(真实),real_crop,DCT,20,0.0,0.0,1.0,0.0,2.113
+top50_real,上裁50%(真实),real_crop,DCT-Pro,20,0.25,0.25,0.75,0.433,95.793
+left30_occlusion,左裁30%(遮挡),occlusion,LSB,20,0.0,0.0,1.0,0.0,0.647
+left30_occlusion,左裁30%(遮挡),occlusion,DCT,20,0.0,0.15,0.1235,0.1036,11.497
+left30_occlusion,左裁30%(遮挡),occlusion,DCT-Pro,20,1.0,1.0,0.0,0.0,85.094
+left30_real,左裁30%(真实),real_crop,LSB,20,0.0,0.0,1.0,0.0,0.446
+left30_real,左裁30%(真实),real_crop,DCT,20,0.0,0.0,1.0,0.0,2.049
+left30_real,左裁30%(真实),real_crop,DCT-Pro,20,0.1,0.1,0.8732,0.3135,165.942
+center60_screenshot,中心60%(截图),real_crop,LSB,20,0.0,0.0,1.0,0.0,0.487
+center60_screenshot,中心60%(截图),real_crop,DCT,20,0.0,0.0,1.0,0.0,1.757
+center60_screenshot,中心60%(截图),real_crop,DCT-Pro,20,0.2,0.2,0.7732,0.4037,78.624
+random30_real,随机30%(真实),real_crop,LSB,20,0.0,0.0,1.0,0.0,0.541
+random30_real,随机30%(真实),real_crop,DCT,20,0.0,0.0,1.0,0.0,1.332
+random30_real,随机30%(真实),real_crop,DCT-Pro,20,0.0,0.0,1.0,0.0,148.607
+top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,LSB,20,0.0,0.0,1.0,0.0,0.578
+top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,DCT,20,0.0,0.0,1.0,0.0,2.476
+top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,DCT-Pro,20,0.0,0.0,1.0,0.0,202.432
+jpeg_q70,JPEG Q70,compression,LSB,20,0.0,0.0,1.0,0.0,0.722
+jpeg_q70,JPEG Q70,compression,DCT,20,0.9,0.9,0.0716,0.2328,11.273
+jpeg_q70,JPEG Q70,compression,DCT-Pro,20,0.95,1.0,0.0022,0.0096,290.308
+jpeg_q50,JPEG Q50,compression,LSB,20,0.0,0.0,1.0,0.0,0.842
+jpeg_q50,JPEG Q50,compression,DCT,20,0.85,0.85,0.1219,0.3078,9.788
+jpeg_q50,JPEG Q50,compression,DCT-Pro,20,1.0,1.0,0.0,0.0,208.651
+jpeg_q30,JPEG Q30,compression,LSB,20,0.0,0.0,1.0,0.0,0.828
+jpeg_q30,JPEG Q30,compression,DCT,20,0.1,0.3,0.4824,0.4395,400.739
+jpeg_q30,JPEG Q30,compression,DCT-Pro,20,0.95,0.95,0.05,0.2179,250.333
+resize_50,缩放50%,resize,LSB,20,0.0,0.0,1.0,0.0,0.598
+resize_50,缩放50%,resize,DCT,20,0.1,0.1,0.6629,0.3936,213.581
+resize_50,缩放50%,resize,DCT-Pro,20,0.55,0.55,0.3982,0.4634,235.351
+resize_200,缩放200%,resize,LSB,20,0.0,0.0,1.0,0.0,0.582
+resize_200,缩放200%,resize,DCT,20,0.8,0.8,0.1441,0.3142,50.479
+resize_200,缩放200%,resize,DCT-Pro,20,1.0,1.0,0.0,0.0,96.092
+noise_sigma10,噪声σ=10,noise,LSB,20,0.0,0.0,1.0,0.0,0.681
+noise_sigma10,噪声σ=10,noise,DCT,20,0.8,0.8,0.1265,0.3057,11.555
+noise_sigma10,噪声σ=10,noise,DCT-Pro,20,1.0,1.0,0.0,0.0,169.151
+brightness_plus30,亮度+30%,brightness,LSB,20,0.0,0.0,1.0,0.0,0.644
+brightness_plus30,亮度+30%,brightness,DCT,20,0.65,0.7,0.2725,0.43,9.683
+brightness_plus30,亮度+30%,brightness,DCT-Pro,20,1.0,1.0,0.0,0.0,68.397

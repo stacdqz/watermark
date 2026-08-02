@@ -1,0 +1,1163 @@
+﻿image_index,image_name,method,attack,attack_label,attack_group,psnr,ssim,extracted_text,success,soft_success,ber,runtime_ms,output_height,output_width
+0,000000000139.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,54.0405,0.998848,,False,False,1.0,0.559,426,640
+0,000000000139.jpg,LSB,top30_real,上裁30%(真实),real_crop,54.0405,0.998848,,False,False,1.0,0.322,298,640
+0,000000000139.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,54.0405,0.998848,,False,False,1.0,0.344,426,640
+0,000000000139.jpg,LSB,top50_real,上裁50%(真实),real_crop,54.0405,0.998848,,False,False,1.0,0.267,213,640
+0,000000000139.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,54.0405,0.998848,,False,False,1.0,0.339,426,640
+0,000000000139.jpg,LSB,left30_real,左裁30%(真实),real_crop,54.0405,0.998848,,False,False,1.0,0.267,426,448
+0,000000000139.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,54.0405,0.998848,,False,False,1.0,0.258,256,384
+0,000000000139.jpg,LSB,random30_real,随机30%(真实),real_crop,54.0405,0.998848,,False,False,1.0,0.681,298,448
+0,000000000139.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,54.0405,0.998848,,False,False,1.0,0.751,298,640
+0,000000000139.jpg,LSB,jpeg_q70,JPEG Q70,compression,54.0405,0.998848,,False,False,1.0,0.538,426,640
+0,000000000139.jpg,LSB,jpeg_q50,JPEG Q50,compression,54.0405,0.998848,,False,False,1.0,0.547,426,640
+0,000000000139.jpg,LSB,jpeg_q30,JPEG Q30,compression,54.0405,0.998848,,False,False,1.0,0.483,426,640
+0,000000000139.jpg,LSB,resize_50,缩放50%,resize,54.0405,0.998848,,False,False,1.0,0.662,426,640
+0,000000000139.jpg,LSB,resize_200,缩放200%,resize,54.0405,0.998848,,False,False,1.0,0.62,426,640
+0,000000000139.jpg,LSB,noise_sigma10,噪声σ=10,noise,54.0405,0.998848,,False,False,1.0,0.577,426,640
+0,000000000139.jpg,LSB,brightness_plus30,亮度+30%,brightness,54.0405,0.998848,,False,False,1.0,0.5,426,640
+0,000000000139.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,45.8058,0.988945, CT_P K_A PYRAE@,False,False,0.095588,10.838,426,640
+0,000000000139.jpg,DCT,top30_real,上裁30%(真实),real_crop,45.8058,0.988945,,False,False,1.0,1.779,298,640
+0,000000000139.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,45.8058,0.988945, A  P 	[A PIB@A@,False,False,0.213235,7.319,426,640
+0,000000000139.jpg,DCT,top50_real,上裁50%(真实),real_crop,45.8058,0.988945,,False,False,1.0,1.267,213,640
+0,000000000139.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,45.8058,0.988945, CTZ@RN_CK@ RI HP,False,False,0.073529,8.759,426,640
+0,000000000139.jpg,DCT,left30_real,左裁30%(真实),real_crop,45.8058,0.988945,,False,False,1.0,1.582,426,448
+0,000000000139.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,45.8058,0.988945,,False,False,1.0,0.957,256,384
+0,000000000139.jpg,DCT,random30_real,随机30%(真实),real_crop,45.8058,0.988945,,False,False,1.0,1.497,298,448
+0,000000000139.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,45.8058,0.988945,,False,False,1.0,2.601,298,640
+0,000000000139.jpg,DCT,jpeg_q70,JPEG Q70,compression,45.8058,0.988945,DCT_PRO_COPYRIGHT,True,True,0.0,8.607,426,640
+0,000000000139.jpg,DCT,jpeg_q50,JPEG Q50,compression,45.8058,0.988945,DCT_PRO_COPYRIGHT,True,True,0.0,7.879,426,640
+0,000000000139.jpg,DCT,jpeg_q30,JPEG Q30,compression,45.8058,0.988945,DCT_PRO^COPYRIGHT,False,True,0.007353,7.934,426,640
+0,000000000139.jpg,DCT,resize_50,缩放50%,resize,45.8058,0.988945,"DCT_PPO_COPYRIGHTGñeVÙð <0a
+O  2¨0:s¯|²  +èù  ë¬
+mY ¶¹ ¶ïþ e 6jBÚå DFºZ ñº¾ÓêÔVf fO§Æ</d : ìdÞ mDCT_PPO_COPYRIGHTGñeVÙð <0a
+O  2¨0:s¯|²  +èù  ë¬
+mY ¶¹ ¶ïþ e 6jBÚå DFºZ ñº¾ÓêÔVf fO§Æ</d : ìdÞ mDCT_PPO_COPYRIGHTGñeVÙð <0a
+O  2¨0:s¯|²  +èù  ë¬
+mY ¶¹ ¶ïþ e 6jBÚå DFºZ ñº¾ÓêÔVf fO§Æ</d : ìdÞ mDCT_PPO_COPYRIGHTGñeVÙð <0a
+O  2¨0:s¯|²  +èù  ë¬
+mY ¶¹ ¶ïþ e 6jBÚå DFºZ ñº¾ÓêÔVf fO§Æ</d : ìdÞ mDC",False,False,0.439446,134.343,426,640
+0,000000000139.jpg,DCT,resize_200,缩放200%,resize,45.8058,0.988945,DCT_PRO_COPYRIGHT,True,True,0.0,38.171,426,640
+0,000000000139.jpg,DCT,noise_sigma10,噪声σ=10,noise,45.8058,0.988945,DCT_PRO_COPYRIGHT,True,True,0.0,8.967,426,640
+0,000000000139.jpg,DCT,brightness_plus30,亮度+30%,brightness,45.8058,0.988945,DCT_PRO_COPYRIGHT,True,True,0.0,7.685,426,640
+0,000000000139.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,40.1373,0.96291,DCT_PRO_COPYRIGHT,True,True,0.0,83.036,426,640
+0,000000000139.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,40.1373,0.96291,DCT_PRO_COPYRIGHT,True,True,0.0,57.829,298,640
+0,000000000139.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,40.1373,0.96291,DCT_PRO_COPYRIGHT,True,True,0.0,62.556,426,640
+0,000000000139.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,40.1373,0.96291,,False,False,1.0,67.809,213,640
+0,000000000139.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,40.1373,0.96291,DCT_PRO_COPYRIGHT,True,True,0.0,55.192,426,640
+0,000000000139.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,40.1373,0.96291,,False,False,1.0,107.956,426,448
+0,000000000139.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,40.1373,0.96291,,False,False,1.0,84.659,256,384
+0,000000000139.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,40.1373,0.96291,,False,False,1.0,128.216,298,448
+0,000000000139.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,40.1373,0.96291,,False,False,1.0,188.128,298,640
+0,000000000139.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,40.1373,0.96291,DCT_PRO_COPYRIGHT,True,True,0.0,279.883,426,640
+0,000000000139.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,40.1373,0.96291,DCT_PRO_COPYRIGHT,True,True,0.0,243.744,426,640
+0,000000000139.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,40.1373,0.96291,DCT_PRO_COPYRIGHT,True,True,0.0,885.214,426,640
+0,000000000139.jpg,DCT-Pro,resize_50,缩放50%,resize,40.1373,0.96291,Þ;¬,False,False,0.507353,236.828,426,640
+0,000000000139.jpg,DCT-Pro,resize_200,缩放200%,resize,40.1373,0.96291,DCT_PRO_COPYRIGHT,True,True,0.0,77.633,426,640
+0,000000000139.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,40.1373,0.96291,DCT_PRO_COPYRIGHT,True,True,0.0,180.761,426,640
+0,000000000139.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,40.1373,0.96291,DCT_PRO_COPYRIGHT,True,True,0.0,64.662,426,640
+1,000000027972.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,52.6319,0.999155,,False,False,1.0,3.109,426,640
+1,000000027972.jpg,LSB,top30_real,上裁30%(真实),real_crop,52.6319,0.999155,,False,False,1.0,0.523,298,640
+1,000000027972.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,52.6319,0.999155,,False,False,1.0,0.451,426,640
+1,000000027972.jpg,LSB,top50_real,上裁50%(真实),real_crop,52.6319,0.999155,,False,False,1.0,1.049,213,640
+1,000000027972.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,52.6319,0.999155,,False,False,1.0,0.9,426,640
+1,000000027972.jpg,LSB,left30_real,左裁30%(真实),real_crop,52.6319,0.999155,,False,False,1.0,0.521,426,448
+1,000000027972.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,52.6319,0.999155,,False,False,1.0,0.366,256,384
+1,000000027972.jpg,LSB,random30_real,随机30%(真实),real_crop,52.6319,0.999155,,False,False,1.0,0.366,298,448
+1,000000027972.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,52.6319,0.999155,,False,False,1.0,0.718,298,640
+1,000000027972.jpg,LSB,jpeg_q70,JPEG Q70,compression,52.6319,0.999155,,False,False,1.0,1.46,426,640
+1,000000027972.jpg,LSB,jpeg_q50,JPEG Q50,compression,52.6319,0.999155,,False,False,1.0,0.776,426,640
+1,000000027972.jpg,LSB,jpeg_q30,JPEG Q30,compression,52.6319,0.999155,,False,False,1.0,0.605,426,640
+1,000000027972.jpg,LSB,resize_50,缩放50%,resize,52.6319,0.999155,,False,False,1.0,0.556,426,640
+1,000000027972.jpg,LSB,resize_200,缩放200%,resize,52.6319,0.999155,,False,False,1.0,0.462,426,640
+1,000000027972.jpg,LSB,noise_sigma10,噪声σ=10,noise,52.6319,0.999155,,False,False,1.0,0.615,426,640
+1,000000027972.jpg,LSB,brightness_plus30,亮度+30%,brightness,52.6319,0.999155,,False,False,1.0,0.774,426,640
+1,000000027972.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,43.7371,0.992216, CT_P K_A PYRAE@,False,False,0.095588,7.646,426,640
+1,000000027972.jpg,DCT,top30_real,上裁30%(真实),real_crop,43.7371,0.992216,,False,False,1.0,1.717,298,640
+1,000000027972.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,43.7371,0.992216, A  P 	[A @IB@A@,False,False,0.220588,13.819,426,640
+1,000000027972.jpg,DCT,top50_real,上裁50%(真实),real_crop,43.7371,0.992216,,False,False,1.0,1.159,213,640
+1,000000027972.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,43.7371,0.992216, CDZ@RN_CK@ RI HP,False,False,0.080882,11.023,426,640
+1,000000027972.jpg,DCT,left30_real,左裁30%(真实),real_crop,43.7371,0.992216,,False,False,1.0,1.402,426,448
+1,000000027972.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,43.7371,0.992216,,False,False,1.0,1.485,256,384
+1,000000027972.jpg,DCT,random30_real,随机30%(真实),real_crop,43.7371,0.992216,,False,False,1.0,1.251,298,448
+1,000000027972.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,43.7371,0.992216,,False,False,1.0,2.024,298,640
+1,000000027972.jpg,DCT,jpeg_q70,JPEG Q70,compression,43.7371,0.992216,DCT_PRO_COPYRIGHT,True,True,0.0,7.698,426,640
+1,000000027972.jpg,DCT,jpeg_q50,JPEG Q50,compression,43.7371,0.992216,DCT_PRO_COPYRIGHT,True,True,0.0,8.735,426,640
+1,000000027972.jpg,DCT,jpeg_q30,JPEG Q30,compression,43.7371,0.992216,DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D1 DCT_PRO_COPYRIGHT9èã<t` <¢É@ h1ÌTÑr@P\\ÕÓ  LxÃÞ·ðÄ$ MÚ'R# ªõ  ØAd'¯@¨¢Ðväê-L¢ Z$%DÙ$:³D,False,False,0.407574,1717.84,426,640
+1,000000027972.jpg,DCT,resize_50,缩放50%,resize,43.7371,0.992216,DCT_PRO_COPYRIGHT,True,True,0.0,7.471,426,640
+1,000000027972.jpg,DCT,resize_200,缩放200%,resize,43.7371,0.992216,DCT_PRO_COPYRIGHT,True,True,0.0,8.786,426,640
+1,000000027972.jpg,DCT,noise_sigma10,噪声σ=10,noise,43.7371,0.992216,DCT_PRO_COPYRIGHTbhj ~ ,False,False,0.108696,11.599,426,640
+1,000000027972.jpg,DCT,brightness_plus30,亮度+30%,brightness,43.7371,0.992216,DCT_PRO_COPYRIGHT,True,True,0.0,8.158,426,640
+1,000000027972.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,39.1496,0.977464,DCT_PRO_COPYRIGHT,True,True,0.0,65.845,426,640
+1,000000027972.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,39.1496,0.977464,DCT_PRO_COPYRIGHT,True,True,0.0,45.027,298,640
+1,000000027972.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,39.1496,0.977464,DCT_PRO_COPYRIGHT,True,True,0.0,61.111,426,640
+1,000000027972.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,39.1496,0.977464,,False,False,1.0,77.907,213,640
+1,000000027972.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,39.1496,0.977464,DCT_PRO_COPYRIGHT,True,True,0.0,60.893,426,640
+1,000000027972.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,39.1496,0.977464,,False,False,1.0,117.647,426,448
+1,000000027972.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,39.1496,0.977464,,False,False,1.0,75.4,256,384
+1,000000027972.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,39.1496,0.977464,,False,False,1.0,82.783,298,448
+1,000000027972.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,39.1496,0.977464,,False,False,1.0,124.096,298,640
+1,000000027972.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,39.1496,0.977464,DCT_PRO_COPYRIGHT,True,True,0.0,179.509,426,640
+1,000000027972.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,39.1496,0.977464,DCT_PRO_COPYRIGHT,True,True,0.0,184.36,426,640
+1,000000027972.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,39.1496,0.977464,DCT_PRO_COPYRIGHT,True,True,0.0,183.085,426,640
+1,000000027972.jpg,DCT-Pro,resize_50,缩放50%,resize,39.1496,0.977464,DCT_PRO_COPYRIGHT,True,True,0.0,177.566,426,640
+1,000000027972.jpg,DCT-Pro,resize_200,缩放200%,resize,39.1496,0.977464,DCT_PRO_COPYRIGHT,True,True,0.0,61.137,426,640
+1,000000027972.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,39.1496,0.977464,DCT_PRO_COPYRIGHT,True,True,0.0,60.36,426,640
+1,000000027972.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,39.1496,0.977464,DCT_PRO_COPYRIGHT,True,True,0.0,64.852,426,640
+2,000000060102.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,53.4723,0.998971,,False,False,1.0,0.461,360,640
+2,000000060102.jpg,LSB,top30_real,上裁30%(真实),real_crop,53.4723,0.998971,,False,False,1.0,0.354,252,640
+2,000000060102.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,53.4723,0.998971,,False,False,1.0,0.342,360,640
+2,000000060102.jpg,LSB,top50_real,上裁50%(真实),real_crop,53.4723,0.998971,,False,False,1.0,0.334,180,640
+2,000000060102.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,53.4723,0.998971,,False,False,1.0,0.581,360,640
+2,000000060102.jpg,LSB,left30_real,左裁30%(真实),real_crop,53.4723,0.998971,,False,False,1.0,0.381,360,448
+2,000000060102.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,53.4723,0.998971,,False,False,1.0,0.247,216,384
+2,000000060102.jpg,LSB,random30_real,随机30%(真实),real_crop,53.4723,0.998971,,False,False,1.0,0.183,252,448
+2,000000060102.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,53.4723,0.998971,,False,False,1.0,0.437,252,640
+2,000000060102.jpg,LSB,jpeg_q70,JPEG Q70,compression,53.4723,0.998971,,False,False,1.0,0.491,360,640
+2,000000060102.jpg,LSB,jpeg_q50,JPEG Q50,compression,53.4723,0.998971,,False,False,1.0,0.555,360,640
+2,000000060102.jpg,LSB,jpeg_q30,JPEG Q30,compression,53.4723,0.998971,,False,False,1.0,0.661,360,640
+2,000000060102.jpg,LSB,resize_50,缩放50%,resize,53.4723,0.998971,,False,False,1.0,0.645,360,640
+2,000000060102.jpg,LSB,resize_200,缩放200%,resize,53.4723,0.998971,,False,False,1.0,0.584,360,640
+2,000000060102.jpg,LSB,noise_sigma10,噪声σ=10,noise,53.4723,0.998971,,False,False,1.0,0.504,360,640
+2,000000060102.jpg,LSB,brightness_plus30,亮度+30%,brightness,53.4723,0.998971,,False,False,1.0,0.532,360,640
+2,000000060102.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,41.8173,0.986508,DCT ,False,False,0.338235,8.303,360,640
+2,000000060102.jpg,DCT,top30_real,上裁30%(真实),real_crop,41.8173,0.986508,,False,False,1.0,1.359,252,640
+2,000000060102.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,41.8173,0.986508,D D ,False,False,0.367647,5.26,360,640
+2,000000060102.jpg,DCT,top50_real,上裁50%(真实),real_crop,41.8173,0.986508,,False,False,1.0,0.925,180,640
+2,000000060102.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,41.8173,0.986508,DBP ,False,False,0.352941,3.57,360,640
+2,000000060102.jpg,DCT,left30_real,左裁30%(真实),real_crop,41.8173,0.986508,,False,False,1.0,0.897,360,448
+2,000000060102.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,41.8173,0.986508,,False,False,1.0,0.826,216,384
+2,000000060102.jpg,DCT,random30_real,随机30%(真实),real_crop,41.8173,0.986508,,False,False,1.0,0.675,252,448
+2,000000060102.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,41.8173,0.986508,,False,False,1.0,1.003,252,640
+2,000000060102.jpg,DCT,jpeg_q70,JPEG Q70,compression,41.8173,0.986508,DCT_PRO_COPYRIGHT,True,True,0.0,5.946,360,640
+2,000000060102.jpg,DCT,jpeg_q50,JPEG Q50,compression,41.8173,0.986508,DCT_PRO_COPYRIGHT,True,True,0.0,9.125,360,640
+2,000000060102.jpg,DCT,jpeg_q30,JPEG Q30,compression,41.8173,0.986508,,False,False,1.0,3.469,360,640
+2,000000060102.jpg,DCT,resize_50,缩放50%,resize,41.8173,0.986508,,False,False,1.0,1.75,360,640
+2,000000060102.jpg,DCT,resize_200,缩放200%,resize,41.8173,0.986508,DCT_PRO_COPYRIGHT,True,True,0.0,5.914,360,640
+2,000000060102.jpg,DCT,noise_sigma10,噪声σ=10,noise,41.8173,0.986508,DCT_PRO_COPYRIGHT,True,True,0.0,7.591,360,640
+2,000000060102.jpg,DCT,brightness_plus30,亮度+30%,brightness,41.8173,0.986508,DCT_PRO_COPYRIGHT,True,True,0.0,5.983,360,640
+2,000000060102.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,39.3806,0.973336,DCT_PRO_COPYRIGHT,True,True,0.0,40.873,360,640
+2,000000060102.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,39.3806,0.973336,,False,False,1.0,84.375,252,640
+2,000000060102.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,39.3806,0.973336,,False,False,1.0,152.513,360,640
+2,000000060102.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,39.3806,0.973336,,False,False,1.0,73.378,180,640
+2,000000060102.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,39.3806,0.973336,DCT_PRO_COPYRIGHT,True,True,0.0,45.182,360,640
+2,000000060102.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,39.3806,0.973336,,False,False,1.0,94.099,360,448
+2,000000060102.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,39.3806,0.973336,,False,False,1.0,47.678,216,384
+2,000000060102.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,39.3806,0.973336,,False,False,1.0,64.184,252,448
+2,000000060102.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,39.3806,0.973336,,False,False,1.0,98.863,252,640
+2,000000060102.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,39.3806,0.973336,DCT_PRO_COPYRIGHT,True,True,0.0,138.586,360,640
+2,000000060102.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,39.3806,0.973336,DCT_PRO_COPYRIGHT,True,True,0.0,136.147,360,640
+2,000000060102.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,39.3806,0.973336,DCT_PRO_COPYRIGHT,True,True,0.0,132.768,360,640
+2,000000060102.jpg,DCT-Pro,resize_50,缩放50%,resize,39.3806,0.973336,,False,False,1.0,168.217,360,640
+2,000000060102.jpg,DCT-Pro,resize_200,缩放200%,resize,39.3806,0.973336,DCT_PRO_COPYRIGHT,True,True,0.0,45.18,360,640
+2,000000060102.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,39.3806,0.973336,DCT_PRO_COPYRIGHT,True,True,0.0,142.594,360,640
+2,000000060102.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,39.3806,0.973336,DCT_PRO_COPYRIGHT,True,True,0.0,44.587,360,640
+3,000000092053.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,53.8591,0.996451,,False,False,1.0,0.608,427,640
+3,000000092053.jpg,LSB,top30_real,上裁30%(真实),real_crop,53.8591,0.996451,,False,False,1.0,0.565,299,640
+3,000000092053.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,53.8591,0.996451,,False,False,1.0,0.381,427,640
+3,000000092053.jpg,LSB,top50_real,上裁50%(真实),real_crop,53.8591,0.996451,,False,False,1.0,0.205,213,640
+3,000000092053.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,53.8591,0.996451,,False,False,1.0,0.369,427,640
+3,000000092053.jpg,LSB,left30_real,左裁30%(真实),real_crop,53.8591,0.996451,,False,False,1.0,0.328,427,448
+3,000000092053.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,53.8591,0.996451,,False,False,1.0,0.296,256,384
+3,000000092053.jpg,LSB,random30_real,随机30%(真实),real_crop,53.8591,0.996451,,False,False,1.0,0.233,299,448
+3,000000092053.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,53.8591,0.996451,,False,False,1.0,0.422,299,640
+3,000000092053.jpg,LSB,jpeg_q70,JPEG Q70,compression,53.8591,0.996451,,False,False,1.0,0.629,427,640
+3,000000092053.jpg,LSB,jpeg_q50,JPEG Q50,compression,53.8591,0.996451,,False,False,1.0,1.105,427,640
+3,000000092053.jpg,LSB,jpeg_q30,JPEG Q30,compression,53.8591,0.996451,,False,False,1.0,0.77,427,640
+3,000000092053.jpg,LSB,resize_50,缩放50%,resize,53.8591,0.996451,,False,False,1.0,0.541,427,640
+3,000000092053.jpg,LSB,resize_200,缩放200%,resize,53.8591,0.996451,,False,False,1.0,0.479,427,640
+3,000000092053.jpg,LSB,noise_sigma10,噪声σ=10,noise,53.8591,0.996451,,False,False,1.0,0.521,427,640
+3,000000092053.jpg,LSB,brightness_plus30,亮度+30%,brightness,53.8591,0.996451,,False,False,1.0,0.642,427,640
+3,000000092053.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,46.3855,0.986218, CT_P K_A PYRAE@,False,False,0.095588,6.82,427,640
+3,000000092053.jpg,DCT,top30_real,上裁30%(真实),real_crop,46.3855,0.986218,,False,False,1.0,1.752,299,640
+3,000000092053.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,46.3855,0.986218, A  P 	[A PIB@A@,False,False,0.220588,7.552,427,640
+3,000000092053.jpg,DCT,top50_real,上裁50%(真实),real_crop,46.3855,0.986218,,False,False,1.0,2.281,213,640
+3,000000092053.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,46.3855,0.986218, CTZ@RN_CK@ RI HP,False,False,0.073529,9.402,427,640
+3,000000092053.jpg,DCT,left30_real,左裁30%(真实),real_crop,46.3855,0.986218,,False,False,1.0,2.092,427,448
+3,000000092053.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,46.3855,0.986218,,False,False,1.0,1.219,256,384
+3,000000092053.jpg,DCT,random30_real,随机30%(真实),real_crop,46.3855,0.986218,,False,False,1.0,1.081,299,448
+3,000000092053.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,46.3855,0.986218,,False,False,1.0,1.222,299,640
+3,000000092053.jpg,DCT,jpeg_q70,JPEG Q70,compression,46.3855,0.986218,DCT_PRO_COPYRIGHT,True,True,0.0,6.174,427,640
+3,000000092053.jpg,DCT,jpeg_q50,JPEG Q50,compression,46.3855,0.986218,DCT_PRO_COPYRIGHT,True,True,0.0,6.525,427,640
+3,000000092053.jpg,DCT,jpeg_q30,JPEG Q30,compression,46.3855,0.986218,"@CT^PROVBOPYRI  TB        ±Bè @I    @     @ `
+    "" 
+       ",False,False,0.179487,21.782,427,640
+3,000000092053.jpg,DCT,resize_50,缩放50%,resize,46.3855,0.986218,DCT_PRO_COPYRIGHT­/°Gh Ã^° 0Ùù,False,False,0.24359,8.874,427,640
+3,000000092053.jpg,DCT,resize_200,缩放200%,resize,46.3855,0.986218,DCT_PRO_COPYRIGHT,True,True,0.0,7.036,427,640
+3,000000092053.jpg,DCT,noise_sigma10,噪声σ=10,noise,46.3855,0.986218,DCT_PRO_COPYRIGHT,True,True,0.0,7.719,427,640
+3,000000092053.jpg,DCT,brightness_plus30,亮度+30%,brightness,46.3855,0.986218,DCT_PRO_COPYRIGHT,True,True,0.0,6.108,427,640
+3,000000092053.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,40.6355,0.960205,DCT_PRO_COPYRIGHT,True,True,0.0,103.324,427,640
+3,000000092053.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,40.6355,0.960205,DCT_PRO_COPYRIGHT,True,True,0.0,45.652,299,640
+3,000000092053.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,40.6355,0.960205,DCT_PRO_COPYRIGHT,True,True,0.0,60.698,427,640
+3,000000092053.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,40.6355,0.960205,,False,False,1.0,107.383,213,640
+3,000000092053.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,40.6355,0.960205,DCT_PRO_COPYRIGHT,True,True,0.0,61.578,427,640
+3,000000092053.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,40.6355,0.960205,,False,False,1.0,117.296,427,448
+3,000000092053.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,40.6355,0.960205,* b $,False,False,0.463235,66.081,256,384
+3,000000092053.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,40.6355,0.960205,,False,False,1.0,77.251,299,448
+3,000000092053.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,40.6355,0.960205,,False,False,1.0,126.457,299,640
+3,000000092053.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,40.6355,0.960205,DCT_PRO_COPYRIGHT,True,True,0.0,174.66,427,640
+3,000000092053.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,40.6355,0.960205,DCT_PRO_COPYRIGHT,True,True,0.0,177.603,427,640
+3,000000092053.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,40.6355,0.960205,,False,False,1.0,184.014,427,640
+3,000000092053.jpg,DCT-Pro,resize_50,缩放50%,resize,40.6355,0.960205,DCT_PRO_COPYRIGHT,True,True,0.0,176.359,427,640
+3,000000092053.jpg,DCT-Pro,resize_200,缩放200%,resize,40.6355,0.960205,DCT_PRO_COPYRIGHT,True,True,0.0,65.913,427,640
+3,000000092053.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,40.6355,0.960205,DCT_PRO_COPYRIGHT,True,True,0.0,60.012,427,640
+3,000000092053.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,40.6355,0.960205,DCT_PRO_COPYRIGHT,True,True,0.0,64.739,427,640
+4,000000125472.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,52.5547,0.999665,,False,False,1.0,0.489,640,427
+4,000000125472.jpg,LSB,top30_real,上裁30%(真实),real_crop,52.5547,0.999665,,False,False,1.0,0.426,448,427
+4,000000125472.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,52.5547,0.999665,,False,False,1.0,0.431,640,427
+4,000000125472.jpg,LSB,top50_real,上裁50%(真实),real_crop,52.5547,0.999665,,False,False,1.0,0.305,320,427
+4,000000125472.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,52.5547,0.999665,,False,False,1.0,0.388,640,427
+4,000000125472.jpg,LSB,left30_real,左裁30%(真实),real_crop,52.5547,0.999665,,False,False,1.0,0.339,640,299
+4,000000125472.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,52.5547,0.999665,,False,False,1.0,0.302,384,256
+4,000000125472.jpg,LSB,random30_real,随机30%(真实),real_crop,52.5547,0.999665,,False,False,1.0,0.238,448,299
+4,000000125472.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,52.5547,0.999665,,False,False,1.0,0.525,448,427
+4,000000125472.jpg,LSB,jpeg_q70,JPEG Q70,compression,52.5547,0.999665,,False,False,1.0,0.784,640,427
+4,000000125472.jpg,LSB,jpeg_q50,JPEG Q50,compression,52.5547,0.999665,,False,False,1.0,0.918,640,427
+4,000000125472.jpg,LSB,jpeg_q30,JPEG Q30,compression,52.5547,0.999665,,False,False,1.0,0.603,640,427
+4,000000125472.jpg,LSB,resize_50,缩放50%,resize,52.5547,0.999665,,False,False,1.0,0.817,640,427
+4,000000125472.jpg,LSB,resize_200,缩放200%,resize,52.5547,0.999665,,False,False,1.0,0.736,640,427
+4,000000125472.jpg,LSB,noise_sigma10,噪声σ=10,noise,52.5547,0.999665,,False,False,1.0,0.591,640,427
+4,000000125472.jpg,LSB,brightness_plus30,亮度+30%,brightness,52.5547,0.999665,,False,False,1.0,0.513,640,427
+4,000000125472.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,42.2834,0.988581,,False,False,1.0,2.845,640,427
+4,000000125472.jpg,DCT,top30_real,上裁30%(真实),real_crop,42.2834,0.988581,,False,False,1.0,1.299,448,427
+4,000000125472.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,42.2834,0.988581,,False,False,1.0,1.876,640,427
+4,000000125472.jpg,DCT,top50_real,上裁50%(真实),real_crop,42.2834,0.988581,,False,False,1.0,1.048,320,427
+4,000000125472.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,42.2834,0.988581,DAT[,False,False,0.345588,3.61,640,427
+4,000000125472.jpg,DCT,left30_real,左裁30%(真实),real_crop,42.2834,0.988581,,False,False,1.0,1.64,640,299
+4,000000125472.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,42.2834,0.988581,,False,False,1.0,1.587,384,256
+4,000000125472.jpg,DCT,random30_real,随机30%(真实),real_crop,42.2834,0.988581,,False,False,1.0,1.467,448,299
+4,000000125472.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,42.2834,0.988581,,False,False,1.0,2.015,448,427
+4,000000125472.jpg,DCT,jpeg_q70,JPEG Q70,compression,42.2834,0.988581,,False,False,1.0,2.377,640,427
+4,000000125472.jpg,DCT,jpeg_q50,JPEG Q50,compression,42.2834,0.988581,,False,False,1.0,1.911,640,427
+4,000000125472.jpg,DCT,jpeg_q30,JPEG Q30,compression,42.2834,0.988581,,False,False,1.0,1.815,640,427
+4,000000125472.jpg,DCT,resize_50,缩放50%,resize,42.2834,0.988581,,False,False,1.0,1.876,640,427
+4,000000125472.jpg,DCT,resize_200,缩放200%,resize,42.2834,0.988581,,False,False,1.0,2.031,640,427
+4,000000125472.jpg,DCT,noise_sigma10,噪声σ=10,noise,42.2834,0.988581,,False,False,1.0,3.008,640,427
+4,000000125472.jpg,DCT,brightness_plus30,亮度+30%,brightness,42.2834,0.988581,,False,False,1.0,2.68,640,427
+4,000000125472.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,37.9221,0.964945,DCT_PRO_COPYRIGHT,True,True,0.0,61.988,640,427
+4,000000125472.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,37.9221,0.964945,]ó¢õ § ¯y-åÙGmUC%,False,False,0.490385,112.687,448,427
+4,000000125472.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,37.9221,0.964945,DCT_PRO_COPYRIGHT,True,True,0.0,61.129,640,427
+4,000000125472.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,37.9221,0.964945,,False,False,1.0,249.934,320,427
+4,000000125472.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,37.9221,0.964945,DCT_PRO_COPYRIGHT,True,True,0.0,183.546,640,427
+4,000000125472.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,37.9221,0.964945,DCT_PRO_COPYRIGHT,True,True,0.0,55.511,640,299
+4,000000125472.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,37.9221,0.964945,,False,False,1.0,85.644,384,256
+4,000000125472.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,37.9221,0.964945,,False,False,1.0,90.627,448,299
+4,000000125472.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,37.9221,0.964945,,False,False,1.0,114.193,448,427
+4,000000125472.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,37.9221,0.964945,DCT_PRO_COPYRIGHT,True,True,0.0,169.812,640,427
+4,000000125472.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,37.9221,0.964945,DCT_PRO_COPYRIGHT,True,True,0.0,166.395,640,427
+4,000000125472.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,37.9221,0.964945,DCT_PRO_COPYRIGHT,True,True,0.0,193.857,640,427
+4,000000125472.jpg,DCT-Pro,resize_50,缩放50%,resize,37.9221,0.964945,DCT_PRO_COPYRIGHT,True,True,0.0,61.898,640,427
+4,000000125472.jpg,DCT-Pro,resize_200,缩放200%,resize,37.9221,0.964945,DCT_PRO_COPYRIGHT,True,True,0.0,60.137,640,427
+4,000000125472.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,37.9221,0.964945,DCT_PRO_COPYRIGHT,True,True,0.0,181.699,640,427
+4,000000125472.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,37.9221,0.964945,DCT_PRO_COPYRIGHT,True,True,0.0,53.081,640,427
+5,000000154705.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,54.0629,0.999009,,False,False,1.0,0.836,464,640
+5,000000154705.jpg,LSB,top30_real,上裁30%(真实),real_crop,54.0629,0.999009,,False,False,1.0,0.384,325,640
+5,000000154705.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,54.0629,0.999009,,False,False,1.0,1.435,464,640
+5,000000154705.jpg,LSB,top50_real,上裁50%(真实),real_crop,54.0629,0.999009,,False,False,1.0,0.42,232,640
+5,000000154705.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,54.0629,0.999009,,False,False,1.0,1.222,464,640
+5,000000154705.jpg,LSB,left30_real,左裁30%(真实),real_crop,54.0629,0.999009,,False,False,1.0,0.659,464,448
+5,000000154705.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,54.0629,0.999009,,False,False,1.0,0.455,278,384
+5,000000154705.jpg,LSB,random30_real,随机30%(真实),real_crop,54.0629,0.999009,,False,False,1.0,0.849,325,448
+5,000000154705.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,54.0629,0.999009,,False,False,1.0,0.512,325,640
+5,000000154705.jpg,LSB,jpeg_q70,JPEG Q70,compression,54.0629,0.999009,,False,False,1.0,0.992,464,640
+5,000000154705.jpg,LSB,jpeg_q50,JPEG Q50,compression,54.0629,0.999009,,False,False,1.0,1.031,464,640
+5,000000154705.jpg,LSB,jpeg_q30,JPEG Q30,compression,54.0629,0.999009,,False,False,1.0,0.797,464,640
+5,000000154705.jpg,LSB,resize_50,缩放50%,resize,54.0629,0.999009,,False,False,1.0,0.565,464,640
+5,000000154705.jpg,LSB,resize_200,缩放200%,resize,54.0629,0.999009,,False,False,1.0,0.759,464,640
+5,000000154705.jpg,LSB,noise_sigma10,噪声σ=10,noise,54.0629,0.999009,,False,False,1.0,0.553,464,640
+5,000000154705.jpg,LSB,brightness_plus30,亮度+30%,brightness,54.0629,0.999009,,False,False,1.0,0.565,464,640
+5,000000154705.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,43.4775,0.990143,DCT P  OCAPHR	GHT,False,False,0.095588,7.241,464,640
+5,000000154705.jpg,DCT,top30_real,上裁30%(真实),real_crop,43.4775,0.990143,,False,False,1.0,2.139,325,640
+5,000000154705.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,43.4775,0.990143,"      
+O APHR  H",False,False,0.242647,7.754,464,640
+5,000000154705.jpg,DCT,top50_real,上裁50%(真实),real_crop,43.4775,0.990143,,False,False,1.0,1.368,232,640
+5,000000154705.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,43.4775,0.990143,@CT_PR [COPIRIFHT,False,True,0.036765,8.116,464,640
+5,000000154705.jpg,DCT,left30_real,左裁30%(真实),real_crop,43.4775,0.990143,,False,False,1.0,2.055,464,448
+5,000000154705.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,43.4775,0.990143,,False,False,1.0,0.893,278,384
+5,000000154705.jpg,DCT,random30_real,随机30%(真实),real_crop,43.4775,0.990143,,False,False,1.0,1.18,325,448
+5,000000154705.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,43.4775,0.990143,,False,False,1.0,2.592,325,640
+5,000000154705.jpg,DCT,jpeg_q70,JPEG Q70,compression,43.4775,0.990143,DCT_PRO_COPYRIGHT,True,True,0.0,7.777,464,640
+5,000000154705.jpg,DCT,jpeg_q50,JPEG Q50,compression,43.4775,0.990143,DCT_PRO_COPYRIGHT,True,True,0.0,6.593,464,640
+5,000000154705.jpg,DCT,jpeg_q30,JPEG Q30,compression,43.4775,0.990143,"DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @           @          	   @      !         DCT_PRO_COPYRIGHT   @         @@  
+      	  @            `       @    ",False,False,0.165832,1442.471,464,640
+5,000000154705.jpg,DCT,resize_50,缩放50%,resize,43.4775,0.990143,DCT_PRO_COPYRIGHTMmn§ &,False,False,0.135417,7.792,464,640
+5,000000154705.jpg,DCT,resize_200,缩放200%,resize,43.4775,0.990143,DCT_PRO_COPYRIGHT,True,True,0.0,6.358,464,640
+5,000000154705.jpg,DCT,noise_sigma10,噪声σ=10,noise,43.4775,0.990143,DCT_PRO_COPYRIGHT,True,True,0.0,6.085,464,640
+5,000000154705.jpg,DCT,brightness_plus30,亮度+30%,brightness,43.4775,0.990143,DCT_PRO_COPYRIGHT,True,True,0.0,6.284,464,640
+5,000000154705.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,38.7708,0.969875,DCT_PRO_COPYRIGHT,True,True,0.0,50.941,464,640
+5,000000154705.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,38.7708,0.969875,,False,False,1.0,114.845,325,640
+5,000000154705.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,38.7708,0.969875,DCT_PRO_COPYRIGHT,True,True,0.0,56.661,464,640
+5,000000154705.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,38.7708,0.969875,DCT_PRO_COPYRIGHT,True,True,0.0,19.039,232,640
+5,000000154705.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,38.7708,0.969875,DCT_PRO_COPYRIGHT,True,True,0.0,54.544,464,640
+5,000000154705.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,38.7708,0.969875,,False,False,1.0,107.46,464,448
+5,000000154705.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,38.7708,0.969875,,False,False,1.0,64.649,278,384
+5,000000154705.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,38.7708,0.969875,,False,False,1.0,73.597,325,448
+5,000000154705.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,38.7708,0.969875,,False,False,1.0,125.505,325,640
+5,000000154705.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,38.7708,0.969875,DCT_PRO_COPYRIGHT,True,True,0.0,162.896,464,640
+5,000000154705.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,38.7708,0.969875,DCT_PRO_COPYRIGHT,True,True,0.0,165.998,464,640
+5,000000154705.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,38.7708,0.969875,DCT_PRO_COPYRIGHT,True,True,0.0,161.455,464,640
+5,000000154705.jpg,DCT-Pro,resize_50,缩放50%,resize,38.7708,0.969875,,False,False,1.0,155.866,464,640
+5,000000154705.jpg,DCT-Pro,resize_200,缩放200%,resize,38.7708,0.969875,DCT_PRO_COPYRIGHT,True,True,0.0,56.731,464,640
+5,000000154705.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,38.7708,0.969875,DCT_PRO_COPYRIGHT,True,True,0.0,55.89,464,640
+5,000000154705.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,38.7708,0.969875,DCT_PRO_COPYRIGHT,True,True,0.0,59.24,464,640
+6,000000181859.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,53.6172,0.998846,,False,False,1.0,0.478,640,426
+6,000000181859.jpg,LSB,top30_real,上裁30%(真实),real_crop,53.6172,0.998846,,False,False,1.0,0.432,448,426
+6,000000181859.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,53.6172,0.998846,,False,False,1.0,0.567,640,426
+6,000000181859.jpg,LSB,top50_real,上裁50%(真实),real_crop,53.6172,0.998846,,False,False,1.0,0.304,320,426
+6,000000181859.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,53.6172,0.998846,,False,False,1.0,0.481,640,426
+6,000000181859.jpg,LSB,left30_real,左裁30%(真实),real_crop,53.6172,0.998846,,False,False,1.0,0.34,640,298
+6,000000181859.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,53.6172,0.998846,,False,False,1.0,0.398,384,256
+6,000000181859.jpg,LSB,random30_real,随机30%(真实),real_crop,53.6172,0.998846,,False,False,1.0,0.249,448,298
+6,000000181859.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,53.6172,0.998846,,False,False,1.0,0.459,448,426
+6,000000181859.jpg,LSB,jpeg_q70,JPEG Q70,compression,53.6172,0.998846,,False,False,1.0,0.521,640,426
+6,000000181859.jpg,LSB,jpeg_q50,JPEG Q50,compression,53.6172,0.998846,,False,False,1.0,0.851,640,426
+6,000000181859.jpg,LSB,jpeg_q30,JPEG Q30,compression,53.6172,0.998846,,False,False,1.0,0.502,640,426
+6,000000181859.jpg,LSB,resize_50,缩放50%,resize,53.6172,0.998846,,False,False,1.0,0.341,640,426
+6,000000181859.jpg,LSB,resize_200,缩放200%,resize,53.6172,0.998846,,False,False,1.0,0.341,640,426
+6,000000181859.jpg,LSB,noise_sigma10,噪声σ=10,noise,53.6172,0.998846,,False,False,1.0,0.822,640,426
+6,000000181859.jpg,LSB,brightness_plus30,亮度+30%,brightness,53.6172,0.998846,,False,False,1.0,0.525,640,426
+6,000000181859.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,45.8767,0.988325, CT_P K_A PYRAE@,False,False,0.095588,5.989,640,426
+6,000000181859.jpg,DCT,top30_real,上裁30%(真实),real_crop,45.8767,0.988325,,False,False,1.0,1.405,448,426
+6,000000181859.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,45.8767,0.988325, A  P  [A @IB@A@,False,False,0.227941,6.958,640,426
+6,000000181859.jpg,DCT,top50_real,上裁50%(真实),real_crop,45.8767,0.988325,,False,False,1.0,1.161,320,426
+6,000000181859.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,45.8767,0.988325,DAT[,False,False,0.345588,4.122,640,426
+6,000000181859.jpg,DCT,left30_real,左裁30%(真实),real_crop,45.8767,0.988325,,False,False,1.0,0.904,640,298
+6,000000181859.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,45.8767,0.988325,,False,False,1.0,1.136,384,256
+6,000000181859.jpg,DCT,random30_real,随机30%(真实),real_crop,45.8767,0.988325,,False,False,1.0,0.774,448,298
+6,000000181859.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,45.8767,0.988325,,False,False,1.0,1.554,448,426
+6,000000181859.jpg,DCT,jpeg_q70,JPEG Q70,compression,45.8767,0.988325,DCT_PRO_COPYRIGHT,True,True,0.0,5.921,640,426
+6,000000181859.jpg,DCT,jpeg_q50,JPEG Q50,compression,45.8767,0.988325,DCT_PRO_COPYRIGHT,True,True,0.0,6.152,640,426
+6,000000181859.jpg,DCT,jpeg_q30,JPEG Q30,compression,45.8767,0.988325,DBT_PRO_COPYRIGHT  2    Ä       À       ,False,False,0.081522,15.119,640,426
+6,000000181859.jpg,DCT,resize_50,缩放50%,resize,45.8767,0.988325,"DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'¹#òQï uû	ÎTBb DCT_PRO_COPYRIGHT±:'ïí ñRè· ybØ¢ Ü£F¤N7C,füý ÆnN¤Z±PÉ4ÐåLÀ L&ª å CÈ ¾ãàq642<'",False,False,0.440224,373.496,640,426
+6,000000181859.jpg,DCT,resize_200,缩放200%,resize,45.8767,0.988325,DCT_PRO_COPYRIGHT,True,True,0.0,7.691,640,426
+6,000000181859.jpg,DCT,noise_sigma10,噪声σ=10,noise,45.8767,0.988325,DCT_PRO_COPYRIGHT,True,True,0.0,6.461,640,426
+6,000000181859.jpg,DCT,brightness_plus30,亮度+30%,brightness,45.8767,0.988325,DCT_PRO_COPYRIGHT,True,True,0.0,6.143,640,426
+6,000000181859.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,40.5971,0.962834,DCT_PRO_COPYRIGHT,True,True,0.0,66.115,640,426
+6,000000181859.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,40.5971,0.962834,,False,False,1.0,104.472,448,426
+6,000000181859.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,40.5971,0.962834,DCT_PRO_COPYRIGHT,True,True,0.0,51.406,640,426
+6,000000181859.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,40.5971,0.962834,,False,False,1.0,74.61,320,426
+6,000000181859.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,40.5971,0.962834,DCT_PRO_COPYRIGHT,True,True,0.0,51.991,640,426
+6,000000181859.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,40.5971,0.962834,DCT_PRO_COPYRIGHT,True,True,0.0,37.585,640,298
+6,000000181859.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,40.5971,0.962834,,False,False,1.0,56.044,384,256
+6,000000181859.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,40.5971,0.962834,,False,False,1.0,69.434,448,298
+6,000000181859.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,40.5971,0.962834,,False,False,1.0,110.531,448,426
+6,000000181859.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,40.5971,0.962834,DCT_PRO_COPYRIGHT,True,True,0.0,188.319,640,426
+6,000000181859.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,40.5971,0.962834,DCT_PRO_COPYRIGHT,True,True,0.0,155.451,640,426
+6,000000181859.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,40.5971,0.962834,DCT_PRO_COPYRIGHT,True,True,0.0,165.916,640,426
+6,000000181859.jpg,DCT-Pro,resize_50,缩放50%,resize,40.5971,0.962834,DCT_PRO_COPYRIGHT,True,True,0.0,152.753,640,426
+6,000000181859.jpg,DCT-Pro,resize_200,缩放200%,resize,40.5971,0.962834,DCT_PRO_COPYRIGHT,True,True,0.0,54.289,640,426
+6,000000181859.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,40.5971,0.962834,DCT_PRO_COPYRIGHT,True,True,0.0,157.87,640,426
+6,000000181859.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,40.5971,0.962834,DCT_PRO_COPYRIGHT,True,True,0.0,54.051,640,426
+7,000000212072.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,53.8615,0.999314,,False,False,1.0,0.371,375,500
+7,000000212072.jpg,LSB,top30_real,上裁30%(真实),real_crop,53.8615,0.999314,,False,False,1.0,0.229,263,500
+7,000000212072.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,53.8615,0.999314,,False,False,1.0,0.326,375,500
+7,000000212072.jpg,LSB,top50_real,上裁50%(真实),real_crop,53.8615,0.999314,,False,False,1.0,0.217,187,500
+7,000000212072.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,53.8615,0.999314,,False,False,1.0,0.306,375,500
+7,000000212072.jpg,LSB,left30_real,左裁30%(真实),real_crop,53.8615,0.999314,,False,False,1.0,0.223,375,350
+7,000000212072.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,53.8615,0.999314,,False,False,1.0,0.244,225,300
+7,000000212072.jpg,LSB,random30_real,随机30%(真实),real_crop,53.8615,0.999314,,False,False,1.0,0.193,262,350
+7,000000212072.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,53.8615,0.999314,,False,False,1.0,0.254,263,500
+7,000000212072.jpg,LSB,jpeg_q70,JPEG Q70,compression,53.8615,0.999314,,False,False,1.0,0.583,375,500
+7,000000212072.jpg,LSB,jpeg_q50,JPEG Q50,compression,53.8615,0.999314,,False,False,1.0,0.291,375,500
+7,000000212072.jpg,LSB,jpeg_q30,JPEG Q30,compression,53.8615,0.999314,,False,False,1.0,0.586,375,500
+7,000000212072.jpg,LSB,resize_50,缩放50%,resize,53.8615,0.999314,,False,False,1.0,0.515,375,500
+7,000000212072.jpg,LSB,resize_200,缩放200%,resize,53.8615,0.999314,,False,False,1.0,0.539,375,500
+7,000000212072.jpg,LSB,noise_sigma10,噪声σ=10,noise,53.8615,0.999314,,False,False,1.0,0.492,375,500
+7,000000212072.jpg,LSB,brightness_plus30,亮度+30%,brightness,53.8615,0.999314,,False,False,1.0,0.469,375,500
+7,000000212072.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,41.7354,0.988674,DCD^PP [COPXRACH,False,False,0.080882,4.994,375,500
+7,000000212072.jpg,DCT,top30_real,上裁30%(真实),real_crop,41.7354,0.988674,,False,False,1.0,1.44,263,500
+7,000000212072.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,41.7354,0.988674,D@D,False,False,0.397059,2.581,375,500
+7,000000212072.jpg,DCT,top50_real,上裁50%(真实),real_crop,41.7354,0.988674,,False,False,1.0,1.467,187,500
+7,000000212072.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,41.7354,0.988674,DAD PPO[CGPYBIEH,False,False,0.095588,5.575,375,500
+7,000000212072.jpg,DCT,left30_real,左裁30%(真实),real_crop,41.7354,0.988674,,False,False,1.0,0.982,375,350
+7,000000212072.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,41.7354,0.988674,,False,False,1.0,0.476,225,300
+7,000000212072.jpg,DCT,random30_real,随机30%(真实),real_crop,41.7354,0.988674,,False,False,1.0,0.534,262,350
+7,000000212072.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,41.7354,0.988674,,False,False,1.0,0.567,263,500
+7,000000212072.jpg,DCT,jpeg_q70,JPEG Q70,compression,41.7354,0.988674,DCT_PRO_COPYRIGHT,True,True,0.0,5.493,375,500
+7,000000212072.jpg,DCT,jpeg_q50,JPEG Q50,compression,41.7354,0.988674,DCT_PRO_COPYRIGHT,True,True,0.0,4.93,375,500
+7,000000212072.jpg,DCT,jpeg_q30,JPEG Q30,compression,41.7354,0.988674,DCT_PRO_COPYRIGHT,True,True,0.0,4.974,375,500
+7,000000212072.jpg,DCT,resize_50,缩放50%,resize,41.7354,0.988674,,False,False,1.0,2.151,375,500
+7,000000212072.jpg,DCT,resize_200,缩放200%,resize,41.7354,0.988674,DCT_PRO_COPYRIGHT,True,True,0.0,5.647,375,500
+7,000000212072.jpg,DCT,noise_sigma10,噪声σ=10,noise,41.7354,0.988674,DCT_PRO_COPYRIGHT,True,True,0.0,5.096,375,500
+7,000000212072.jpg,DCT,brightness_plus30,亮度+30%,brightness,41.7354,0.988674,DCT_PRO_COPYRIGHT,True,True,0.0,5.053,375,500
+7,000000212072.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,40.5856,0.98475,DCT_PRO_COPYRIGHT,True,True,0.0,22.699,375,500
+7,000000212072.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,40.5856,0.98475,DCT_PRO_COPYRIGHT,True,True,0.0,20.675,263,500
+7,000000212072.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,40.5856,0.98475,  ,False,False,0.441176,87.59,375,500
+7,000000212072.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,40.5856,0.98475,,False,False,1.0,47.948,187,500
+7,000000212072.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,40.5856,0.98475,DCT_PRO_COPYRIGHT,True,True,0.0,21.511,375,500
+7,000000212072.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,40.5856,0.98475,,False,False,1.0,108.941,375,350
+7,000000212072.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,40.5856,0.98475,,False,False,1.0,190.851,225,300
+7,000000212072.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,40.5856,0.98475,,False,False,1.0,191.121,262,350
+7,000000212072.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,40.5856,0.98475,,False,False,1.0,90.054,263,500
+7,000000212072.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,40.5856,0.98475,DCT_PRO_COPYRIGHT,True,True,0.0,102.58,375,500
+7,000000212072.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,40.5856,0.98475,DCT_PRO_COPYRIGHT,True,True,0.0,105.491,375,500
+7,000000212072.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,40.5856,0.98475,DCT_PRO_COPYRIGHT,True,True,0.0,119.862,375,500
+7,000000212072.jpg,DCT-Pro,resize_50,缩放50%,resize,40.5856,0.98475,,False,False,1.0,97.645,375,500
+7,000000212072.jpg,DCT-Pro,resize_200,缩放200%,resize,40.5856,0.98475,DCT_PRO_COPYRIGHT,True,True,0.0,41.412,375,500
+7,000000212072.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,40.5856,0.98475,DCT_PRO_COPYRIGHT,True,True,0.0,552.082,375,500
+7,000000212072.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,40.5856,0.98475,DCT_PRO_COPYRIGHT,True,True,0.0,77.203,375,500
+8,000000241677.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,53.5523,0.99963,,False,False,1.0,5.271,480,640
+8,000000241677.jpg,LSB,top30_real,上裁30%(真实),real_crop,53.5523,0.99963,,False,False,1.0,1.007,336,640
+8,000000241677.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,53.5523,0.99963,,False,False,1.0,1.3,480,640
+8,000000241677.jpg,LSB,top50_real,上裁50%(真实),real_crop,53.5523,0.99963,,False,False,1.0,0.949,240,640
+8,000000241677.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,53.5523,0.99963,,False,False,1.0,1.028,480,640
+8,000000241677.jpg,LSB,left30_real,左裁30%(真实),real_crop,53.5523,0.99963,,False,False,1.0,0.645,480,448
+8,000000241677.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,53.5523,0.99963,,False,False,1.0,0.678,288,384
+8,000000241677.jpg,LSB,random30_real,随机30%(真实),real_crop,53.5523,0.99963,,False,False,1.0,0.586,336,448
+8,000000241677.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,53.5523,0.99963,,False,False,1.0,0.652,336,640
+8,000000241677.jpg,LSB,jpeg_q70,JPEG Q70,compression,53.5523,0.99963,,False,False,1.0,1.085,480,640
+8,000000241677.jpg,LSB,jpeg_q50,JPEG Q50,compression,53.5523,0.99963,,False,False,1.0,2.086,480,640
+8,000000241677.jpg,LSB,jpeg_q30,JPEG Q30,compression,53.5523,0.99963,,False,False,1.0,1.579,480,640
+8,000000241677.jpg,LSB,resize_50,缩放50%,resize,53.5523,0.99963,,False,False,1.0,0.605,480,640
+8,000000241677.jpg,LSB,resize_200,缩放200%,resize,53.5523,0.99963,,False,False,1.0,0.86,480,640
+8,000000241677.jpg,LSB,noise_sigma10,噪声σ=10,noise,53.5523,0.99963,,False,False,1.0,0.712,480,640
+8,000000241677.jpg,LSB,brightness_plus30,亮度+30%,brightness,53.5523,0.99963,,False,False,1.0,0.633,480,640
+8,000000241677.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,43.0597,0.995646,"DCT^PRO C P BIGHT    ,"" . Å µ °$ Õ@Â ª1     £ P(a  ªH 0j   D@   È  ìÐo        G  ) ""`! è	À ",False,False,0.256579,29.481,480,640
+8,000000241677.jpg,DCT,top30_real,上裁30%(真实),real_crop,43.0597,0.995646,,False,False,1.0,1.996,336,640
+8,000000241677.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,43.0597,0.995646,"DCTD BL   @   D@@       
+ Å  0  P         # P                 @   À   d Ð(      
+ B  (       ¨ @ ",False,False,0.170551,28.495,480,640
+8,000000241677.jpg,DCT,top50_real,上裁50%(真实),real_crop,43.0597,0.995646,,False,False,1.0,1.444,240,640
+8,000000241677.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,43.0597,0.995646,"DCT] RG[AMP RIGHPÀ    ,@ª  d ÙH¢ 
+  À (#   #
+ 1 é  `b(  ¸¦@TQ À   ¤¢   p       a""^aAFÐ  $À""H
+  P  !²   ",False,False,0.255833,28.964,480,640
+8,000000241677.jpg,DCT,left30_real,左裁30%(真实),real_crop,43.0597,0.995646,,False,False,1.0,2.024,480,448
+8,000000241677.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,43.0597,0.995646,,False,False,1.0,0.752,288,384
+8,000000241677.jpg,DCT,random30_real,随机30%(真实),real_crop,43.0597,0.995646,,False,False,1.0,1.052,336,448
+8,000000241677.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,43.0597,0.995646,,False,False,1.0,2.817,336,640
+8,000000241677.jpg,DCT,jpeg_q70,JPEG Q70,compression,43.0597,0.995646,"DCT_PRO_COPYRIGHTéü¯]. ×b¿ô¹f$ÝCâ}¾1 ìÅ:çëT:xc3 ûL0$kë; Ûyæ@ôs
+È´ îãÉïÐ°úAQÄ_µ_úy7ÞoõÎÙk=à>Ú
+BÕMèé·¸f.",False,False,0.43118,32.069,480,640
+8,000000241677.jpg,DCT,jpeg_q50,JPEG Q50,compression,43.0597,0.995646,"DCT_PRO_COPYRIGHTMí°þ¯}.£×bÿ^¿flÝCâ-«¹²ìU:ëÔ;xc|± ¹H0~jÙx }ä`Ôq Ì¼Q­ îãÁï""ðúÉy¦ä ¼Ö y·ÞO÷]Ñ« =â&ò kôLâßù7¸ç 6",False,False,0.438904,30.416,480,640
+8,000000241677.jpg,DCT,jpeg_q30,JPEG Q30,compression,43.0597,0.995646,,False,False,1.0,2.648,480,640
+8,000000241677.jpg,DCT,resize_50,缩放50%,resize,43.0597,0.995646,,False,False,1.0,3.679,480,640
+8,000000241677.jpg,DCT,resize_200,缩放200%,resize,43.0597,0.995646,"DCT_PRO_COPYRIGHT=É¹ü¯]n§Õ""|¹f,ÝKâ'¦9 èE:çã zxcªÜ1 ëI0ské{ ùæÀôu
+Ì¥Ñ ®¶Ùï À°Ú	ØÄ[´_þy7ÞçßÝé=À>Þ
+FðEêé·¨f>",False,False,0.430866,30.358,480,640
+8,000000241677.jpg,DCT,noise_sigma10,噪声σ=10,noise,43.0597,0.995646,"DCT_PRO_COPYRIGHT I ±|¯]nÅF¿üf-ÍCâu®9 àE:®´ãZzcª\\1 ûH hjé{ ýæ`ôw Üµ êòÙo ÀøI d[,Öx3ßwçÍÅë=` Ö J ôdêø6¨F>",False,False,0.421598,29.924,480,640
+8,000000241677.jpg,DCT,brightness_plus30,亮度+30%,brightness,43.0597,0.995646,"DCT_PRO_COPYRIGHTÉ|§].·×b¿t¹f-ÝKâ5º9 èU:§ã zxc± ûH {ké{ ùæÀôu
+Ì¤Ñ î²Áï ð°ú	UÄ ´_>y7ßoç×Ñé=à6Þ
+DÐEêé·¸F>",False,False,0.426966,31.612,480,640
+8,000000241677.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,37.7249,0.986593,DCT_PRO_COPYRIGHT,True,True,0.0,65.647,480,640
+8,000000241677.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,37.7249,0.986593,,False,False,1.0,162.733,336,640
+8,000000241677.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,37.7249,0.986593,DCT_PRO_COPYRIGHT,True,True,0.0,112.591,480,640
+8,000000241677.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,37.7249,0.986593,DCT_PRO_COPYRIGHT,True,True,0.0,22.742,240,640
+8,000000241677.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,37.7249,0.986593,DCT_PRO_COPYRIGHT,True,True,0.0,60.609,480,640
+8,000000241677.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,37.7249,0.986593,,False,False,1.0,119.284,480,448
+8,000000241677.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,37.7249,0.986593,DCT_PRO_COPYRIGHT,True,True,0.0,23.595,288,384
+8,000000241677.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,37.7249,0.986593,,False,False,1.0,222.906,336,448
+8,000000241677.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,37.7249,0.986593,,False,False,1.0,965.595,336,640
+8,000000241677.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,37.7249,0.986593,DCT_PRO_COPYRIGHT,True,True,0.0,1843.355,480,640
+8,000000241677.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,37.7249,0.986593,DCT_PRO_COPYRIGHT,True,True,0.0,476.853,480,640
+8,000000241677.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,37.7249,0.986593,DCT_PRO_COPYRIGHT,True,True,0.0,245.427,480,640
+8,000000241677.jpg,DCT-Pro,resize_50,缩放50%,resize,37.7249,0.986593,,False,False,1.0,195.319,480,640
+8,000000241677.jpg,DCT-Pro,resize_200,缩放200%,resize,37.7249,0.986593,DCT_PRO_COPYRIGHT,True,True,0.0,57.632,480,640
+8,000000241677.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,37.7249,0.986593,DCT_PRO_COPYRIGHT,True,True,0.0,59.409,480,640
+8,000000241677.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,37.7249,0.986593,DCT_PRO_COPYRIGHT,True,True,0.0,57.879,480,640
+9,000000274066.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,54.2748,0.999516,,False,False,1.0,0.635,427,640
+9,000000274066.jpg,LSB,top30_real,上裁30%(真实),real_crop,54.2748,0.999516,,False,False,1.0,0.365,299,640
+9,000000274066.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,54.2748,0.999516,,False,False,1.0,0.691,427,640
+9,000000274066.jpg,LSB,top50_real,上裁50%(真实),real_crop,54.2748,0.999516,,False,False,1.0,0.353,213,640
+9,000000274066.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,54.2748,0.999516,,False,False,1.0,0.373,427,640
+9,000000274066.jpg,LSB,left30_real,左裁30%(真实),real_crop,54.2748,0.999516,,False,False,1.0,0.37,427,448
+9,000000274066.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,54.2748,0.999516,,False,False,1.0,0.328,256,384
+9,000000274066.jpg,LSB,random30_real,随机30%(真实),real_crop,54.2748,0.999516,,False,False,1.0,0.217,299,448
+9,000000274066.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,54.2748,0.999516,,False,False,1.0,0.468,299,640
+9,000000274066.jpg,LSB,jpeg_q70,JPEG Q70,compression,54.2748,0.999516,,False,False,1.0,0.582,427,640
+9,000000274066.jpg,LSB,jpeg_q50,JPEG Q50,compression,54.2748,0.999516,,False,False,1.0,0.41,427,640
+9,000000274066.jpg,LSB,jpeg_q30,JPEG Q30,compression,54.2748,0.999516,,False,False,1.0,0.577,427,640
+9,000000274066.jpg,LSB,resize_50,缩放50%,resize,54.2748,0.999516,,False,False,1.0,0.379,427,640
+9,000000274066.jpg,LSB,resize_200,缩放200%,resize,54.2748,0.999516,,False,False,1.0,0.383,427,640
+9,000000274066.jpg,LSB,noise_sigma10,噪声σ=10,noise,54.2748,0.999516,,False,False,1.0,1.185,427,640
+9,000000274066.jpg,LSB,brightness_plus30,亮度+30%,brightness,54.2748,0.999516,,False,False,1.0,0.757,427,640
+9,000000274066.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,42.6261,0.993942, CT_P K_A PYRAE@,False,False,0.095588,17.339,427,640
+9,000000274066.jpg,DCT,top30_real,上裁30%(真实),real_crop,42.6261,0.993942,,False,False,1.0,2.724,299,640
+9,000000274066.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,42.6261,0.993942, A  P  [A PIB@A@,False,False,0.227941,24.388,427,640
+9,000000274066.jpg,DCT,top50_real,上裁50%(真实),real_crop,42.6261,0.993942,,False,False,1.0,11.45,213,640
+9,000000274066.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,42.6261,0.993942, CTZ@RN_CK@ RI HP,False,False,0.073529,33.144,427,640
+9,000000274066.jpg,DCT,left30_real,左裁30%(真实),real_crop,42.6261,0.993942,,False,False,1.0,2.332,427,448
+9,000000274066.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,42.6261,0.993942,,False,False,1.0,2.83,256,384
+9,000000274066.jpg,DCT,random30_real,随机30%(真实),real_crop,42.6261,0.993942,,False,False,1.0,1.762,299,448
+9,000000274066.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,42.6261,0.993942,,False,False,1.0,2.875,299,640
+9,000000274066.jpg,DCT,jpeg_q70,JPEG Q70,compression,42.6261,0.993942,DCT_PRO_COPYRIGHT,True,True,0.0,18.898,427,640
+9,000000274066.jpg,DCT,jpeg_q50,JPEG Q50,compression,42.6261,0.993942,,False,False,1.0,5.671,427,640
+9,000000274066.jpg,DCT,jpeg_q30,JPEG Q30,compression,42.6261,0.993942,,False,False,1.0,4.353,427,640
+9,000000274066.jpg,DCT,resize_50,缩放50%,resize,42.6261,0.993942,,False,False,1.0,3.253,427,640
+9,000000274066.jpg,DCT,resize_200,缩放200%,resize,42.6261,0.993942,,False,False,1.0,3.183,427,640
+9,000000274066.jpg,DCT,noise_sigma10,噪声σ=10,noise,42.6261,0.993942,,False,False,1.0,3.12,427,640
+9,000000274066.jpg,DCT,brightness_plus30,亮度+30%,brightness,42.6261,0.993942,DCT_PRO_COPYRIGHT,True,True,0.0,17.869,427,640
+9,000000274066.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,37.4869,0.981029,DCT_PRO_COPYRIGHT,True,True,0.0,54.665,427,640
+9,000000274066.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,37.4869,0.981029,DCT_PRO_COPYRIGHT,True,True,0.0,41.674,299,640
+9,000000274066.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,37.4869,0.981029,DCT_PRO_COPYRIGHT,True,True,0.0,83.674,427,640
+9,000000274066.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,37.4869,0.981029,,False,False,1.0,80.691,213,640
+9,000000274066.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,37.4869,0.981029,DCT_PRO_COPYRIGHT,True,True,0.0,109.648,427,640
+9,000000274066.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,37.4869,0.981029,,False,False,1.0,125.823,427,448
+9,000000274066.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,37.4869,0.981029,,False,False,1.0,142.064,256,384
+9,000000274066.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,37.4869,0.981029,,False,False,1.0,532.301,299,448
+9,000000274066.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,37.4869,0.981029,,False,False,1.0,159.342,299,640
+9,000000274066.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,37.4869,0.981029,DCT_PRO_COPYRIGHT,True,True,0.0,179.983,427,640
+9,000000274066.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,37.4869,0.981029,DCT_PRO_COPYRIGHT,True,True,0.0,189.042,427,640
+9,000000274066.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,37.4869,0.981029,DCT_PRO_COPYRIGHT,True,True,0.0,183.714,427,640
+9,000000274066.jpg,DCT-Pro,resize_50,缩放50%,resize,37.4869,0.981029,,False,False,1.0,203.837,427,640
+9,000000274066.jpg,DCT-Pro,resize_200,缩放200%,resize,37.4869,0.981029,DCT_PRO_COPYRIGHT,True,True,0.0,82.676,427,640
+9,000000274066.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,37.4869,0.981029,DCT_PRO_COPYRIGHT,True,True,0.0,248.74,427,640
+9,000000274066.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,37.4869,0.981029,DCT_PRO_COPYRIGHT,True,True,0.0,68.108,427,640
+10,000000303893.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,54.0502,0.999507,,False,False,1.0,0.683,427,640
+10,000000303893.jpg,LSB,top30_real,上裁30%(真实),real_crop,54.0502,0.999507,,False,False,1.0,0.52,299,640
+10,000000303893.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,54.0502,0.999507,,False,False,1.0,0.379,427,640
+10,000000303893.jpg,LSB,top50_real,上裁50%(真实),real_crop,54.0502,0.999507,,False,False,1.0,0.326,213,640
+10,000000303893.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,54.0502,0.999507,,False,False,1.0,0.343,427,640
+10,000000303893.jpg,LSB,left30_real,左裁30%(真实),real_crop,54.0502,0.999507,,False,False,1.0,0.452,427,448
+10,000000303893.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,54.0502,0.999507,,False,False,1.0,0.435,256,384
+10,000000303893.jpg,LSB,random30_real,随机30%(真实),real_crop,54.0502,0.999507,,False,False,1.0,0.821,299,448
+10,000000303893.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,54.0502,0.999507,,False,False,1.0,0.534,299,640
+10,000000303893.jpg,LSB,jpeg_q70,JPEG Q70,compression,54.0502,0.999507,,False,False,1.0,0.98,427,640
+10,000000303893.jpg,LSB,jpeg_q50,JPEG Q50,compression,54.0502,0.999507,,False,False,1.0,0.591,427,640
+10,000000303893.jpg,LSB,jpeg_q30,JPEG Q30,compression,54.0502,0.999507,,False,False,1.0,0.555,427,640
+10,000000303893.jpg,LSB,resize_50,缩放50%,resize,54.0502,0.999507,,False,False,1.0,0.574,427,640
+10,000000303893.jpg,LSB,resize_200,缩放200%,resize,54.0502,0.999507,,False,False,1.0,0.45,427,640
+10,000000303893.jpg,LSB,noise_sigma10,噪声σ=10,noise,54.0502,0.999507,,False,False,1.0,0.557,427,640
+10,000000303893.jpg,LSB,brightness_plus30,亮度+30%,brightness,54.0502,0.999507,,False,False,1.0,0.586,427,640
+10,000000303893.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,43.3932,0.99472, CT_P K_A PYRAE@,False,False,0.095588,5.767,427,640
+10,000000303893.jpg,DCT,top30_real,上裁30%(真实),real_crop,43.3932,0.99472,,False,False,1.0,1.753,299,640
+10,000000303893.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,43.3932,0.99472, A  P  [A PIB@A@,False,False,0.227941,6.544,427,640
+10,000000303893.jpg,DCT,top50_real,上裁50%(真实),real_crop,43.3932,0.99472,,False,False,1.0,1.367,213,640
+10,000000303893.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,43.3932,0.99472, CTZ@RN_CK@ RI HP,False,False,0.073529,7.179,427,640
+10,000000303893.jpg,DCT,left30_real,左裁30%(真实),real_crop,43.3932,0.99472,,False,False,1.0,1.507,427,448
+10,000000303893.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,43.3932,0.99472,,False,False,1.0,0.834,256,384
+10,000000303893.jpg,DCT,random30_real,随机30%(真实),real_crop,43.3932,0.99472,,False,False,1.0,1.207,299,448
+10,000000303893.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,43.3932,0.99472,,False,False,1.0,1.296,299,640
+10,000000303893.jpg,DCT,jpeg_q70,JPEG Q70,compression,43.3932,0.99472,DCT_PRO_COPYRIGHT,True,True,0.0,6.947,427,640
+10,000000303893.jpg,DCT,jpeg_q50,JPEG Q50,compression,43.3932,0.99472,DCT_PRO_COPYRIGHT,True,True,0.0,6.655,427,640
+10,000000303893.jpg,DCT,jpeg_q30,JPEG Q30,compression,43.3932,0.99472,"DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO_COPYRIGHT·îbæì ×:íýs 
+f   1Ñ$ Ý Cd±áq¼ /  Ö¸R«ß	£äø'î¯mJõã`+F ³L ò    D`XÜ #`Ã¸´DCT_PRO",False,False,0.421658,1334.009,427,640
+10,000000303893.jpg,DCT,resize_50,缩放50%,resize,43.3932,0.99472,,False,False,1.0,2.981,427,640
+10,000000303893.jpg,DCT,resize_200,缩放200%,resize,43.3932,0.99472,DCT_PRO_COPYRIGHT,True,True,0.0,10.241,427,640
+10,000000303893.jpg,DCT,noise_sigma10,噪声σ=10,noise,43.3932,0.99472,DCT_PRO_COPYRIGHT,True,True,0.0,7.426,427,640
+10,000000303893.jpg,DCT,brightness_plus30,亮度+30%,brightness,43.3932,0.99472,,False,False,1.0,2.977,427,640
+10,000000303893.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,38.421,0.980907,DCT_PRO_COPYRIGHT,True,True,0.0,76.628,427,640
+10,000000303893.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,38.421,0.980907,DCT_PRO_COPYRIGHT,True,True,0.0,87.003,299,640
+10,000000303893.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,38.421,0.980907,DCT_PRO_COPYRIGHT,True,True,0.0,78.355,427,640
+10,000000303893.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,38.421,0.980907,,False,False,1.0,448.157,213,640
+10,000000303893.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,38.421,0.980907,DCT_PRO_COPYRIGHT,True,True,0.0,87.962,427,640
+10,000000303893.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,38.421,0.980907,,False,False,1.0,170.211,427,448
+10,000000303893.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,38.421,0.980907,,False,False,1.0,70.354,256,384
+10,000000303893.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,38.421,0.980907,,False,False,1.0,82.463,299,448
+10,000000303893.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,38.421,0.980907,,False,False,1.0,124.582,299,640
+10,000000303893.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,38.421,0.980907,DCT_PRO_COPYRIGHT,True,True,0.0,168.831,427,640
+10,000000303893.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,38.421,0.980907,DCT_PRO_COPYRIGHT,True,True,0.0,186.992,427,640
+10,000000303893.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,38.421,0.980907,DCT_PRO_COPYRIGHT,True,True,0.0,165.925,427,640
+10,000000303893.jpg,DCT-Pro,resize_50,缩放50%,resize,38.421,0.980907,DCT_PRO_COPYRIGHT,True,True,0.0,177.488,427,640
+10,000000303893.jpg,DCT-Pro,resize_200,缩放200%,resize,38.421,0.980907,DCT_PRO_COPYRIGHT,True,True,0.0,110.566,427,640
+10,000000303893.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,38.421,0.980907,DCT_PRO_COPYRIGHT,True,True,0.0,60.793,427,640
+10,000000303893.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,38.421,0.980907,DCT_PRO_COPYRIGHT,True,True,0.0,57.236,427,640
+11,000000335328.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,55.1171,0.999689,,False,False,1.0,6.3,640,512
+11,000000335328.jpg,LSB,top30_real,上裁30%(真实),real_crop,55.1171,0.999689,,False,False,1.0,1.128,448,512
+11,000000335328.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,55.1171,0.999689,,False,False,1.0,1.74,640,512
+11,000000335328.jpg,LSB,top50_real,上裁50%(真实),real_crop,55.1171,0.999689,,False,False,1.0,0.488,320,512
+11,000000335328.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,55.1171,0.999689,,False,False,1.0,1.255,640,512
+11,000000335328.jpg,LSB,left30_real,左裁30%(真实),real_crop,55.1171,0.999689,,False,False,1.0,0.998,640,358
+11,000000335328.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,55.1171,0.999689,,False,False,1.0,3.323,384,307
+11,000000335328.jpg,LSB,random30_real,随机30%(真实),real_crop,55.1171,0.999689,,False,False,1.0,3.619,448,358
+11,000000335328.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,55.1171,0.999689,,False,False,1.0,1.562,448,512
+11,000000335328.jpg,LSB,jpeg_q70,JPEG Q70,compression,55.1171,0.999689,,False,False,1.0,0.82,640,512
+11,000000335328.jpg,LSB,jpeg_q50,JPEG Q50,compression,55.1171,0.999689,,False,False,1.0,0.983,640,512
+11,000000335328.jpg,LSB,jpeg_q30,JPEG Q30,compression,55.1171,0.999689,,False,False,1.0,3.437,640,512
+11,000000335328.jpg,LSB,resize_50,缩放50%,resize,55.1171,0.999689,,False,False,1.0,1.661,640,512
+11,000000335328.jpg,LSB,resize_200,缩放200%,resize,55.1171,0.999689,,False,False,1.0,0.729,640,512
+11,000000335328.jpg,LSB,noise_sigma10,噪声σ=10,noise,55.1171,0.999689,,False,False,1.0,0.829,640,512
+11,000000335328.jpg,LSB,brightness_plus30,亮度+30%,brightness,55.1171,0.999689,,False,False,1.0,0.687,640,512
+11,000000335328.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,44.2271,0.994938,D P_PROOCOPYR,False,False,0.117647,8.467,640,512
+11,000000335328.jpg,DCT,top30_real,上裁30%(真实),real_crop,44.2271,0.994938,,False,False,1.0,2.349,448,512
+11,000000335328.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,44.2271,0.994938,D P @  F F QB,False,False,0.242647,10.299,640,512
+11,000000335328.jpg,DCT,top50_real,上裁50%(真实),real_crop,44.2271,0.994938,,False,False,1.0,1.618,320,512
+11,000000335328.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,44.2271,0.994938,DCT]@ K_CMPYRI H,False,False,0.073529,12.596,640,512
+11,000000335328.jpg,DCT,left30_real,左裁30%(真实),real_crop,44.2271,0.994938,,False,False,1.0,2.258,640,358
+11,000000335328.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,44.2271,0.994938,,False,False,1.0,1.977,384,307
+11,000000335328.jpg,DCT,random30_real,随机30%(真实),real_crop,44.2271,0.994938,,False,False,1.0,1.069,448,358
+11,000000335328.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,44.2271,0.994938,,False,False,1.0,3.25,448,512
+11,000000335328.jpg,DCT,jpeg_q70,JPEG Q70,compression,44.2271,0.994938,DCT_PRO_COPYRIGHT,True,True,0.0,8.729,640,512
+11,000000335328.jpg,DCT,jpeg_q50,JPEG Q50,compression,44.2271,0.994938,DCT_PRO_COPYRIGHT,True,True,0.0,9.171,640,512
+11,000000335328.jpg,DCT,jpeg_q30,JPEG Q30,compression,44.2271,0.994938,,False,False,1.0,3.769,640,512
+11,000000335328.jpg,DCT,resize_50,缩放50%,resize,44.2271,0.994938,,False,False,1.0,2.274,640,512
+11,000000335328.jpg,DCT,resize_200,缩放200%,resize,44.2271,0.994938,DCT_PRO_COPYRIGHT,True,True,0.0,8.789,640,512
+11,000000335328.jpg,DCT,noise_sigma10,噪声σ=10,noise,44.2271,0.994938,DCT_PRO_COPYRIGHT,True,True,0.0,9.584,640,512
+11,000000335328.jpg,DCT,brightness_plus30,亮度+30%,brightness,44.2271,0.994938,DCT_PRO_COPYRIGHT,True,True,0.0,9.014,640,512
+11,000000335328.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,37.696,0.980192,DCT_PRO_COPYRIGHT,True,True,0.0,76.444,640,512
+11,000000335328.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,37.696,0.980192,,False,False,1.0,472.484,448,512
+11,000000335328.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,37.696,0.980192,DCT_PRO_COPYRIGHT,True,True,0.0,210.818,640,512
+11,000000335328.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,37.696,0.980192,,False,False,1.0,143.688,320,512
+11,000000335328.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,37.696,0.980192,DCT_PRO_COPYRIGHT,True,True,0.0,124.213,640,512
+11,000000335328.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,37.696,0.980192,,False,False,1.0,188.171,640,358
+11,000000335328.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,37.696,0.980192,,False,False,1.0,80.753,384,307
+11,000000335328.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,37.696,0.980192,,False,False,1.0,91.374,448,358
+11,000000335328.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,37.696,0.980192,,False,False,1.0,152.55,448,512
+11,000000335328.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,37.696,0.980192,DCT_PRP_GOPYRIGHT,False,True,0.044118,76.838,640,512
+11,000000335328.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,37.696,0.980192,DCT_PRO_COPYRIGHT,True,True,0.0,191.203,640,512
+11,000000335328.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,37.696,0.980192,DCT_PRO_COPYRIGHT,True,True,0.0,192.143,640,512
+11,000000335328.jpg,DCT-Pro,resize_50,缩放50%,resize,37.696,0.980192,DCT_PRO_COPYRIGHT,True,True,0.0,249.088,640,512
+11,000000335328.jpg,DCT-Pro,resize_200,缩放200%,resize,37.696,0.980192,DCT_PRO_COPYRIGHT,True,True,0.0,123.564,640,512
+11,000000335328.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,37.696,0.980192,DCT_PRO_COPYRIGHT,True,True,0.0,537.889,640,512
+11,000000335328.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,37.696,0.980192,DCT_PRO_COPYRIGHT,True,True,0.0,136.729,640,512
+12,000000365208.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,78.6938,0.999995,,False,False,1.0,0.928,640,603
+12,000000365208.jpg,LSB,top30_real,上裁30%(真实),real_crop,78.6938,0.999995,,False,False,1.0,0.543,448,603
+12,000000365208.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,78.6938,0.999995,,False,False,1.0,1.176,640,603
+12,000000365208.jpg,LSB,top50_real,上裁50%(真实),real_crop,78.6938,0.999995,,False,False,1.0,0.667,320,603
+12,000000365208.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,78.6938,0.999995,,False,False,1.0,1.484,640,603
+12,000000365208.jpg,LSB,left30_real,左裁30%(真实),real_crop,78.6938,0.999995,,False,False,1.0,0.41,640,422
+12,000000365208.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,78.6938,0.999995,,False,False,1.0,0.369,384,362
+12,000000365208.jpg,LSB,random30_real,随机30%(真实),real_crop,78.6938,0.999995,,False,False,1.0,0.337,448,422
+12,000000365208.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,78.6938,0.999995,,False,False,1.0,0.956,448,603
+12,000000365208.jpg,LSB,jpeg_q70,JPEG Q70,compression,78.6938,0.999995,,False,False,1.0,0.952,640,603
+12,000000365208.jpg,LSB,jpeg_q50,JPEG Q50,compression,78.6938,0.999995,,False,False,1.0,1.009,640,603
+12,000000365208.jpg,LSB,jpeg_q30,JPEG Q30,compression,78.6938,0.999995,,False,False,1.0,0.928,640,603
+12,000000365208.jpg,LSB,resize_50,缩放50%,resize,78.6938,0.999995,,False,False,1.0,0.869,640,603
+12,000000365208.jpg,LSB,resize_200,缩放200%,resize,78.6938,0.999995,,False,False,1.0,0.82,640,603
+12,000000365208.jpg,LSB,noise_sigma10,噪声σ=10,noise,78.6938,0.999995,,False,False,1.0,1.035,640,603
+12,000000365208.jpg,LSB,brightness_plus30,亮度+30%,brightness,78.6938,0.999995,,False,False,1.0,0.93,640,603
+12,000000365208.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,45.0652,0.994743,  TO@PM   PIRIG@,False,False,0.117647,15.769,640,603
+12,000000365208.jpg,DCT,top30_real,上裁30%(真实),real_crop,45.0652,0.994743,,False,False,1.0,2.039,448,603
+12,000000365208.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,45.0652,0.994743,  TK@ M	   HP,False,False,0.257353,7.946,640,603
+12,000000365208.jpg,DCT,top50_real,上裁50%(真实),real_crop,45.0652,0.994743,,False,False,1.0,2.725,320,603
+12,000000365208.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,45.0652,0.994743,DBD]PRN_ OPHBAF@T,False,False,0.080882,8.803,640,603
+12,000000365208.jpg,DCT,left30_real,左裁30%(真实),real_crop,45.0652,0.994743,,False,False,1.0,2.744,640,422
+12,000000365208.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,45.0652,0.994743,,False,False,1.0,1.218,384,362
+12,000000365208.jpg,DCT,random30_real,随机30%(真实),real_crop,45.0652,0.994743,,False,False,1.0,1.795,448,422
+12,000000365208.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,45.0652,0.994743,,False,False,1.0,3.1,448,603
+12,000000365208.jpg,DCT,jpeg_q70,JPEG Q70,compression,45.0652,0.994743,DCT_PRO_COPYRIGHT,True,True,0.0,8.124,640,603
+12,000000365208.jpg,DCT,jpeg_q50,JPEG Q50,compression,45.0652,0.994743,DCT_PRO_COPYRIGHT,True,True,0.0,8.122,640,603
+12,000000365208.jpg,DCT,jpeg_q30,JPEG Q30,compression,45.0652,0.994743,DCT_PRO_COPYRIGHT,True,True,0.0,8.971,640,603
+12,000000365208.jpg,DCT,resize_50,缩放50%,resize,45.0652,0.994743,DCT_PRO_COPYR,False,False,0.088235,7.597,640,603
+12,000000365208.jpg,DCT,resize_200,缩放200%,resize,45.0652,0.994743,DCT_PRO_COPYRIGHT,True,True,0.0,7.768,640,603
+12,000000365208.jpg,DCT,noise_sigma10,噪声σ=10,noise,45.0652,0.994743,DCT_PRO_COPYRIGHT,True,True,0.0,8.092,640,603
+12,000000365208.jpg,DCT,brightness_plus30,亮度+30%,brightness,45.0652,0.994743,DCT_PRO_COPYRIGH,False,True,0.022059,10.44,640,603
+12,000000365208.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,39.6742,0.978859,DCT_PRO_COPYRIGHT,True,True,0.0,120.205,640,603
+12,000000365208.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,39.6742,0.978859,,False,False,1.0,169.464,448,603
+12,000000365208.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,39.6742,0.978859,DCT_PRO_COPYRIGHT,True,True,0.0,77.052,640,603
+12,000000365208.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,39.6742,0.978859,,False,False,1.0,104.593,320,603
+12,000000365208.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,39.6742,0.978859,DCT_PRO_COPYRIGHT,True,True,0.0,121.865,640,603
+12,000000365208.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,39.6742,0.978859,,False,False,1.0,178.002,640,422
+12,000000365208.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,39.6742,0.978859,,False,False,1.0,94.242,384,362
+12,000000365208.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,39.6742,0.978859,,False,False,1.0,172.703,448,422
+12,000000365208.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,39.6742,0.978859,,False,False,1.0,177.184,448,603
+12,000000365208.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,39.6742,0.978859,DCT_PRO_COPYRIGHT,True,True,0.0,298.248,640,603
+12,000000365208.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,39.6742,0.978859,DCT_PRO_COPYRIGHT,True,True,0.0,237.331,640,603
+12,000000365208.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,39.6742,0.978859,DCT_PRO_COPYRIGHT,True,True,0.0,241.128,640,603
+12,000000365208.jpg,DCT-Pro,resize_50,缩放50%,resize,39.6742,0.978859,r ÒuèbBÃ¦,False,False,0.456522,333.999,640,603
+12,000000365208.jpg,DCT-Pro,resize_200,缩放200%,resize,39.6742,0.978859,DCT_PRO_COPYRIGHT,True,True,0.0,126.324,640,603
+12,000000365208.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,39.6742,0.978859,DCT_PRO_COPYRIGHT,True,True,0.0,228.342,640,603
+12,000000365208.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,39.6742,0.978859,DCT_PRO_COPYRIGHT,True,True,0.0,92.8,640,603
+13,000000396274.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,53.7891,0.999328,,False,False,1.0,0.804,480,640
+13,000000396274.jpg,LSB,top30_real,上裁30%(真实),real_crop,53.7891,0.999328,,False,False,1.0,0.618,336,640
+13,000000396274.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,53.7891,0.999328,,False,False,1.0,0.683,480,640
+13,000000396274.jpg,LSB,top50_real,上裁50%(真实),real_crop,53.7891,0.999328,,False,False,1.0,0.224,240,640
+13,000000396274.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,53.7891,0.999328,,False,False,1.0,0.622,480,640
+13,000000396274.jpg,LSB,left30_real,左裁30%(真实),real_crop,53.7891,0.999328,,False,False,1.0,0.497,480,448
+13,000000396274.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,53.7891,0.999328,,False,False,1.0,0.201,288,384
+13,000000396274.jpg,LSB,random30_real,随机30%(真实),real_crop,53.7891,0.999328,,False,False,1.0,0.485,336,448
+13,000000396274.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,53.7891,0.999328,,False,False,1.0,0.479,336,640
+13,000000396274.jpg,LSB,jpeg_q70,JPEG Q70,compression,53.7891,0.999328,,False,False,1.0,0.477,480,640
+13,000000396274.jpg,LSB,jpeg_q50,JPEG Q50,compression,53.7891,0.999328,,False,False,1.0,1.382,480,640
+13,000000396274.jpg,LSB,jpeg_q30,JPEG Q30,compression,53.7891,0.999328,,False,False,1.0,0.969,480,640
+13,000000396274.jpg,LSB,resize_50,缩放50%,resize,53.7891,0.999328,,False,False,1.0,0.438,480,640
+13,000000396274.jpg,LSB,resize_200,缩放200%,resize,53.7891,0.999328,,False,False,1.0,0.41,480,640
+13,000000396274.jpg,LSB,noise_sigma10,噪声σ=10,noise,53.7891,0.999328,,False,False,1.0,0.562,480,640
+13,000000396274.jpg,LSB,brightness_plus30,亮度+30%,brightness,53.7891,0.999328,,False,False,1.0,0.557,480,640
+13,000000396274.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,43.2748,0.994276,DCT,False,False,0.375,4.025,480,640
+13,000000396274.jpg,DCT,top30_real,上裁30%(真实),real_crop,43.2748,0.994276,,False,False,1.0,1.367,336,640
+13,000000396274.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,43.2748,0.994276,DCT,False,False,0.375,5.537,480,640
+13,000000396274.jpg,DCT,top50_real,上裁50%(真实),real_crop,43.2748,0.994276,,False,False,1.0,1.313,240,640
+13,000000396274.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,43.2748,0.994276,DCT] RG[AMP RIGH,False,False,0.080882,7.977,480,640
+13,000000396274.jpg,DCT,left30_real,左裁30%(真实),real_crop,43.2748,0.994276,,False,False,1.0,2.437,480,448
+13,000000396274.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,43.2748,0.994276,,False,False,1.0,0.802,288,384
+13,000000396274.jpg,DCT,random30_real,随机30%(真实),real_crop,43.2748,0.994276,,False,False,1.0,0.895,336,448
+13,000000396274.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,43.2748,0.994276,,False,False,1.0,1.853,336,640
+13,000000396274.jpg,DCT,jpeg_q70,JPEG Q70,compression,43.2748,0.994276,DCT_PRO_COPYRIGHT,True,True,0.0,7.752,480,640
+13,000000396274.jpg,DCT,jpeg_q50,JPEG Q50,compression,43.2748,0.994276,DCT_PRO_COPYRIGHT,True,True,0.0,7.191,480,640
+13,000000396274.jpg,DCT,jpeg_q30,JPEG Q30,compression,43.2748,0.994276,,False,False,1.0,2.224,480,640
+13,000000396274.jpg,DCT,resize_50,缩放50%,resize,43.2748,0.994276,,False,False,1.0,2.122,480,640
+13,000000396274.jpg,DCT,resize_200,缩放200%,resize,43.2748,0.994276,DCT_PRO_COPYRIGHT,True,True,0.0,6.613,480,640
+13,000000396274.jpg,DCT,noise_sigma10,噪声σ=10,noise,43.2748,0.994276,DCT_PRO_COPYRIGHT,True,True,0.0,7.317,480,640
+13,000000396274.jpg,DCT,brightness_plus30,亮度+30%,brightness,43.2748,0.994276,DCT_PRO_COPYRIGHT,True,True,0.0,7.959,480,640
+13,000000396274.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,38.4164,0.980897,DCT_PRO_COPYRIGHT,True,True,0.0,67.561,480,640
+13,000000396274.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,38.4164,0.980897,,False,False,1.0,156.611,336,640
+13,000000396274.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,38.4164,0.980897,DCT_PRO_COPYRIGHT,True,True,0.0,59.511,480,640
+13,000000396274.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,38.4164,0.980897,DCT_PRO_COPYRIGHT,True,True,0.0,21.612,240,640
+13,000000396274.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,38.4164,0.980897,DCT_PRO_COPYRIGHT,True,True,0.0,66.193,480,640
+13,000000396274.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,38.4164,0.980897,,False,False,1.0,149.746,480,448
+13,000000396274.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,38.4164,0.980897,DCT_PRO_COPYRIGHT,True,True,0.0,26.322,288,384
+13,000000396274.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,38.4164,0.980897,,False,False,1.0,258.663,336,448
+13,000000396274.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,38.4164,0.980897,,False,False,1.0,313.814,336,640
+13,000000396274.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,38.4164,0.980897,DCT_PRO_COPYRIGHT,True,True,0.0,311.616,480,640
+13,000000396274.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,38.4164,0.980897,DCT_PRO_COPYRIGHT,True,True,0.0,239.917,480,640
+13,000000396274.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,38.4164,0.980897,DCT_PRO_COPYRIGHT,True,True,0.0,193.244,480,640
+13,000000396274.jpg,DCT-Pro,resize_50,缩放50%,resize,38.4164,0.980897,DCT_PRO_COPYRIGHT,True,True,0.0,173.112,480,640
+13,000000396274.jpg,DCT-Pro,resize_200,缩放200%,resize,38.4164,0.980897,DCT_PRO_COPYRIGHT,True,True,0.0,102.136,480,640
+13,000000396274.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,38.4164,0.980897,DCT_PRO_COPYRIGHT,True,True,0.0,190.062,480,640
+13,000000396274.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,38.4164,0.980897,DCT_PRO_COPYRIGHT,True,True,0.0,70.157,480,640
+14,000000427034.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,54.4348,0.999206,,False,False,1.0,1.253,480,640
+14,000000427034.jpg,LSB,top30_real,上裁30%(真实),real_crop,54.4348,0.999206,,False,False,1.0,0.935,336,640
+14,000000427034.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,54.4348,0.999206,,False,False,1.0,0.494,480,640
+14,000000427034.jpg,LSB,top50_real,上裁50%(真实),real_crop,54.4348,0.999206,,False,False,1.0,0.227,240,640
+14,000000427034.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,54.4348,0.999206,,False,False,1.0,0.441,480,640
+14,000000427034.jpg,LSB,left30_real,左裁30%(真实),real_crop,54.4348,0.999206,,False,False,1.0,0.337,480,448
+14,000000427034.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,54.4348,0.999206,,False,False,1.0,0.305,288,384
+14,000000427034.jpg,LSB,random30_real,随机30%(真实),real_crop,54.4348,0.999206,,False,False,1.0,0.341,336,448
+14,000000427034.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,54.4348,0.999206,,False,False,1.0,0.34,336,640
+14,000000427034.jpg,LSB,jpeg_q70,JPEG Q70,compression,54.4348,0.999206,,False,False,1.0,0.562,480,640
+14,000000427034.jpg,LSB,jpeg_q50,JPEG Q50,compression,54.4348,0.999206,,False,False,1.0,0.695,480,640
+14,000000427034.jpg,LSB,jpeg_q30,JPEG Q30,compression,54.4348,0.999206,,False,False,1.0,0.56,480,640
+14,000000427034.jpg,LSB,resize_50,缩放50%,resize,54.4348,0.999206,,False,False,1.0,0.387,480,640
+14,000000427034.jpg,LSB,resize_200,缩放200%,resize,54.4348,0.999206,,False,False,1.0,0.691,480,640
+14,000000427034.jpg,LSB,noise_sigma10,噪声σ=10,noise,54.4348,0.999206,,False,False,1.0,0.643,480,640
+14,000000427034.jpg,LSB,brightness_plus30,亮度+30%,brightness,54.4348,0.999206,,False,False,1.0,0.552,480,640
+14,000000427034.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,45.5267,0.99115,DCT,False,False,0.375,4.034,480,640
+14,000000427034.jpg,DCT,top30_real,上裁30%(真实),real_crop,45.5267,0.99115,,False,False,1.0,2.881,336,640
+14,000000427034.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,45.5267,0.99115,DCT,False,False,0.375,3.343,480,640
+14,000000427034.jpg,DCT,top50_real,上裁50%(真实),real_crop,45.5267,0.99115,,False,False,1.0,1.557,240,640
+14,000000427034.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,45.5267,0.99115,DCT] RG[AMP RIGH,False,False,0.080882,11.026,480,640
+14,000000427034.jpg,DCT,left30_real,左裁30%(真实),real_crop,45.5267,0.99115,,False,False,1.0,3.123,480,448
+14,000000427034.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,45.5267,0.99115,,False,False,1.0,5.232,288,384
+14,000000427034.jpg,DCT,random30_real,随机30%(真实),real_crop,45.5267,0.99115,,False,False,1.0,2.254,336,448
+14,000000427034.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,45.5267,0.99115,,False,False,1.0,3.983,336,640
+14,000000427034.jpg,DCT,jpeg_q70,JPEG Q70,compression,45.5267,0.99115,DCT_PRO_COPYRIGHT,True,True,0.0,8.794,480,640
+14,000000427034.jpg,DCT,jpeg_q50,JPEG Q50,compression,45.5267,0.99115,DCT_PRO_COPYRIGHT,True,True,0.0,7.631,480,640
+14,000000427034.jpg,DCT,jpeg_q30,JPEG Q30,compression,45.5267,0.99115,DCT_PRO_COPYRHGH,False,True,0.029412,7.114,480,640
+14,000000427034.jpg,DCT,resize_50,缩放50%,resize,45.5267,0.99115,"DCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~8¿0)Ð ' îÒp{ ¯oWó»ñ	ñá¨Í7nDCT_PRO_COPYRIGHTMÙh¦i#ÿÝ åïàûÔ Õ  hÌ,Ô»{n FÒ­ëþu î ®;æîV L ´ ­f[bs tg º@Oibåò5~",False,False,0.459957,2436.089,480,640
+14,000000427034.jpg,DCT,resize_200,缩放200%,resize,45.5267,0.99115,DCT_PRO_COPYRIGHT,True,True,0.0,12.736,480,640
+14,000000427034.jpg,DCT,noise_sigma10,噪声σ=10,noise,45.5267,0.99115,DCT_PRO_COPYRIGHT,True,True,0.0,23.755,480,640
+14,000000427034.jpg,DCT,brightness_plus30,亮度+30%,brightness,45.5267,0.99115,DCT_PRO_COPYRIGHT,True,True,0.0,11.93,480,640
+14,000000427034.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,39.8381,0.972787,DCT_PRO_COPYRIGHT,True,True,0.0,77.843,480,640
+14,000000427034.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,39.8381,0.972787,,False,False,1.0,197.24,336,640
+14,000000427034.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,39.8381,0.972787,DCT_PRO_COPYRIGHT,True,True,0.0,76.171,480,640
+14,000000427034.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,39.8381,0.972787,DCT_PRO_COPYRIGHT,True,True,0.0,29.639,240,640
+14,000000427034.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,39.8381,0.972787,DCT_PRO_COPYRIGHT,True,True,0.0,160.225,480,640
+14,000000427034.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,39.8381,0.972787,,False,False,1.0,442.002,480,448
+14,000000427034.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,39.8381,0.972787,DCT_PRO_COPYRIGHT,True,True,0.0,47.484,288,384
+14,000000427034.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,39.8381,0.972787,,False,False,1.0,121.919,336,448
+14,000000427034.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,39.8381,0.972787,,False,False,1.0,222.456,336,640
+14,000000427034.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,39.8381,0.972787,DCT_PRO_COPYRIGHT,True,True,0.0,322.552,480,640
+14,000000427034.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,39.8381,0.972787,DCT_PRO_COPYRIGHT,True,True,0.0,225.02,480,640
+14,000000427034.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,39.8381,0.972787,DCT_PRO_COPYRIGHT,True,True,0.0,713.055,480,640
+14,000000427034.jpg,DCT-Pro,resize_50,缩放50%,resize,39.8381,0.972787,DCT_PRO_COPYRIGHT,True,True,0.0,209.559,480,640
+14,000000427034.jpg,DCT-Pro,resize_200,缩放200%,resize,39.8381,0.972787,DCT_PRO_COPYRIGHT,True,True,0.0,64.641,480,640
+14,000000427034.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,39.8381,0.972787,DCT_PRO_COPYRIGHT,True,True,0.0,206.998,480,640
+14,000000427034.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,39.8381,0.972787,DCT_PRO_COPYRIGHT,True,True,0.0,63.393,480,640
+15,000000458109.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,54.0102,0.999661,,False,False,1.0,0.724,480,640
+15,000000458109.jpg,LSB,top30_real,上裁30%(真实),real_crop,54.0102,0.999661,,False,False,1.0,0.495,336,640
+15,000000458109.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,54.0102,0.999661,,False,False,1.0,0.506,480,640
+15,000000458109.jpg,LSB,top50_real,上裁50%(真实),real_crop,54.0102,0.999661,,False,False,1.0,0.408,240,640
+15,000000458109.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,54.0102,0.999661,,False,False,1.0,0.425,480,640
+15,000000458109.jpg,LSB,left30_real,左裁30%(真实),real_crop,54.0102,0.999661,,False,False,1.0,0.39,480,448
+15,000000458109.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,54.0102,0.999661,,False,False,1.0,0.381,288,384
+15,000000458109.jpg,LSB,random30_real,随机30%(真实),real_crop,54.0102,0.999661,,False,False,1.0,0.25,336,448
+15,000000458109.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,54.0102,0.999661,,False,False,1.0,0.437,336,640
+15,000000458109.jpg,LSB,jpeg_q70,JPEG Q70,compression,54.0102,0.999661,,False,False,1.0,0.534,480,640
+15,000000458109.jpg,LSB,jpeg_q50,JPEG Q50,compression,54.0102,0.999661,,False,False,1.0,0.66,480,640
+15,000000458109.jpg,LSB,jpeg_q30,JPEG Q30,compression,54.0102,0.999661,,False,False,1.0,0.588,480,640
+15,000000458109.jpg,LSB,resize_50,缩放50%,resize,54.0102,0.999661,,False,False,1.0,0.378,480,640
+15,000000458109.jpg,LSB,resize_200,缩放200%,resize,54.0102,0.999661,,False,False,1.0,0.569,480,640
+15,000000458109.jpg,LSB,noise_sigma10,噪声σ=10,noise,54.0102,0.999661,,False,False,1.0,0.58,480,640
+15,000000458109.jpg,LSB,brightness_plus30,亮度+30%,brightness,54.0102,0.999661,,False,False,1.0,0.751,480,640
+15,000000458109.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,42.3956,0.993869,DCT,False,False,0.375,5.679,480,640
+15,000000458109.jpg,DCT,top30_real,上裁30%(真实),real_crop,42.3956,0.993869,,False,False,1.0,1.933,336,640
+15,000000458109.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,42.3956,0.993869,DCT,False,False,0.375,4.763,480,640
+15,000000458109.jpg,DCT,top50_real,上裁50%(真实),real_crop,42.3956,0.993869,,False,False,1.0,1.175,240,640
+15,000000458109.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,42.3956,0.993869,DCT] RG[AMP RIGH,False,False,0.080882,8.714,480,640
+15,000000458109.jpg,DCT,left30_real,左裁30%(真实),real_crop,42.3956,0.993869,,False,False,1.0,1.94,480,448
+15,000000458109.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,42.3956,0.993869,,False,False,1.0,0.923,288,384
+15,000000458109.jpg,DCT,random30_real,随机30%(真实),real_crop,42.3956,0.993869,,False,False,1.0,1.225,336,448
+15,000000458109.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,42.3956,0.993869,,False,False,1.0,1.42,336,640
+15,000000458109.jpg,DCT,jpeg_q70,JPEG Q70,compression,42.3956,0.993869,DCT_PRO_COPYRIGHT,True,True,0.0,7.199,480,640
+15,000000458109.jpg,DCT,jpeg_q50,JPEG Q50,compression,42.3956,0.993869,DCT_PRO_COPYRIGHT,True,True,0.0,7.572,480,640
+15,000000458109.jpg,DCT,jpeg_q30,JPEG Q30,compression,42.3956,0.993869,DCT_PRO_COPYRIGH,False,True,0.022059,7.45,480,640
+15,000000458109.jpg,DCT,resize_50,缩放50%,resize,42.3956,0.993869,"DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâä%± mµò´ØJ±þÑKþ ãTò+za¼# .9&  xù ^qÞ Ôz
+»µçÆ:É  DCU_QRO_CO YRIG@TKdHïÀÜñ< !uÏ4xýÂ±S ± ^õ: ØÈüeøÑYkSTÞâ",False,False,0.450603,1237.124,480,640
+15,000000458109.jpg,DCT,resize_200,缩放200%,resize,42.3956,0.993869,DCT_PRO_COPYRIGHT,True,True,0.0,8.199,480,640
+15,000000458109.jpg,DCT,noise_sigma10,噪声σ=10,noise,42.3956,0.993869,DCT_PRO_COPYRIGHT,True,True,0.0,7.119,480,640
+15,000000458109.jpg,DCT,brightness_plus30,亮度+30%,brightness,42.3956,0.993869,DCT_PRO_COPYRIGHT,True,True,0.0,6.782,480,640
+15,000000458109.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,36.8565,0.979928,DCT_PRO_COPYRIGHT,True,True,0.0,65.39,480,640
+15,000000458109.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,36.8565,0.979928,,False,False,1.0,129.359,336,640
+15,000000458109.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,36.8565,0.979928,DCT_PRO_COPYRIGHT,True,True,0.0,53.866,480,640
+15,000000458109.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,36.8565,0.979928,DCT_PRO_COPYRIGHT,True,True,0.0,18.989,240,640
+15,000000458109.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,36.8565,0.979928,DCT_PRO_COPYRIGHT,True,True,0.0,199.38,480,640
+15,000000458109.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,36.8565,0.979928,,False,False,1.0,190.76,480,448
+15,000000458109.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,36.8565,0.979928,DCT_PRO_COPYRIGHT,True,True,0.0,52.46,288,384
+15,000000458109.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,36.8565,0.979928,,False,False,1.0,244.703,336,448
+15,000000458109.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,36.8565,0.979928,,False,False,1.0,409.915,336,640
+15,000000458109.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,36.8565,0.979928,DCT_PRO_COPYRIGHT,True,True,0.0,116.553,480,640
+15,000000458109.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,36.8565,0.979928,DCT_PRO_COPYRIGHT,True,True,0.0,277.316,480,640
+15,000000458109.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,36.8565,0.979928,DCT_PRO_COPYRIGHT,True,True,0.0,214.251,480,640
+15,000000458109.jpg,DCT-Pro,resize_50,缩放50%,resize,36.8565,0.979928,,False,False,1.0,721.764,480,640
+15,000000458109.jpg,DCT-Pro,resize_200,缩放200%,resize,36.8565,0.979928,DCT_PRO_COPYRIGHT,True,True,0.0,73.769,480,640
+15,000000458109.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,36.8565,0.979928,DCT_PRO_COPYRIGHT,True,True,0.0,86.596,480,640
+15,000000458109.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,36.8565,0.979928,DCT_PRO_COPYRIGHT,True,True,0.0,83.959,480,640
+16,000000486040.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,54.4357,0.999508,,False,False,1.0,0.634,640,480
+16,000000486040.jpg,LSB,top30_real,上裁30%(真实),real_crop,54.4357,0.999508,,False,False,1.0,0.75,448,480
+16,000000486040.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,54.4357,0.999508,,False,False,1.0,0.487,640,480
+16,000000486040.jpg,LSB,top50_real,上裁50%(真实),real_crop,54.4357,0.999508,,False,False,1.0,0.363,320,480
+16,000000486040.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,54.4357,0.999508,,False,False,1.0,1.058,640,480
+16,000000486040.jpg,LSB,left30_real,左裁30%(真实),real_crop,54.4357,0.999508,,False,False,1.0,0.463,640,336
+16,000000486040.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,54.4357,0.999508,,False,False,1.0,0.297,384,288
+16,000000486040.jpg,LSB,random30_real,随机30%(真实),real_crop,54.4357,0.999508,,False,False,1.0,0.39,448,336
+16,000000486040.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,54.4357,0.999508,,False,False,1.0,0.585,448,480
+16,000000486040.jpg,LSB,jpeg_q70,JPEG Q70,compression,54.4357,0.999508,,False,False,1.0,0.772,640,480
+16,000000486040.jpg,LSB,jpeg_q50,JPEG Q50,compression,54.4357,0.999508,,False,False,1.0,0.809,640,480
+16,000000486040.jpg,LSB,jpeg_q30,JPEG Q30,compression,54.4357,0.999508,,False,False,1.0,0.826,640,480
+16,000000486040.jpg,LSB,resize_50,缩放50%,resize,54.4357,0.999508,,False,False,1.0,0.59,640,480
+16,000000486040.jpg,LSB,resize_200,缩放200%,resize,54.4357,0.999508,,False,False,1.0,0.578,640,480
+16,000000486040.jpg,LSB,noise_sigma10,噪声σ=10,noise,54.4357,0.999508,,False,False,1.0,0.651,640,480
+16,000000486040.jpg,LSB,brightness_plus30,亮度+30%,brightness,54.4357,0.999508,,False,False,1.0,0.731,640,480
+16,000000486040.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,44.5735,0.991457,DBT,False,False,0.382353,4.104,640,480
+16,000000486040.jpg,DCT,top30_real,上裁30%(真实),real_crop,44.5735,0.991457,,False,False,1.0,1.829,448,480
+16,000000486040.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,44.5735,0.991457,DBT,False,False,0.382353,4.19,640,480
+16,000000486040.jpg,DCT,top50_real,上裁50%(真实),real_crop,44.5735,0.991457,,False,False,1.0,1.212,320,480
+16,000000486040.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,44.5735,0.991457,DBT_PRM CKPY IFHT,False,True,0.044118,7.402,640,480
+16,000000486040.jpg,DCT,left30_real,左裁30%(真实),real_crop,44.5735,0.991457,,False,False,1.0,2.113,640,336
+16,000000486040.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,44.5735,0.991457,,False,False,1.0,0.927,384,288
+16,000000486040.jpg,DCT,random30_real,随机30%(真实),real_crop,44.5735,0.991457,,False,False,1.0,1.047,448,336
+16,000000486040.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,44.5735,0.991457,,False,False,1.0,1.932,448,480
+16,000000486040.jpg,DCT,jpeg_q70,JPEG Q70,compression,44.5735,0.991457,DCT_PRO_COPYRIGHT,True,True,0.0,6.997,640,480
+16,000000486040.jpg,DCT,jpeg_q50,JPEG Q50,compression,44.5735,0.991457,DCT_PRO_COPYRIGHT,True,True,0.0,7.089,640,480
+16,000000486040.jpg,DCT,jpeg_q30,JPEG Q30,compression,44.5735,0.991457,,False,False,1.0,2.61,640,480
+16,000000486040.jpg,DCT,resize_50,缩放50%,resize,44.5735,0.991457,,False,False,1.0,2.17,640,480
+16,000000486040.jpg,DCT,resize_200,缩放200%,resize,44.5735,0.991457,DCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìïÅ§¤7ÈuF©\\	 emO=Õ:Þ­1ÕÜoDCT_PRO_COPYRIGHT`u¦©F ¤´Púdm ¶<r>b9¡mÕ¬ÌAñ)Ê ð­UxèwûÄ\\a ¼ nwã$µïOc -n%Ä5Â \\ Ç ¢	¤ A ìï,False,False,0.451026,525.411,640,480
+16,000000486040.jpg,DCT,noise_sigma10,噪声σ=10,noise,44.5735,0.991457,DCT_PRO_COPYRIGHT,True,True,0.0,7.109,640,480
+16,000000486040.jpg,DCT,brightness_plus30,亮度+30%,brightness,44.5735,0.991457,,False,False,1.0,2.375,640,480
+16,000000486040.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,38.2206,0.971124,DCT_PRO_COPYRIGHT,True,True,0.0,62.559,640,480
+16,000000486040.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,38.2206,0.971124,,False,False,1.0,143.478,448,480
+16,000000486040.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,38.2206,0.971124,DCT_PRO_COPYRIGHT,True,True,0.0,72.861,640,480
+16,000000486040.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,38.2206,0.971124,,False,False,1.0,113.841,320,480
+16,000000486040.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,38.2206,0.971124,DCT_PRO_COPYRIGHT,True,True,0.0,65.566,640,480
+16,000000486040.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,38.2206,0.971124,,False,False,1.0,353.786,640,336
+16,000000486040.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,38.2206,0.971124,,False,False,1.0,182.603,384,288
+16,000000486040.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,38.2206,0.971124,,False,False,1.0,194.897,448,336
+16,000000486040.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,38.2206,0.971124,,False,False,1.0,162.613,448,480
+16,000000486040.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,38.2206,0.971124,DCT_PRO_COPYRIGHT,True,True,0.0,659.174,640,480
+16,000000486040.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,38.2206,0.971124,DCT_PRO_COPYRIGHT,True,True,0.0,343.958,640,480
+16,000000486040.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,38.2206,0.971124,DCT_PRO_COPYRIGHT,True,True,0.0,351.939,640,480
+16,000000486040.jpg,DCT-Pro,resize_50,缩放50%,resize,38.2206,0.971124,DCT_PRO_COPYRIGHT,True,True,0.0,293.758,640,480
+16,000000486040.jpg,DCT-Pro,resize_200,缩放200%,resize,38.2206,0.971124,DCT_PRO_COPYRIGHT,True,True,0.0,487.67,640,480
+16,000000486040.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,38.2206,0.971124,DCT_PRO_COPYRIGHT,True,True,0.0,92.695,640,480
+16,000000486040.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,38.2206,0.971124,DCT_PRO_COPYRIGHT,True,True,0.0,66.374,640,480
+17,000000519208.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,53.6156,0.99898,,False,False,1.0,0.476,406,640
+17,000000519208.jpg,LSB,top30_real,上裁30%(真实),real_crop,53.6156,0.99898,,False,False,1.0,0.641,284,640
+17,000000519208.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,53.6156,0.99898,,False,False,1.0,0.549,406,640
+17,000000519208.jpg,LSB,top50_real,上裁50%(真实),real_crop,53.6156,0.99898,,False,False,1.0,0.254,203,640
+17,000000519208.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,53.6156,0.99898,,False,False,1.0,0.356,406,640
+17,000000519208.jpg,LSB,left30_real,左裁30%(真实),real_crop,53.6156,0.99898,,False,False,1.0,0.341,406,448
+17,000000519208.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,53.6156,0.99898,,False,False,1.0,0.327,244,384
+17,000000519208.jpg,LSB,random30_real,随机30%(真实),real_crop,53.6156,0.99898,,False,False,1.0,0.214,284,448
+17,000000519208.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,53.6156,0.99898,,False,False,1.0,0.41,284,640
+17,000000519208.jpg,LSB,jpeg_q70,JPEG Q70,compression,53.6156,0.99898,,False,False,1.0,0.767,406,640
+17,000000519208.jpg,LSB,jpeg_q50,JPEG Q50,compression,53.6156,0.99898,,False,False,1.0,0.595,406,640
+17,000000519208.jpg,LSB,jpeg_q30,JPEG Q30,compression,53.6156,0.99898,,False,False,1.0,0.513,406,640
+17,000000519208.jpg,LSB,resize_50,缩放50%,resize,53.6156,0.99898,,False,False,1.0,0.353,406,640
+17,000000519208.jpg,LSB,resize_200,缩放200%,resize,53.6156,0.99898,,False,False,1.0,0.711,406,640
+17,000000519208.jpg,LSB,noise_sigma10,噪声σ=10,noise,53.6156,0.99898,,False,False,1.0,0.717,406,640
+17,000000519208.jpg,LSB,brightness_plus30,亮度+30%,brightness,53.6156,0.99898,,False,False,1.0,1.107,406,640
+17,000000519208.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,45.4435,0.990581,D P_@RKW OPYR,False,False,0.139706,25.633,406,640
+17,000000519208.jpg,DCT,top30_real,上裁30%(真实),real_crop,45.4435,0.990581,,False,False,1.0,2.921,284,640
+17,000000519208.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,45.4435,0.990581,,False,False,1.0,26.22,406,640
+17,000000519208.jpg,DCT,top50_real,上裁50%(真实),real_crop,45.4435,0.990581,,False,False,1.0,2.99,203,640
+17,000000519208.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,45.4435,0.990581,@AT_PROOC PYRAG T,False,True,0.044118,26.47,406,640
+17,000000519208.jpg,DCT,left30_real,左裁30%(真实),real_crop,45.4435,0.990581,,False,False,1.0,3.209,406,448
+17,000000519208.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,45.4435,0.990581,,False,False,1.0,8.27,244,384
+17,000000519208.jpg,DCT,random30_real,随机30%(真实),real_crop,45.4435,0.990581,,False,False,1.0,3.373,284,448
+17,000000519208.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,45.4435,0.990581,,False,False,1.0,7.433,284,640
+17,000000519208.jpg,DCT,jpeg_q70,JPEG Q70,compression,45.4435,0.990581,DCT_PRO_COPYRIGHT,True,True,0.0,46.507,406,640
+17,000000519208.jpg,DCT,jpeg_q50,JPEG Q50,compression,45.4435,0.990581,DCT_PRO_COPYRIGHT,True,True,0.0,31.114,406,640
+17,000000519208.jpg,DCT,jpeg_q30,JPEG Q30,compression,45.4435,0.990581,"DCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0   HH ² á$ `]   	p Íb
+ a BDCT_PRO_COPYRIGHTDÀ Ã  PA""  4+  ¨)A    	 $B  Ò@  Y¿È ]*¸ p0",False,False,0.325099,3403.071,406,640
+17,000000519208.jpg,DCT,resize_50,缩放50%,resize,45.4435,0.990581,DCT_PRO_COPYRIGHT,True,True,0.0,18.749,406,640
+17,000000519208.jpg,DCT,resize_200,缩放200%,resize,45.4435,0.990581,DCT_PRO_COPYRIGHT,True,True,0.0,114.17,406,640
+17,000000519208.jpg,DCT,noise_sigma10,噪声σ=10,noise,45.4435,0.990581,DCT_PRO_COPYRIGHT,True,True,0.0,50.284,406,640
+17,000000519208.jpg,DCT,brightness_plus30,亮度+30%,brightness,45.4435,0.990581,DCT_PRO_COPYRIGHT,True,True,0.0,36.238,406,640
+17,000000519208.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,39.7676,0.966791,DCT_PRO_COPYRIGHT,True,True,0.0,71.794,406,640
+17,000000519208.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,39.7676,0.966791,,False,False,1.0,144.149,284,640
+17,000000519208.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,39.7676,0.966791,DCT_PRO_COPYRIGHT,True,True,0.0,53.768,406,640
+17,000000519208.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,39.7676,0.966791,,False,False,1.0,64.952,203,640
+17,000000519208.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,39.7676,0.966791,DCT_PRO_COPYRIGHT,True,True,0.0,57.547,406,640
+17,000000519208.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,39.7676,0.966791,,False,False,1.0,100.744,406,448
+17,000000519208.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,39.7676,0.966791,,False,False,1.0,45.341,244,384
+17,000000519208.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,39.7676,0.966791,,False,False,1.0,65.916,284,448
+17,000000519208.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,39.7676,0.966791,,False,False,1.0,104.923,284,640
+17,000000519208.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,39.7676,0.966791,DCT_PRO_COPYRIGHT,True,True,0.0,161.103,406,640
+17,000000519208.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,39.7676,0.966791,DCT_PRO_COPYRIGHT,True,True,0.0,148.246,406,640
+17,000000519208.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,39.7676,0.966791,DCT_PRO_COPYRIGHT,True,True,0.0,156.743,406,640
+17,000000519208.jpg,DCT-Pro,resize_50,缩放50%,resize,39.7676,0.966791,,False,False,1.0,142.03,406,640
+17,000000519208.jpg,DCT-Pro,resize_200,缩放200%,resize,39.7676,0.966791,DCT_PRO_COPYRIGHT,True,True,0.0,59.971,406,640
+17,000000519208.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,39.7676,0.966791,DCT_PRO_COPYRIGHT,True,True,0.0,57.566,406,640
+17,000000519208.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,39.7676,0.966791,DCT_PRO_COPYRIGHT,True,True,0.0,54.31,406,640
+18,000000551660.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,53.1594,0.999448,,False,False,1.0,0.651,640,424
+18,000000551660.jpg,LSB,top30_real,上裁30%(真实),real_crop,53.1594,0.999448,,False,False,1.0,0.47,448,424
+18,000000551660.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,53.1594,0.999448,,False,False,1.0,0.481,640,424
+18,000000551660.jpg,LSB,top50_real,上裁50%(真实),real_crop,53.1594,0.999448,,False,False,1.0,1.168,320,424
+18,000000551660.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,53.1594,0.999448,,False,False,1.0,0.578,640,424
+18,000000551660.jpg,LSB,left30_real,左裁30%(真实),real_crop,53.1594,0.999448,,False,False,1.0,0.651,640,297
+18,000000551660.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,53.1594,0.999448,,False,False,1.0,0.304,384,254
+18,000000551660.jpg,LSB,random30_real,随机30%(真实),real_crop,53.1594,0.999448,,False,False,1.0,0.258,448,297
+18,000000551660.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,53.1594,0.999448,,False,False,1.0,0.676,448,424
+18,000000551660.jpg,LSB,jpeg_q70,JPEG Q70,compression,53.1594,0.999448,,False,False,1.0,0.464,640,424
+18,000000551660.jpg,LSB,jpeg_q50,JPEG Q50,compression,53.1594,0.999448,,False,False,1.0,0.971,640,424
+18,000000551660.jpg,LSB,jpeg_q30,JPEG Q30,compression,53.1594,0.999448,,False,False,1.0,0.514,640,424
+18,000000551660.jpg,LSB,resize_50,缩放50%,resize,53.1594,0.999448,,False,False,1.0,0.335,640,424
+18,000000551660.jpg,LSB,resize_200,缩放200%,resize,53.1594,0.999448,,False,False,1.0,0.437,640,424
+18,000000551660.jpg,LSB,noise_sigma10,噪声σ=10,noise,53.1594,0.999448,,False,False,1.0,0.871,640,424
+18,000000551660.jpg,LSB,brightness_plus30,亮度+30%,brightness,53.1594,0.999448,,False,False,1.0,0.545,640,424
+18,000000551660.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,43.8999,0.991238, CT_P K_A PYRAE@,False,False,0.095588,18.757,640,424
+18,000000551660.jpg,DCT,top30_real,上裁30%(真实),real_crop,43.8999,0.991238,,False,False,1.0,5.912,448,424
+18,000000551660.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,43.8999,0.991238, A  P  [A @IB@A@,False,False,0.227941,35.25,640,424
+18,000000551660.jpg,DCT,top50_real,上裁50%(真实),real_crop,43.8999,0.991238,,False,False,1.0,2.542,320,424
+18,000000551660.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,43.8999,0.991238,DAT[PRO AOPI ICHP,False,False,0.066176,17.297,640,424
+18,000000551660.jpg,DCT,left30_real,左裁30%(真实),real_crop,43.8999,0.991238,,False,False,1.0,4.442,640,297
+18,000000551660.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,43.8999,0.991238,,False,False,1.0,1.974,384,254
+18,000000551660.jpg,DCT,random30_real,随机30%(真实),real_crop,43.8999,0.991238,,False,False,1.0,1.55,448,297
+18,000000551660.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,43.8999,0.991238,,False,False,1.0,4.259,448,424
+18,000000551660.jpg,DCT,jpeg_q70,JPEG Q70,compression,43.8999,0.991238,DCT_PRO_COPYRIGHT,True,True,0.0,17.352,640,424
+18,000000551660.jpg,DCT,jpeg_q50,JPEG Q50,compression,43.8999,0.991238,DCT_PRO_COPYRIGHT,True,True,0.0,16.05,640,424
+18,000000551660.jpg,DCT,jpeg_q30,JPEG Q30,compression,43.8999,0.991238,DCT[PRO_COPYRIGHT,False,True,0.007353,20.263,640,424
+18,000000551660.jpg,DCT,resize_50,缩放50%,resize,43.8999,0.991238,,False,False,1.0,15.783,640,424
+18,000000551660.jpg,DCT,resize_200,缩放200%,resize,43.8999,0.991238,DCT_PRO_COPYRIGHT,True,True,0.0,194.105,640,424
+18,000000551660.jpg,DCT,noise_sigma10,噪声σ=10,noise,43.8999,0.991238,DCT_PRO_COPYRIGHT,True,True,0.0,13.636,640,424
+18,000000551660.jpg,DCT,brightness_plus30,亮度+30%,brightness,43.8999,0.991238,,False,False,1.0,6.223,640,424
+18,000000551660.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,38.7054,0.973176,DCT_PRO_COPYRIGHT,True,True,0.0,57.211,640,424
+18,000000551660.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,38.7054,0.973176,,False,False,1.0,108.569,448,424
+18,000000551660.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,38.7054,0.973176,DCT_PRO_COPYRIGHT,True,True,0.0,55.738,640,424
+18,000000551660.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,38.7054,0.973176,,False,False,1.0,72.33,320,424
+18,000000551660.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,38.7054,0.973176,DCT_PRO_COPYRIGHT,True,True,0.0,55.986,640,424
+18,000000551660.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,38.7054,0.973176," b Ò pì"" Ã¿",False,False,0.464286,114.942,640,297
+18,000000551660.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,38.7054,0.973176,,False,False,1.0,45.707,384,254
+18,000000551660.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,38.7054,0.973176,,False,False,1.0,68.68,448,297
+18,000000551660.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,38.7054,0.973176,,False,False,1.0,101.009,448,424
+18,000000551660.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,38.7054,0.973176,DCT_PRO_COPYRIGHT,True,True,0.0,50.579,640,424
+18,000000551660.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,38.7054,0.973176,DCT_PRO_COPYRIGHT,True,True,0.0,143.661,640,424
+18,000000551660.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,38.7054,0.973176,DCT_PRO_COPYRIGHT,True,True,0.0,144.711,640,424
+18,000000551660.jpg,DCT-Pro,resize_50,缩放50%,resize,38.7054,0.973176,DCT_PRO_COPYRIGHT,True,True,0.0,148.247,640,424
+18,000000551660.jpg,DCT-Pro,resize_200,缩放200%,resize,38.7054,0.973176,DCT_PRO_COPYRIGHT,True,True,0.0,53.214,640,424
+18,000000551660.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,38.7054,0.973176,DCT_PRO_COPYRIGHT,True,True,0.0,52.804,640,424
+18,000000551660.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,38.7054,0.973176,DCT_PRO_COPYRIGHT,True,True,0.0,54.566,640,424
+19,000000581781.jpg,LSB,top30_occlusion,上裁30%(遮挡),occlusion,54.0014,0.997484,,False,False,1.0,1.678,478,640
+19,000000581781.jpg,LSB,top30_real,上裁30%(真实),real_crop,54.0014,0.997484,,False,False,1.0,0.655,335,640
+19,000000581781.jpg,LSB,top50_occlusion,上裁50%(遮挡),occlusion,54.0014,0.997484,,False,False,1.0,0.662,478,640
+19,000000581781.jpg,LSB,top50_real,上裁50%(真实),real_crop,54.0014,0.997484,,False,False,1.0,0.275,239,640
+19,000000581781.jpg,LSB,left30_occlusion,左裁30%(遮挡),occlusion,54.0014,0.997484,,False,False,1.0,0.395,478,640
+19,000000581781.jpg,LSB,left30_real,左裁30%(真实),real_crop,54.0014,0.997484,,False,False,1.0,0.3,478,448
+19,000000581781.jpg,LSB,center60_screenshot,中心60%(截图),real_crop,54.0014,0.997484,,False,False,1.0,0.219,287,384
+19,000000581781.jpg,LSB,random30_real,随机30%(真实),real_crop,54.0014,0.997484,,False,False,1.0,0.306,335,448
+19,000000581781.jpg,LSB,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,54.0014,0.997484,,False,False,1.0,0.376,335,640
+19,000000581781.jpg,LSB,jpeg_q70,JPEG Q70,compression,54.0014,0.997484,,False,False,1.0,0.437,478,640
+19,000000581781.jpg,LSB,jpeg_q50,JPEG Q50,compression,54.0014,0.997484,,False,False,1.0,0.566,478,640
+19,000000581781.jpg,LSB,jpeg_q30,JPEG Q30,compression,54.0014,0.997484,,False,False,1.0,0.5,478,640
+19,000000581781.jpg,LSB,resize_50,缩放50%,resize,54.0014,0.997484,,False,False,1.0,0.758,478,640
+19,000000581781.jpg,LSB,resize_200,缩放200%,resize,54.0014,0.997484,,False,False,1.0,0.484,478,640
+19,000000581781.jpg,LSB,noise_sigma10,噪声σ=10,noise,54.0014,0.997484,,False,False,1.0,0.611,478,640
+19,000000581781.jpg,LSB,brightness_plus30,亮度+30%,brightness,54.0014,0.997484,,False,False,1.0,0.526,478,640
+19,000000581781.jpg,DCT,top30_occlusion,上裁30%(遮挡),occlusion,44.2154,0.990322,DCT,False,False,0.375,3.583,478,640
+19,000000581781.jpg,DCT,top30_real,上裁30%(真实),real_crop,44.2154,0.990322,,False,False,1.0,1.695,335,640
+19,000000581781.jpg,DCT,top50_occlusion,上裁50%(遮挡),occlusion,44.2154,0.990322,  TD  ,False,False,0.382353,4.739,478,640
+19,000000581781.jpg,DCT,top50_real,上裁50%(真实),real_crop,44.2154,0.990322,,False,False,1.0,2.183,239,640
+19,000000581781.jpg,DCT,left30_occlusion,左裁30%(遮挡),occlusion,44.2154,0.990322, C  PRN_BMPYBIG ,False,False,0.110294,6.182,478,640
+19,000000581781.jpg,DCT,left30_real,左裁30%(真实),real_crop,44.2154,0.990322,,False,False,1.0,1.301,478,448
+19,000000581781.jpg,DCT,center60_screenshot,中心60%(截图),real_crop,44.2154,0.990322,,False,False,1.0,0.824,287,384
+19,000000581781.jpg,DCT,random30_real,随机30%(真实),real_crop,44.2154,0.990322,,False,False,1.0,0.947,335,448
+19,000000581781.jpg,DCT,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,44.2154,0.990322,,False,False,1.0,1.719,335,640
+19,000000581781.jpg,DCT,jpeg_q70,JPEG Q70,compression,44.2154,0.990322,DCT_PRO_COPYRIGHT,True,True,0.0,6.104,478,640
+19,000000581781.jpg,DCT,jpeg_q50,JPEG Q50,compression,44.2154,0.990322,DCT_PRO_COPYRIGHT,True,True,0.0,7.223,478,640
+19,000000581781.jpg,DCT,jpeg_q30,JPEG Q30,compression,44.2154,0.990322,,False,False,1.0,2.885,478,640
+19,000000581781.jpg,DCT,resize_50,缩放50%,resize,44.2154,0.990322,,False,False,1.0,2.054,478,640
+19,000000581781.jpg,DCT,resize_200,缩放200%,resize,44.2154,0.990322,DCT_PRO_COPYRIGHT,True,True,0.0,6.365,478,640
+19,000000581781.jpg,DCT,noise_sigma10,噪声σ=10,noise,44.2154,0.990322,DCT_PRO_COPYRIGHT,True,True,0.0,7.217,478,640
+19,000000581781.jpg,DCT,brightness_plus30,亮度+30%,brightness,44.2154,0.990322,,False,False,1.0,2.149,478,640
+19,000000581781.jpg,DCT-Pro,top30_occlusion,上裁30%(遮挡),occlusion,39.1327,0.975495,DCT_PRO_COPYRIGHT,True,True,0.0,98.787,478,640
+19,000000581781.jpg,DCT-Pro,top30_real,上裁30%(真实),real_crop,39.1327,0.975495,,False,False,1.0,170.161,335,640
+19,000000581781.jpg,DCT-Pro,top50_occlusion,上裁50%(遮挡),occlusion,39.1327,0.975495,DCT_PRO_COPYRIGHT,True,True,0.0,58.089,478,640
+19,000000581781.jpg,DCT-Pro,top50_real,上裁50%(真实),real_crop,39.1327,0.975495,,False,False,1.0,76.622,239,640
+19,000000581781.jpg,DCT-Pro,left30_occlusion,左裁30%(遮挡),occlusion,39.1327,0.975495,DCT_PRO_COPYRIGHT,True,True,0.0,58.244,478,640
+19,000000581781.jpg,DCT-Pro,left30_real,左裁30%(真实),real_crop,39.1327,0.975495,,False,False,1.0,438.873,478,448
+19,000000581781.jpg,DCT-Pro,center60_screenshot,中心60%(截图),real_crop,39.1327,0.975495,,False,False,1.0,90.55,287,384
+19,000000581781.jpg,DCT-Pro,random30_real,随机30%(真实),real_crop,39.1327,0.975495,,False,False,1.0,138.398,335,448
+19,000000581781.jpg,DCT-Pro,top30_real_jpeg_q30,组合攻击(上裁30%+JPEG Q30),combo,39.1327,0.975495,,False,False,1.0,176.836,335,640
+19,000000581781.jpg,DCT-Pro,jpeg_q70,JPEG Q70,compression,39.1327,0.975495,DCT_PRO_COPYRIGHT,True,True,0.0,221.092,478,640
+19,000000581781.jpg,DCT-Pro,jpeg_q50,JPEG Q50,compression,39.1327,0.975495,DCT_PRO_COPYRIGHT,True,True,0.0,178.287,478,640
+19,000000581781.jpg,DCT-Pro,jpeg_q30,JPEG Q30,compression,39.1327,0.975495,DCT_PRO_COPYRIGHT,True,True,0.0,178.218,478,640
+19,000000581781.jpg,DCT-Pro,resize_50,缩放50%,resize,39.1327,0.975495,DCT_PRO_COPYRIGHT,True,True,0.0,631.688,478,640
+19,000000581781.jpg,DCT-Pro,resize_200,缩放200%,resize,39.1327,0.975495,DCT_PRO_COPYRIGHT,True,True,0.0,117.244,478,640
+19,000000581781.jpg,DCT-Pro,noise_sigma10,噪声σ=10,noise,39.1327,0.975495,DCT_PRO_COPYRIGHT,True,True,0.0,169.862,478,640
+19,000000581781.jpg,DCT-Pro,brightness_plus30,亮度+30%,brightness,39.1327,0.975495,DCT_PRO_COPYRIGHT,True,True,0.0,80.011,478,640
