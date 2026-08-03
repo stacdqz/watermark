@@ -16,7 +16,7 @@
 
 - **完整图文操作手册**：本 README 即程序《图像数字水印嵌入与鲁棒检测提取系统》的完整操作手册（含界面截图）；
 - **交互式可视化**：`index.html`，浏览器直接打开；
-- **研究成果与攻击测试结果**：[实验数据与图表](docs/RESEARCH_RESULTS.md)（含热力图、攻击对比、CSV 原始数据）；
+- **研究成果与攻击测试结果**：[实验数据与图表](docs/RESEARCH_RESULTS.md)（含热力图、Preset 消融对比、CSV 原始数据）；
 - **Windows 可执行程序**：GitHub Release 提供 `v13_ex.exe`。
 
 ## Download
