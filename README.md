@@ -2,11 +2,9 @@
 
 > DCT-Pro Image Watermarking Research Workbench — visualization, documentation, and a Windows executable demo.
 
-## 📊 研究成果与攻击测试报告
+## 研究成果与攻击测试报告
 
-| 快速入口 | 说明 |
-|---|---|
-| [**📈 点击查看完整研究报告与攻击测试结果 →**](docs/RESEARCH_RESULTS.md) | 最新批量实验（2026-08-03）：500 张图像 × 6 组配置 × 30 种攻击，含热力图、攻击矩阵、实验日志与 CSV 原始数据 |
+最新批量实验结果（2026-08-03）已发布：[**《研究成果与攻击测试报告》**](docs/RESEARCH_RESULTS.md)，覆盖 500 张图像、6 组配置、30 种攻击测试，包含热力图、攻击矩阵、实验日志与 CSV 原始数据。
 
 ## Project Status
 
